@@ -1,0 +1,109 @@
+[
+  {
+    "id": "github:stripe/openapi/openapi/spec3.yaml",
+    "source_url": "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.yaml",
+    "title": "Stripe API",
+    "oas_version": "3.0.0",
+    "latest_version": "2024-06-20",
+    "description": "The Stripe REST API. Please see https://stripe.com/docs/api for more details.",
+    "paths_count": 583,
+    "tags": [
+      "Accounts",
+      "Charges",
+      "Customers",
+      "PaymentIntents",
+      "Refunds",
+      "Subscriptions"
+    ],
+    "servers": [
+      "https://api.stripe.com/"
+    ],
+    "fetched_at": "2025-05-14T08:22:11.000Z",
+    "status": "active",
+    "etag": "\"a9c1b2d4e5f6a7b8c9d0e1f2a3b4c5d6\"",
+    "last_modified": "Wed, 14 May 2025 06:00:00 GMT",
+    "content_hash": "f3b9c2d5a8e1f4b7c0d3e6a9b2c5f8e1d4a7b0c3f6e9d2a5b8c1e4f7a0d3b6c9",
+    "history": [
+      {
+        "version": "2024-04-10",
+        "hash": "1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+        "paths_delta": 575,
+        "recorded_at": "2025-04-12T09:15:33.000Z"
+      },
+      {
+        "version": "2024-06-20",
+        "hash": "f3b9c2d5a8e1f4b7c0d3e6a9b2c5f8e1d4a7b0c3f6e9d2a5b8c1e4f7a0d3b6c9",
+        "paths_delta": 8,
+        "recorded_at": "2025-05-14T08:22:11.000Z"
+      }
+    ]
+  },
+  {
+    "id": "github:github/rest-api-description/descriptions/api.github.com/api.github.com.json",
+    "source_url": "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json",
+    "title": "GitHub v3 REST API",
+    "oas_version": "3.0.3",
+    "latest_version": "1.1.4",
+    "description": "GitHub's v3 REST API.",
+    "paths_count": 712,
+    "tags": [
+      "actions",
+      "activity",
+      "apps",
+      "billing",
+      "checks",
+      "code-scanning",
+      "issues",
+      "repos",
+      "users"
+    ],
+    "servers": [
+      "https://api.github.com"
+    ],
+    "fetched_at": "2025-05-14T08:22:43.000Z",
+    "status": "active",
+    "etag": "\"b8e1c4f7a0d3b6c9e2f5a8b1c4d7e0a3\"",
+    "last_modified": "Tue, 13 May 2025 22:14:08 GMT",
+    "content_hash": "e2a5b8c1d4f7a0b3c6e9d2f5a8b1c4e7d0a3b6c9f2e5d8a1b4c7e0f3a6b9d2c5",
+    "history": [
+      {
+        "version": "1.1.4",
+        "hash": "e2a5b8c1d4f7a0b3c6e9d2f5a8b1c4e7d0a3b6c9f2e5d8a1b4c7e0f3a6b9d2c5",
+        "paths_delta": 712,
+        "recorded_at": "2025-05-14T08:22:43.000Z"
+      }
+    ]
+  },
+  {
+    "id": "github:twilio/twilio-oai/spec/yaml/twilio_api_v2010.yaml",
+    "source_url": "https://raw.githubusercontent.com/twilio/twilio-oai/main/spec/yaml/twilio_api_v2010.yaml",
+    "title": "Twilio - Api",
+    "oas_version": "3.0.1",
+    "latest_version": "1.55.0",
+    "description": "This is the public Twilio REST API.",
+    "paths_count": 154,
+    "tags": [],
+    "servers": [
+      "https://api.twilio.com"
+    ],
+    "fetched_at": "2025-05-14T08:23:09.000Z",
+    "status": "active",
+    "etag": "\"c1d4e7f0a3b6c9d2e5f8a1b4c7d0e3f6\"",
+    "last_modified": "Mon, 12 May 2025 14:02:51 GMT",
+    "content_hash": "d4a7b0c3e6f9d2a5b8c1e4f7a0d3b6c9e2f5a8b1c4d7e0a3b6c9d2e5f8a1b4c7",
+    "history": [
+      {
+        "version": "1.54.0",
+        "hash": "9c2f5a8b1c4d7e0f3a6b9c2d5e8f1a4b7c0d3e6f9a2b5c8d1e4f7a0b3c6d9e2f",
+        "paths_delta": 148,
+        "recorded_at": "2025-04-28T11:30:00.000Z"
+      },
+      {
+        "version": "1.55.0",
+        "hash": "d4a7b0c3e6f9d2a5b8c1e4f7a0d3b6c9e2f5a8b1c4d7e0a3b6c9d2e5f8a1b4c7",
+        "paths_delta": 6,
+        "recorded_at": "2025-05-14T08:23:09.000Z"
+      }
+    ]
+  }
+]

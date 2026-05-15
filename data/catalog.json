@@ -1,0 +1,552 @@
+[
+  {
+    "id": "github:APIs-guru/openapi-directory/APIs/ip2location.io/1.0/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/APIs-guru/openapi-directory/f04b8d0bcd39c52e1cf3ad7a5fe744709832ae49/APIs/ip2location.io/1.0/openapi.yaml",
+    "title": "IP2Location.io IP Geolocation API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0",
+    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
+    "paths_count": 1,
+    "tags": [],
+    "servers": [
+      "https://api.ip2location.io"
+    ],
+    "fetched_at": "2026-05-15T20:23:21.544Z",
+    "status": "active",
+    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
+    "last_modified": null,
+    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+    "history": [
+      {
+        "version": "1.0",
+        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+        "paths_delta": 1,
+        "recorded_at": "2026-05-15T20:19:04.372Z"
+      }
+    ]
+  },
+  {
+    "id": "github:Tierion/boltwall/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/Tierion/boltwall/1ef61a13b15e68dabea47123ab7e1e00600594c1/openapi.yaml",
+    "title": "Boltwall API",
+    "oas_version": "3.0.2",
+    "latest_version": "2.0.0-beta-oas3",
+    "description": "API Documentation for Boltwall - A middleware to enable self-sovereign paywalls for the new internet",
+    "paths_count": 4,
+    "tags": [],
+    "servers": [
+      "https://tierion-boltwall.tierion.now.sh/"
+    ],
+    "fetched_at": "2026-05-15T20:23:21.604Z",
+    "status": "active",
+    "etag": "W/\"d27841d433e87d0743cda7907f8e9bc51654196066503ecf0beafdc160e57487\"",
+    "last_modified": null,
+    "content_hash": "b76134cf9060c44d8e8cb166d5597885db1933c7ca2a31fdfd9f32ce9b763f1f",
+    "history": [
+      {
+        "version": "2.0.0-beta-oas3",
+        "hash": "b76134cf9060c44d8e8cb166d5597885db1933c7ca2a31fdfd9f32ce9b763f1f",
+        "paths_delta": 4,
+        "recorded_at": "2026-05-15T20:19:04.873Z"
+      }
+    ]
+  },
+  {
+    "id": "github:harshadapr/todo-app/openAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/harshadapr/todo-app/2281a733eba67094bf015cf8612752eeedb8b259/openAPI.yaml",
+    "title": "Todo Application API",
+    "oas_version": "3.0.1",
+    "latest_version": "1.0.0",
+    "description": "A simple Todo application with authentication.",
+    "paths_count": 5,
+    "tags": [],
+    "servers": [
+      "http://localhost:3000"
+    ],
+    "fetched_at": "2026-05-15T20:23:21.659Z",
+    "status": "active",
+    "etag": "W/\"471726d875e360fbcc1e6b157acc91ef662d06b3e4ccca36d739e2278d532bfe\"",
+    "last_modified": null,
+    "content_hash": "3d0dc2453d9c60cfab3481e9c9d9d3be11c7acbd84b0deb7a3f5c93914bfc99e",
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "3d0dc2453d9c60cfab3481e9c9d9d3be11c7acbd84b0deb7a3f5c93914bfc99e",
+        "paths_delta": 5,
+        "recorded_at": "2026-05-15T20:19:05.378Z"
+      }
+    ]
+  },
+  {
+    "id": "github:Kanishk1420/Game-library-service/OpenAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/Kanishk1420/Game-library-service/c5957c30e02a43583674faddf489e4e8f5f0e69f/OpenAPI.yaml",
+    "title": "Video Games API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0.0",
+    "description": "A comprehensive API for video game information, management, and discovery.",
+    "paths_count": 13,
+    "tags": [],
+    "servers": [
+      "http://localhost:5000"
+    ],
+    "fetched_at": "2026-05-15T20:23:21.712Z",
+    "status": "active",
+    "etag": "W/\"cff2a4f567aaa3ac3c3c0e9b84519596924d7a653784acc4691cad7ef867c6fb\"",
+    "last_modified": null,
+    "content_hash": "4078c9aaebde507e9f745765e2dad42fb84bf31a46d4044d6738f02a878da303",
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "4078c9aaebde507e9f745765e2dad42fb84bf31a46d4044d6738f02a878da303",
+        "paths_delta": 13,
+        "recorded_at": "2026-05-15T20:19:06.214Z"
+      }
+    ]
+  },
+  {
+    "id": "github:toheart/goanalysis/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/toheart/goanalysis/cd102da9318f07b67a1f038fe9243ed280e39203/openapi.yaml",
+    "title": "",
+    "oas_version": "3.0.3",
+    "latest_version": "0.0.1",
+    "description": "",
+    "paths_count": 33,
+    "tags": [
+      "Analysis",
+      "FileManager",
+      "StaticAnalysis"
+    ],
+    "servers": [],
+    "fetched_at": "2026-05-15T20:23:21.766Z",
+    "status": "active",
+    "etag": "W/\"3e436fc9d3b4b434f66cd71082b607a620b9ad147e80dd6212e09b622b1ce3af\"",
+    "last_modified": null,
+    "content_hash": "68730bf11fbb4fe33852fbaed57f684ec84309c01159008e72c81abc2c23ae73",
+    "history": [
+      {
+        "version": "0.0.1",
+        "hash": "68730bf11fbb4fe33852fbaed57f684ec84309c01159008e72c81abc2c23ae73",
+        "paths_delta": 33,
+        "recorded_at": "2026-05-15T20:19:06.948Z"
+      }
+    ]
+  },
+  {
+    "id": "github:ga4gh/ga4gh-registry/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/ga4gh/ga4gh-registry/5ebc1d0efa9d5b479eb62b372856a426425362b9/openapi.yaml",
+    "title": "GA4GH Planet API",
+    "oas_version": "3.0.3",
+    "latest_version": "0.5.0",
+    "description": "The production API base url is: https://registry.ga4gh.org/v1/\n* https://registry.ga4gh.org/v1/service-info\n* https://registry.ga4gh.org/v1/standards\n* https://registry.ga4gh.org/v1/services\n* https://registry.ga4gh.org/v1/implementations\n* https://registry.ga4gh.org/v1/organizations\n# Introduction\n",
+    "paths_count": 10,
+    "tags": [
+      "Service Info",
+      "Standards",
+      "Services",
+      "Implementations",
+      "Organizations"
+    ],
+    "servers": [
+      "https://registry.ga4gh.org"
+    ],
+    "fetched_at": "2026-05-15T20:23:21.821Z",
+    "status": "active",
+    "etag": "W/\"763bd7f93daf4feb6e9d94523adb014c82ccca3f64ea74b474c5fbf93f752ab4\"",
+    "last_modified": null,
+    "content_hash": "1e7e8204014b801177bc5b9a03bcbc4eb4ba76b68a0940b3fb53eee411065ef8",
+    "history": [
+      {
+        "version": "0.5.0",
+        "hash": "1e7e8204014b801177bc5b9a03bcbc4eb4ba76b68a0940b3fb53eee411065ef8",
+        "paths_delta": 10,
+        "recorded_at": "2026-05-15T20:19:07.749Z"
+      }
+    ]
+  },
+  {
+    "id": "github:fabiantax87/technovium-unlimited-api/openAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/fabiantax87/technovium-unlimited-api/fd3ade01820280c027dcc5a0b01fef61004060cb/openAPI.yaml",
+    "title": "Technovium Unlimited API version 1.0.0",
+    "oas_version": "3.0.0",
+    "latest_version": "0.1.0",
+    "description": "TU API version to connect to Unity3D of any other client",
+    "paths_count": 14,
+    "tags": [],
+    "servers": [
+      "http://localhost:5000/api/v1"
+    ],
+    "fetched_at": "2026-05-15T20:23:21.874Z",
+    "status": "active",
+    "etag": "W/\"51f996cc2e1d47a52f77bb9f119f8f7f1fb0afb78a7483e75bc05ee7565045b7\"",
+    "last_modified": null,
+    "content_hash": "f7f293dd7e8e8825605b82b671c06d410f09e374fb15b451803336d4c67ae983",
+    "history": [
+      {
+        "version": "0.1.0",
+        "hash": "f7f293dd7e8e8825605b82b671c06d410f09e374fb15b451803336d4c67ae983",
+        "paths_delta": 14,
+        "recorded_at": "2026-05-15T20:19:08.197Z"
+      }
+    ]
+  },
+  {
+    "id": "github:MioraNomenjanahary/openAPI/openAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/MioraNomenjanahary/openAPI/ca6ebe9895666593d1da546590fbac9c2c5a8f68/openAPI.yaml",
+    "title": "Onboarding API",
+    "oas_version": "3.0.3",
+    "latest_version": "1.0.11",
+    "description": "It's my student reference: STD22014",
+    "paths_count": 3,
+    "tags": [],
+    "servers": [
+      "https://STD22014.com"
+    ],
+    "fetched_at": "2026-05-15T20:23:21.930Z",
+    "status": "active",
+    "etag": "W/\"c0e732bf5d57819b2e023abda791d606ec9661bcb0f600e39e9e58b30942e71f\"",
+    "last_modified": null,
+    "content_hash": "674cdb16b2222f9418b0a6ded6850d316c324a3643ff150481b23bf4642b724e",
+    "history": [
+      {
+        "version": "1.0.11",
+        "hash": "674cdb16b2222f9418b0a6ded6850d316c324a3643ff150481b23bf4642b724e",
+        "paths_delta": 3,
+        "recorded_at": "2026-05-15T20:19:08.642Z"
+      }
+    ]
+  },
+  {
+    "id": "github:acacoop/vehiculos-backend/openAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/acacoop/vehiculos-backend/f9aacc5d744b3ae59a5c643cf7c850f42d4fe378/openAPI.yaml",
+    "title": "Vehicle Management API",
+    "oas_version": "3.0.3",
+    "latest_version": "2.0.0",
+    "description": "Secure and scalable API for managing users, vehicles, assignments, and maintenance operations.\n\n## Features\n- RESTful endpoints with consistent plural naming\n- Comprehensive error handling\n- Input validation and sanitization\n- Pagination support\n- Security headers and rate limiting\n\n## Authenticatio",
+    "paths_count": 62,
+    "tags": [],
+    "servers": [
+      "http://localhost:3000",
+      "https://app-vehiculos-api-prod.azurewebsites.net",
+      "https://app-vehiculos-api-test.azurewebsites.net"
+    ],
+    "fetched_at": "2026-05-15T20:23:21.987Z",
+    "status": "active",
+    "etag": "W/\"c42d91b5308e036041cfaf051201cebd82530c1edb18a271ee278f039322d7be\"",
+    "last_modified": null,
+    "content_hash": "baf337814596ca5ba891932871fc8c44a55427d83ea41b02ab0f27fe9753ea83",
+    "history": [
+      {
+        "version": "2.0.0",
+        "hash": "baf337814596ca5ba891932871fc8c44a55427d83ea41b02ab0f27fe9753ea83",
+        "paths_delta": 62,
+        "recorded_at": "2026-05-15T20:19:09.212Z"
+      }
+    ]
+  },
+  {
+    "id": "github:hendripermana2021/BE_PSI/OpenAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/hendripermana2021/BE_PSI/d546bb205095b22da245cf1f8df5fad4a1b793b4/OpenAPI.yaml",
+    "title": "MY SWEET SKRIPSI",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0.0",
+    "description": "",
+    "paths_count": 36,
+    "tags": [
+      "For Dashboard",
+      "For Data Province",
+      "For Data Users",
+      "For Data Kriteria and Sub-kriteria",
+      "For Data Requests Proposal",
+      "For Report",
+      "For Calculated"
+    ],
+    "servers": [
+      "http://localhost:8000/v1/api",
+      "https://be-permission.up.railway.app/v1/api"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.037Z",
+    "status": "active",
+    "etag": "W/\"89bd5676b2ba18a96ee1b2595122a27cf676907ce460f1b82441579633c190b9\"",
+    "last_modified": null,
+    "content_hash": "bf7fa9597f80863f6cfedc42b9576b87a4fba804c4a50bd5e13f58083dba752d",
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "bf7fa9597f80863f6cfedc42b9576b87a4fba804c4a50bd5e13f58083dba752d",
+        "paths_delta": 36,
+        "recorded_at": "2026-05-15T20:19:09.698Z"
+      }
+    ]
+  },
+  {
+    "id": "github:Monika-dhiman/resilient-message-architecture/openApi.yaml",
+    "source_url": "https://raw.githubusercontent.com/Monika-dhiman/resilient-message-architecture/98a3e909538e3226ec4cdcf4c826b380338c05ef/openApi.yaml",
+    "title": "Sample API",
+    "oas_version": "3.0.3",
+    "latest_version": "1.0.0",
+    "description": "",
+    "paths_count": 8,
+    "tags": [],
+    "servers": [],
+    "fetched_at": "2026-05-15T20:23:22.094Z",
+    "status": "active",
+    "etag": "W/\"f48922fc0640210bfef8d98dec9e4bf1fb264d3546c7aa9b4779d605b52bcb85\"",
+    "last_modified": null,
+    "content_hash": "0208863ac286c1f93e09d8bff9733f6aace9a58e8e6ff3a0951d4179361ad06d",
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "0208863ac286c1f93e09d8bff9733f6aace9a58e8e6ff3a0951d4179361ad06d",
+        "paths_delta": 8,
+        "recorded_at": "2026-05-15T20:19:10.190Z"
+      }
+    ]
+  },
+  {
+    "id": "github:link-it/govway/resources/openapi/3.0/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/link-it/govway/1052320ddae245109874cc3f014fa075ba4e9bc7/resources/openapi/3.0/openapi.yaml",
+    "title": "Swagger Petstore - OpenAPI 3.0",
+    "oas_version": "3.0.3",
+    "latest_version": "1.0.11",
+    "description": "This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\nYou can now help us improve the API whether it's by making",
+    "paths_count": 13,
+    "tags": [
+      "pet",
+      "store",
+      "user"
+    ],
+    "servers": [
+      "https://petstore3.swagger.io/api/v3"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.147Z",
+    "status": "active",
+    "etag": "W/\"914769821d02175903badfac8c20742bcfbd0f1ec45fe7a92096dc3a56acfc68\"",
+    "last_modified": null,
+    "content_hash": "850aef3ee4df1c02ae24eb45b7051a8cecc31c2f87b749dab3fda637ef930c1d",
+    "history": [
+      {
+        "version": "1.0.11",
+        "hash": "850aef3ee4df1c02ae24eb45b7051a8cecc31c2f87b749dab3fda637ef930c1d",
+        "paths_delta": 13,
+        "recorded_at": "2026-05-15T20:19:10.709Z"
+      }
+    ]
+  },
+  {
+    "id": "github:codingsoo/nlp2rest/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/codingsoo/nlp2rest/ae3783b7e4475947bd27511ca4dadc4a273d046c/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
+    "title": "IP2Location.io IP Geolocation API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0",
+    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
+    "paths_count": 1,
+    "tags": [],
+    "servers": [
+      "https://api.ip2location.io"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.200Z",
+    "status": "active",
+    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
+    "last_modified": null,
+    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+    "history": [
+      {
+        "version": "1.0",
+        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+        "paths_delta": 1,
+        "recorded_at": "2026-05-15T20:19:11.216Z"
+      }
+    ]
+  },
+  {
+    "id": "github:LoriMarshall/openapidir/APIs/ip2location.io/1.0/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/LoriMarshall/openapidir/433a94f3e9e268f2b000b0b497785ede34332a7f/APIs/ip2location.io/1.0/openapi.yaml",
+    "title": "IP2Location.io IP Geolocation API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0",
+    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
+    "paths_count": 1,
+    "tags": [],
+    "servers": [
+      "https://api.ip2location.io"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.255Z",
+    "status": "active",
+    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
+    "last_modified": null,
+    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+    "history": [
+      {
+        "version": "1.0",
+        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+        "paths_delta": 1,
+        "recorded_at": "2026-05-15T20:19:11.675Z"
+      }
+    ]
+  },
+  {
+    "id": "github:vinit-agr/vinit-website/public/APIs/ip2location.io/1.0/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/vinit-agr/vinit-website/a0bc9f6a5692ce38dadefb859fad52f963df7298/public/APIs/ip2location.io/1.0/openapi.yaml",
+    "title": "IP2Location.io IP Geolocation API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0",
+    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
+    "paths_count": 1,
+    "tags": [],
+    "servers": [
+      "https://api.ip2location.io"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.307Z",
+    "status": "active",
+    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
+    "last_modified": null,
+    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+    "history": [
+      {
+        "version": "1.0",
+        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+        "paths_delta": 1,
+        "recorded_at": "2026-05-15T20:19:12.137Z"
+      }
+    ]
+  },
+  {
+    "id": "github:adityaghatge/nlp2rest/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/adityaghatge/nlp2rest/23fc8dc5e37f7ef1681c135abfba30e6cfad2a91/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
+    "title": "IP2Location.io IP Geolocation API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0",
+    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
+    "paths_count": 1,
+    "tags": [],
+    "servers": [
+      "https://api.ip2location.io"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.361Z",
+    "status": "active",
+    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
+    "last_modified": null,
+    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+    "history": [
+      {
+        "version": "1.0",
+        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+        "paths_delta": 1,
+        "recorded_at": "2026-05-15T20:19:12.651Z"
+      }
+    ]
+  },
+  {
+    "id": "github:tobi-bams/boltwall-cln-support/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/tobi-bams/boltwall-cln-support/cfc66e95db7dbbc4ec667b3244139e94acd7460e/openapi.yaml",
+    "title": "Boltwall API",
+    "oas_version": "3.0.2",
+    "latest_version": "2.0.0-beta-oas3",
+    "description": "API Documentation for Boltwall - A middleware to enable self-sovereign paywalls for the new internet",
+    "paths_count": 4,
+    "tags": [],
+    "servers": [
+      "https://tierion-boltwall.tierion.now.sh/"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.416Z",
+    "status": "active",
+    "etag": "W/\"d27841d433e87d0743cda7907f8e9bc51654196066503ecf0beafdc160e57487\"",
+    "last_modified": null,
+    "content_hash": "b76134cf9060c44d8e8cb166d5597885db1933c7ca2a31fdfd9f32ce9b763f1f",
+    "history": [
+      {
+        "version": "2.0.0-beta-oas3",
+        "hash": "b76134cf9060c44d8e8cb166d5597885db1933c7ca2a31fdfd9f32ce9b763f1f",
+        "paths_delta": 4,
+        "recorded_at": "2026-05-15T20:19:13.176Z"
+      }
+    ]
+  },
+  {
+    "id": "github:harshadapr/todo-app-fullstack/openAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/harshadapr/todo-app-fullstack/1c8a0563b113e4e57e9c4f811409314f3c4dd5a8/openAPI.yaml",
+    "title": "Todo Application API",
+    "oas_version": "3.0.1",
+    "latest_version": "1.0.0",
+    "description": "A simple Todo application with authentication.",
+    "paths_count": 5,
+    "tags": [],
+    "servers": [
+      "http://localhost:3000"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.472Z",
+    "status": "active",
+    "etag": "W/\"471726d875e360fbcc1e6b157acc91ef662d06b3e4ccca36d739e2278d532bfe\"",
+    "last_modified": null,
+    "content_hash": "3d0dc2453d9c60cfab3481e9c9d9d3be11c7acbd84b0deb7a3f5c93914bfc99e",
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "3d0dc2453d9c60cfab3481e9c9d9d3be11c7acbd84b0deb7a3f5c93914bfc99e",
+        "paths_delta": 5,
+        "recorded_at": "2026-05-15T20:19:13.674Z"
+      }
+    ]
+  },
+  {
+    "id": "github:jukasdrj/swiftwing/swiftwing/Generated/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/jukasdrj/swiftwing/f79ddd2a1f32449d0e7a28dff84faad405e32d3e/swiftwing/Generated/openapi.yaml",
+    "title": "Talaria V3 API",
+    "oas_version": "3.0.3",
+    "latest_version": "3.7.0",
+    "description": "High-speed bookshelf scanning API with Gemini Vision",
+    "paths_count": 9,
+    "tags": [
+      "Scans",
+      "Books",
+      "Admin"
+    ],
+    "servers": [
+      "https://api.oooefam.net",
+      "http://localhost:8787"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.524Z",
+    "status": "active",
+    "etag": "W/\"853f3ca3a421b38a9365b95ffde8ec5309af6d709340fbfd3e2c4e31018a62e1\"",
+    "last_modified": null,
+    "content_hash": "d4035cbe0386cab53154e801ba4dd4f9ff4fb7392d659bde5ccaf0e4022260c4",
+    "history": [
+      {
+        "version": "3.7.0",
+        "hash": "d4035cbe0386cab53154e801ba4dd4f9ff4fb7392d659bde5ccaf0e4022260c4",
+        "paths_delta": 9,
+        "recorded_at": "2026-05-15T20:19:14.407Z"
+      }
+    ]
+  },
+  {
+    "id": "github:KOBI12345678910/KOBI-EL-System-2026/GPS-Connect/lib/api-spec/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/KOBI12345678910/KOBI-EL-System-2026/d3e0080da018f2b10330682b7d5919137c93b728/GPS-Connect/lib/api-spec/openapi.yaml",
+    "title": "Api",
+    "oas_version": "3.1.0",
+    "latest_version": "0.1.0",
+    "description": "API specification",
+    "paths_count": 9,
+    "tags": [
+      "health",
+      "locations",
+      "savedPlaces"
+    ],
+    "servers": [
+      "/api"
+    ],
+    "fetched_at": "2026-05-15T20:23:22.578Z",
+    "status": "active",
+    "etag": "W/\"0f402000118b9ceb00bf6223c985bd12557234dd67a54026d27fb22e9db0a854\"",
+    "last_modified": null,
+    "content_hash": "85388080c2070c12e10c55647c6a1360ef2464981a8c1925fed968d8f7dad195",
+    "history": [
+      {
+        "version": "0.1.0",
+        "hash": "85388080c2070c12e10c55647c6a1360ef2464981a8c1925fed968d8f7dad195",
+        "paths_delta": 9,
+        "recorded_at": "2026-05-15T20:19:14.902Z"
+      }
+    ]
+  }
+]
