@@ -7,6 +7,7 @@ import { parseSpec } from "./parser/specParser";
 import {
   detectVersionChange,
   formatChangelog,
+  formatChangelogStdout,
   hashContent
 } from "./versioner/versioner";
 import {
@@ -14,6 +15,9 @@ import {
   saveCatalog,
   upsertEntry,
   findEntry,
+  findEntryByContentHash,
+  applyFetchFailure,
+  applyFetchSuccess,
   type Catalog,
   type CatalogEntry
 } from "./catalog/catalogStore";
@@ -26,6 +30,8 @@ interface CrawlStats {
   unchanged: number;
   invalid: number;
   failed: number;
+  duplicates: number;
+  changelogs: string[];
 }
 
 /**
@@ -48,7 +54,9 @@ async function runCrawl(): Promise<CrawlStats> {
     updated: 0,
     unchanged: 0,
     invalid: 0,
-    failed: 0
+    failed: 0,
+    duplicates: 0,
+    changelogs: []
   };
 
   let catalog: Catalog = await loadCatalog();
@@ -67,13 +75,13 @@ async function runCrawl(): Promise<CrawlStats> {
     if (fetchResult.status === "not_modified" && existing) {
       stats.unchanged++;
       logger.debug("not modified", { id: spec.id });
-      catalog = upsertEntry(catalog, {
-        ...existing,
-        fetched_at: new Date().toISOString(),
-        status: "active",
-        etag: fetchResult.etag ?? existing.etag,
-        last_modified: fetchResult.lastModified ?? existing.last_modified
-      });
+      catalog = upsertEntry(
+        catalog,
+        applyFetchSuccess(existing, {
+          etag: fetchResult.etag ?? existing.etag,
+          last_modified: fetchResult.lastModified ?? existing.last_modified
+        })
+      );
       continue;
     }
 
@@ -86,11 +94,8 @@ async function runCrawl(): Promise<CrawlStats> {
         httpStatus: fetchResult.httpStatus
       });
       if (existing) {
-        catalog = upsertEntry(catalog, {
-          ...existing,
-          status: "stale",
-          fetched_at: new Date().toISOString()
-        });
+        const failed = applyFetchFailure(existing, config.staleAfterRetries);
+        catalog = upsertEntry(catalog, failed);
       }
       continue;
     }
@@ -103,6 +108,19 @@ async function runCrawl(): Promise<CrawlStats> {
     }
 
     const body = fetchResult.body;
+    const contentHash = hashContent(body);
+
+    const duplicateOf = findEntryByContentHash(catalog, contentHash);
+    if (duplicateOf && duplicateOf.id !== spec.id) {
+      stats.duplicates++;
+      logger.info("skipped duplicate (same content hash)", {
+        id: spec.id,
+        existingId: duplicateOf.id,
+        content_hash: contentHash
+      });
+      continue;
+    }
+
     const parsed = parseSpec(body, spec.source_url);
 
     if (parsed.status === "invalid") {
@@ -122,7 +140,8 @@ async function runCrawl(): Promise<CrawlStats> {
         status: "invalid",
         etag: fetchResult.etag,
         last_modified: fetchResult.lastModified,
-        content_hash: hashContent(body),
+        content_hash: contentHash,
+        retry_count: existing?.retry_count ?? 0,
         history: existing?.history ?? []
       };
       catalog = upsertEntry(catalog, invalidEntry);
@@ -133,13 +152,13 @@ async function runCrawl(): Promise<CrawlStats> {
 
     if (!diff.changed && existing) {
       stats.unchanged++;
-      catalog = upsertEntry(catalog, {
-        ...existing,
-        fetched_at: new Date().toISOString(),
-        status: "active",
-        etag: fetchResult.etag,
-        last_modified: fetchResult.lastModified
-      });
+      catalog = upsertEntry(
+        catalog,
+        applyFetchSuccess(existing, {
+          etag: fetchResult.etag,
+          last_modified: fetchResult.lastModified
+        })
+      );
       continue;
     }
 
@@ -149,15 +168,24 @@ async function runCrawl(): Promise<CrawlStats> {
       stats.new++;
     } else {
       stats.updated++;
-      logger.info(
-        formatChangelog(
-          parsed.title || existing.title,
-          existing.latest_version,
-          parsed.version,
-          diff.pathsDelta
-        ),
-        { id: spec.id }
+      const changelog = formatChangelog(
+        parsed.title || existing.title,
+        existing.latest_version,
+        parsed.version,
+        diff.pathsDelta
       );
+      const stdoutLine = formatChangelogStdout(
+        parsed.title || existing.title,
+        existing.latest_version,
+        parsed.version,
+        diff.pathsDelta
+      );
+      stats.changelogs.push(stdoutLine);
+      logger.info(changelog, {
+        id: spec.id,
+        changelog,
+        pathsDelta: diff.pathsDelta
+      });
     }
 
     const newHistory = existing ? [...existing.history] : [];
@@ -178,6 +206,7 @@ async function runCrawl(): Promise<CrawlStats> {
       etag: fetchResult.etag,
       last_modified: fetchResult.lastModified,
       content_hash: diff.newHash,
+      retry_count: 0,
       history: newHistory
     };
     catalog = upsertEntry(catalog, entry);
@@ -217,9 +246,11 @@ async function showCatalog(): Promise<void> {
   for (const entry of sorted) {
     const title = entry.title || "(untitled)";
     const versions = entry.history.length;
+    const statusLabel = entry.status === "stale" ? "[stale]" : `[${entry.status}]`;
     console.log(
-      `[${entry.status}] ${title}  v${entry.latest_version || "?"}  ` +
-        `paths=${entry.paths_count}  history=${versions}  ${entry.id}`
+      `${statusLabel} ${title}  oas=${entry.oas_version || "?"}  ` +
+        `v${entry.latest_version || "?"}  paths=${entry.paths_count}  ` +
+        `history=${versions}  ${entry.id}`
     );
   }
 }
@@ -243,6 +274,26 @@ function printHelp(): void {
   console.log(help);
 }
 
+function printChangelogSection(
+  changelogs: string[],
+  updatedCount: number
+): void {
+  if (changelogs.length > 0) {
+    console.log("");
+    console.log("Changelog:");
+    for (const line of changelogs) {
+      console.log(`  ${line}`);
+    }
+    return;
+  }
+  if (updatedCount === 0) {
+    console.log("");
+    console.log(
+      "Changelog: no spec changes this run (diffs appear here when content hash changes)."
+    );
+  }
+}
+
 function printCrawlSummary(stats: CrawlStats): void {
   console.log("");
   console.log("Run summary:");
@@ -250,8 +301,10 @@ function printCrawlSummary(stats: CrawlStats): void {
   console.log(`  New specs:        ${stats.new}`);
   console.log(`  Updated specs:    ${stats.updated}`);
   console.log(`  Unchanged specs:  ${stats.unchanged}`);
+  console.log(`  Duplicates skip:  ${stats.duplicates}`);
   console.log(`  Invalid specs:    ${stats.invalid}`);
   console.log(`  Failed specs:     ${stats.failed}`);
+  printChangelogSection(stats.changelogs, stats.updated);
 }
 
 async function main(): Promise<void> {
@@ -272,6 +325,7 @@ async function main(): Promise<void> {
       console.log(`  Updated specs:    ${summary.updated}`);
       console.log(`  Unchanged specs:  ${summary.unchanged}`);
       console.log(`  Failed specs:     ${summary.failed}`);
+      printChangelogSection(summary.changelogs, summary.updated);
       break;
     }
     case "catalog": {

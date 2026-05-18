@@ -3,12 +3,15 @@ import { parseSpec } from "../parser/specParser";
 import {
   detectVersionChange,
   formatChangelog,
+  formatChangelogStdout,
   hashContent
 } from "../versioner/versioner";
 import {
   loadCatalog,
   saveCatalog,
   upsertEntry,
+  applyFetchFailure,
+  applyFetchSuccess,
   type Catalog,
   type CatalogEntry
 } from "../catalog/catalogStore";
@@ -20,22 +23,16 @@ export interface RunSummary {
   updated: number;
   unchanged: number;
   failed: number;
+  changelogs: string[];
 }
 
 function emptySummary(): RunSummary {
-  return { newSpecs: 0, updated: 0, unchanged: 0, failed: 0 };
+  return { newSpecs: 0, updated: 0, unchanged: 0, failed: 0, changelogs: [] };
 }
 
 /**
  * Re-fetch every non-invalid entry in the catalog and update history when
  * content has changed. Returns a summary the caller can print.
- *
- * The flow per entry mirrors the initial crawl, but with two differences:
- *   1. We pass the stored ETag / Last-Modified for conditional fetches.
- *      A 304 short-circuits straight to "unchanged".
- *   2. We never add a brand-new entry here — that's `crawl`'s job. So
- *      `newSpecs` in the summary stays 0 unless this gets wired into
- *      a discovery pass too.
  */
 export async function runUpdateCycle(logger: Logger): Promise<RunSummary> {
   const summary = emptySummary();
@@ -45,8 +42,6 @@ export async function runUpdateCycle(logger: Logger): Promise<RunSummary> {
     return summary;
   }
 
-  // Snapshot the catalog so we mutate `current` per iteration but iterate
-  // over the original list. Avoids surprises if upsert ever reorders.
   const targets = catalog.filter((e) => e.status !== "invalid");
   let current: Catalog = catalog;
 
@@ -59,32 +54,25 @@ export async function runUpdateCycle(logger: Logger): Promise<RunSummary> {
     if (result.status === "not_modified") {
       summary.unchanged++;
       logger.debug("not modified", { id: entry.id });
-      // Update the freshness timestamp + status so a previously-stale
-      // entry that's now responding correctly is restored to active.
-      const refreshed: CatalogEntry = {
-        ...entry,
-        fetched_at: new Date().toISOString(),
-        status: "active",
+      const refreshed = applyFetchSuccess(entry, {
         etag: result.etag ?? entry.etag,
         last_modified: result.lastModified ?? entry.last_modified
-      };
+      });
       current = upsertEntry(current, refreshed);
       continue;
     }
 
     if (result.status === "failed") {
       summary.failed++;
+      const failed = applyFetchFailure(entry, config.staleAfterRetries);
+      current = upsertEntry(current, failed);
       logger.warn("fetch failed during update", {
         id: entry.id,
         error: result.error,
-        httpStatus: result.httpStatus
+        httpStatus: result.httpStatus,
+        retry_count: failed.retry_count,
+        status: failed.status
       });
-      const failed: CatalogEntry = {
-        ...entry,
-        status: "stale",
-        fetched_at: new Date().toISOString()
-      };
-      current = upsertEntry(current, failed);
       continue;
     }
 
@@ -98,7 +86,8 @@ export async function runUpdateCycle(logger: Logger): Promise<RunSummary> {
         fetched_at: new Date().toISOString(),
         etag: result.etag,
         last_modified: result.lastModified,
-        content_hash: hashContent(result.body)
+        content_hash: hashContent(result.body),
+        retry_count: 0
       };
       current = upsertEntry(current, invalidEntry);
       logger.warn("spec became invalid", { id: entry.id });
@@ -110,8 +99,20 @@ export async function runUpdateCycle(logger: Logger): Promise<RunSummary> {
       summary.updated++;
       const history = [...entry.history];
       if (diff.newHistoryEntry) history.push(diff.newHistoryEntry);
-      const updated: CatalogEntry = {
-        ...entry,
+      const changelog = formatChangelog(
+        parsed.title || entry.title,
+        entry.latest_version,
+        parsed.version,
+        diff.pathsDelta
+      );
+      const stdoutLine = formatChangelogStdout(
+        parsed.title || entry.title,
+        entry.latest_version,
+        parsed.version,
+        diff.pathsDelta
+      );
+      summary.changelogs.push(stdoutLine);
+      const updated = applyFetchSuccess(entry, {
         title: parsed.title || entry.title,
         oas_version: parsed.oas_version,
         latest_version: parsed.version,
@@ -119,38 +120,29 @@ export async function runUpdateCycle(logger: Logger): Promise<RunSummary> {
         paths_count: parsed.paths_count,
         tags: parsed.tags,
         servers: parsed.servers,
-        fetched_at: new Date().toISOString(),
-        status: "active",
         etag: result.etag,
         last_modified: result.lastModified,
         content_hash: diff.newHash,
         history
-      };
+      });
       current = upsertEntry(current, updated);
-      logger.info(
-        formatChangelog(
-          parsed.title || entry.title,
-          entry.latest_version,
-          parsed.version,
-          diff.pathsDelta
-        ),
-        { id: entry.id }
-      );
+      logger.info(changelog, {
+        id: entry.id,
+        changelog,
+        pathsDelta: diff.pathsDelta
+      });
     } else {
       summary.unchanged++;
-      const refreshed: CatalogEntry = {
-        ...entry,
-        fetched_at: new Date().toISOString(),
-        status: "active",
+      const refreshed = applyFetchSuccess(entry, {
         etag: result.etag ?? entry.etag,
         last_modified: result.lastModified ?? entry.last_modified
-      };
+      });
       current = upsertEntry(current, refreshed);
     }
   }
 
   await saveCatalog(current);
-  logger.info("update cycle complete", { ...summary });
+  logger.info("update cycle complete", { ...summary, changelogCount: summary.changelogs.length });
   return summary;
 }
 
@@ -175,7 +167,6 @@ export function startPolling(logger: Logger): () => void {
     }
   };
 
-  // Kick off the first cycle immediately, then space subsequent ones.
   void tick();
 
   return (): void => {

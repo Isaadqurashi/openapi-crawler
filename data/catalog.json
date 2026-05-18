@@ -11,7 +11,7 @@
     "servers": [
       "https://api.ip2location.io"
     ],
-    "fetched_at": "2026-05-15T20:23:21.544Z",
+    "fetched_at": "2026-05-18T00:59:24.287Z",
     "status": "active",
     "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
     "last_modified": null,
@@ -23,7 +23,8 @@
         "paths_delta": 1,
         "recorded_at": "2026-05-15T20:19:04.372Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:Tierion/boltwall/openapi.yaml",
@@ -37,7 +38,7 @@
     "servers": [
       "https://tierion-boltwall.tierion.now.sh/"
     ],
-    "fetched_at": "2026-05-15T20:23:21.604Z",
+    "fetched_at": "2026-05-18T00:59:24.959Z",
     "status": "active",
     "etag": "W/\"d27841d433e87d0743cda7907f8e9bc51654196066503ecf0beafdc160e57487\"",
     "last_modified": null,
@@ -49,7 +50,8 @@
         "paths_delta": 4,
         "recorded_at": "2026-05-15T20:19:04.873Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:harshadapr/todo-app/openAPI.yaml",
@@ -63,7 +65,7 @@
     "servers": [
       "http://localhost:3000"
     ],
-    "fetched_at": "2026-05-15T20:23:21.659Z",
+    "fetched_at": "2026-05-18T00:59:25.004Z",
     "status": "active",
     "etag": "W/\"471726d875e360fbcc1e6b157acc91ef662d06b3e4ccca36d739e2278d532bfe\"",
     "last_modified": null,
@@ -75,7 +77,8 @@
         "paths_delta": 5,
         "recorded_at": "2026-05-15T20:19:05.378Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:Kanishk1420/Game-library-service/OpenAPI.yaml",
@@ -89,7 +92,7 @@
     "servers": [
       "http://localhost:5000"
     ],
-    "fetched_at": "2026-05-15T20:23:21.712Z",
+    "fetched_at": "2026-05-18T00:59:25.062Z",
     "status": "active",
     "etag": "W/\"cff2a4f567aaa3ac3c3c0e9b84519596924d7a653784acc4691cad7ef867c6fb\"",
     "last_modified": null,
@@ -101,7 +104,8 @@
         "paths_delta": 13,
         "recorded_at": "2026-05-15T20:19:06.214Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:toheart/goanalysis/openapi.yaml",
@@ -117,7 +121,7 @@
       "StaticAnalysis"
     ],
     "servers": [],
-    "fetched_at": "2026-05-15T20:23:21.766Z",
+    "fetched_at": "2026-05-18T00:59:25.112Z",
     "status": "active",
     "etag": "W/\"3e436fc9d3b4b434f66cd71082b607a620b9ad147e80dd6212e09b622b1ce3af\"",
     "last_modified": null,
@@ -129,7 +133,8 @@
         "paths_delta": 33,
         "recorded_at": "2026-05-15T20:19:06.948Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:ga4gh/ga4gh-registry/openapi.yaml",
@@ -149,7 +154,7 @@
     "servers": [
       "https://registry.ga4gh.org"
     ],
-    "fetched_at": "2026-05-15T20:23:21.821Z",
+    "fetched_at": "2026-05-18T00:59:25.524Z",
     "status": "active",
     "etag": "W/\"763bd7f93daf4feb6e9d94523adb014c82ccca3f64ea74b474c5fbf93f752ab4\"",
     "last_modified": null,
@@ -161,7 +166,8 @@
         "paths_delta": 10,
         "recorded_at": "2026-05-15T20:19:07.749Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:fabiantax87/technovium-unlimited-api/openAPI.yaml",
@@ -175,7 +181,7 @@
     "servers": [
       "http://localhost:5000/api/v1"
     ],
-    "fetched_at": "2026-05-15T20:23:21.874Z",
+    "fetched_at": "2026-05-18T00:59:25.958Z",
     "status": "active",
     "etag": "W/\"51f996cc2e1d47a52f77bb9f119f8f7f1fb0afb78a7483e75bc05ee7565045b7\"",
     "last_modified": null,
@@ -187,7 +193,8 @@
         "paths_delta": 14,
         "recorded_at": "2026-05-15T20:19:08.197Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:MioraNomenjanahary/openAPI/openAPI.yaml",
@@ -201,7 +208,7 @@
     "servers": [
       "https://STD22014.com"
     ],
-    "fetched_at": "2026-05-15T20:23:21.930Z",
+    "fetched_at": "2026-05-18T00:59:26.396Z",
     "status": "active",
     "etag": "W/\"c0e732bf5d57819b2e023abda791d606ec9661bcb0f600e39e9e58b30942e71f\"",
     "last_modified": null,
@@ -213,7 +220,8 @@
         "paths_delta": 3,
         "recorded_at": "2026-05-15T20:19:08.642Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:acacoop/vehiculos-backend/openAPI.yaml",
@@ -229,7 +237,7 @@
       "https://app-vehiculos-api-prod.azurewebsites.net",
       "https://app-vehiculos-api-test.azurewebsites.net"
     ],
-    "fetched_at": "2026-05-15T20:23:21.987Z",
+    "fetched_at": "2026-05-18T00:59:26.441Z",
     "status": "active",
     "etag": "W/\"c42d91b5308e036041cfaf051201cebd82530c1edb18a271ee278f039322d7be\"",
     "last_modified": null,
@@ -241,7 +249,8 @@
         "paths_delta": 62,
         "recorded_at": "2026-05-15T20:19:09.212Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:hendripermana2021/BE_PSI/OpenAPI.yaml",
@@ -264,7 +273,7 @@
       "http://localhost:8000/v1/api",
       "https://be-permission.up.railway.app/v1/api"
     ],
-    "fetched_at": "2026-05-15T20:23:22.037Z",
+    "fetched_at": "2026-05-18T00:59:27.055Z",
     "status": "active",
     "etag": "W/\"89bd5676b2ba18a96ee1b2595122a27cf676907ce460f1b82441579633c190b9\"",
     "last_modified": null,
@@ -276,7 +285,8 @@
         "paths_delta": 36,
         "recorded_at": "2026-05-15T20:19:09.698Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:Monika-dhiman/resilient-message-architecture/openApi.yaml",
@@ -288,7 +298,7 @@
     "paths_count": 8,
     "tags": [],
     "servers": [],
-    "fetched_at": "2026-05-15T20:23:22.094Z",
+    "fetched_at": "2026-05-18T00:59:27.158Z",
     "status": "active",
     "etag": "W/\"f48922fc0640210bfef8d98dec9e4bf1fb264d3546c7aa9b4779d605b52bcb85\"",
     "last_modified": null,
@@ -300,7 +310,8 @@
         "paths_delta": 8,
         "recorded_at": "2026-05-15T20:19:10.190Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:link-it/govway/resources/openapi/3.0/openapi.yaml",
@@ -318,7 +329,7 @@
     "servers": [
       "https://petstore3.swagger.io/api/v3"
     ],
-    "fetched_at": "2026-05-15T20:23:22.147Z",
+    "fetched_at": "2026-05-18T00:59:27.821Z",
     "status": "active",
     "etag": "W/\"914769821d02175903badfac8c20742bcfbd0f1ec45fe7a92096dc3a56acfc68\"",
     "last_modified": null,
@@ -330,7 +341,8 @@
         "paths_delta": 13,
         "recorded_at": "2026-05-15T20:19:10.709Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:codingsoo/nlp2rest/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
@@ -344,7 +356,7 @@
     "servers": [
       "https://api.ip2location.io"
     ],
-    "fetched_at": "2026-05-15T20:23:22.200Z",
+    "fetched_at": "2026-05-18T00:59:27.868Z",
     "status": "active",
     "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
     "last_modified": null,
@@ -356,7 +368,8 @@
         "paths_delta": 1,
         "recorded_at": "2026-05-15T20:19:11.216Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:LoriMarshall/openapidir/APIs/ip2location.io/1.0/openapi.yaml",
@@ -370,7 +383,7 @@
     "servers": [
       "https://api.ip2location.io"
     ],
-    "fetched_at": "2026-05-15T20:23:22.255Z",
+    "fetched_at": "2026-05-18T00:59:27.915Z",
     "status": "active",
     "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
     "last_modified": null,
@@ -382,7 +395,8 @@
         "paths_delta": 1,
         "recorded_at": "2026-05-15T20:19:11.675Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:vinit-agr/vinit-website/public/APIs/ip2location.io/1.0/openapi.yaml",
@@ -396,7 +410,7 @@
     "servers": [
       "https://api.ip2location.io"
     ],
-    "fetched_at": "2026-05-15T20:23:22.307Z",
+    "fetched_at": "2026-05-18T00:59:27.967Z",
     "status": "active",
     "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
     "last_modified": null,
@@ -408,7 +422,8 @@
         "paths_delta": 1,
         "recorded_at": "2026-05-15T20:19:12.137Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:adityaghatge/nlp2rest/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
@@ -422,7 +437,7 @@
     "servers": [
       "https://api.ip2location.io"
     ],
-    "fetched_at": "2026-05-15T20:23:22.361Z",
+    "fetched_at": "2026-05-18T00:59:28.012Z",
     "status": "active",
     "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
     "last_modified": null,
@@ -434,7 +449,8 @@
         "paths_delta": 1,
         "recorded_at": "2026-05-15T20:19:12.651Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:tobi-bams/boltwall-cln-support/openapi.yaml",
@@ -448,7 +464,7 @@
     "servers": [
       "https://tierion-boltwall.tierion.now.sh/"
     ],
-    "fetched_at": "2026-05-15T20:23:22.416Z",
+    "fetched_at": "2026-05-18T00:59:28.592Z",
     "status": "active",
     "etag": "W/\"d27841d433e87d0743cda7907f8e9bc51654196066503ecf0beafdc160e57487\"",
     "last_modified": null,
@@ -460,7 +476,8 @@
         "paths_delta": 4,
         "recorded_at": "2026-05-15T20:19:13.176Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:harshadapr/todo-app-fullstack/openAPI.yaml",
@@ -474,7 +491,7 @@
     "servers": [
       "http://localhost:3000"
     ],
-    "fetched_at": "2026-05-15T20:23:22.472Z",
+    "fetched_at": "2026-05-18T00:59:29.032Z",
     "status": "active",
     "etag": "W/\"471726d875e360fbcc1e6b157acc91ef662d06b3e4ccca36d739e2278d532bfe\"",
     "last_modified": null,
@@ -486,7 +503,8 @@
         "paths_delta": 5,
         "recorded_at": "2026-05-15T20:19:13.674Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:jukasdrj/swiftwing/swiftwing/Generated/openapi.yaml",
@@ -505,7 +523,7 @@
       "https://api.oooefam.net",
       "http://localhost:8787"
     ],
-    "fetched_at": "2026-05-15T20:23:22.524Z",
+    "fetched_at": "2026-05-18T00:59:29.690Z",
     "status": "active",
     "etag": "W/\"853f3ca3a421b38a9365b95ffde8ec5309af6d709340fbfd3e2c4e31018a62e1\"",
     "last_modified": null,
@@ -517,7 +535,8 @@
         "paths_delta": 9,
         "recorded_at": "2026-05-15T20:19:14.407Z"
       }
-    ]
+    ],
+    "retry_count": 0
   },
   {
     "id": "github:KOBI12345678910/KOBI-EL-System-2026/GPS-Connect/lib/api-spec/openapi.yaml",
@@ -535,7 +554,7 @@
     "servers": [
       "/api"
     ],
-    "fetched_at": "2026-05-15T20:23:22.578Z",
+    "fetched_at": "2026-05-18T00:59:30.199Z",
     "status": "active",
     "etag": "W/\"0f402000118b9ceb00bf6223c985bd12557234dd67a54026d27fb22e9db0a854\"",
     "last_modified": null,
@@ -547,6 +566,425 @@
         "paths_delta": 9,
         "recorded_at": "2026-05-15T20:19:14.902Z"
       }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:Hendri-Welpie/store-main/OpenAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/Hendri-Welpie/store-main/7e75fd4d93d687fc715888290d018b55cba2ecf0/OpenAPI.yaml",
+    "title": "Store API",
+    "oas_version": "3.0.3",
+    "latest_version": "1.0.0",
+    "description": "REST API for managing customers, orders, and products.\n\n## Pagination\nAll collection endpoints accept `page` (0-based index) and `size` query parameters.\n\n## Error responses\nEvery 4xx / 5xx response returns an `ErrorResponse` object with a consistent structure.\n\n## Tracing\nEvery response includes an",
+    "paths_count": 6,
+    "tags": [
+      "Orders",
+      "Customers",
+      "Products"
+    ],
+    "servers": [
+      "http://localhost:8080",
+      "http://localhost:8080"
+    ],
+    "fetched_at": "2026-05-18T00:59:30.245Z",
+    "status": "active",
+    "etag": "W/\"ec082399bf124d3f908a20c992b38790626074b127c5ef1fb83f065c9d5697d6\"",
+    "last_modified": null,
+    "content_hash": "9f7e30f6fe1561aa137e8d5f251bb33a07fb4ae24ebb90489d8ede2a74ae7409",
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "9f7e30f6fe1561aa137e8d5f251bb33a07fb4ae24ebb90489d8ede2a74ae7409",
+        "paths_delta": 6,
+        "recorded_at": "2026-05-16T10:33:27.118Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:Mtynan/Thunderwings/OpenAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/Mtynan/Thunderwings/ad9fb54b64658c56db626bbef535e6805b1d92d1/OpenAPI.yaml",
+    "title": "Thunderwings API",
+    "oas_version": "3.0.1",
+    "latest_version": "v1",
+    "description": "Allows for filtering of Military Jets. Basket process for creating a basket, adding or removing items from the basket. Checkout Process.",
+    "paths_count": 6,
+    "tags": [],
+    "servers": [],
+    "fetched_at": "2026-05-18T00:59:30.287Z",
+    "status": "active",
+    "etag": "W/\"fd6af6cc0aab0ce465848b6b1d83d42ad19f4edaed2a209d4e9b7b0f3df49764\"",
+    "last_modified": null,
+    "content_hash": "595873f1778cc93f585d8987a9364ae3d54e6a76477d4f098f2a48a55f46838a",
+    "history": [
+      {
+        "version": "v1",
+        "hash": "595873f1778cc93f585d8987a9364ae3d54e6a76477d4f098f2a48a55f46838a",
+        "paths_delta": 6,
+        "recorded_at": "2026-05-16T10:33:27.536Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:bitNathan/ECE46100-phase-2/OpenAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/bitNathan/ECE46100-phase-2/8ca1d64c044962dafffa0253c6a00042f892348d/OpenAPI.yaml",
+    "title": "ECE 461 - Fall 2024 - Project Phase 2",
+    "oas_version": "3.1.2",
+    "latest_version": "2.0.0",
+    "description": "API for ECE 461/Fall 2024/Project Phase 2: A Trustworthy Module Registry\n\nThis spec ONLY covers endpoints that will be targeted by the autograder, and thus expect a consistent format.\n\nThis means that just the baseline requirements are covered by this spec, along with /recommend for the ML track.",
+    "paths_count": 7,
+    "tags": [],
+    "servers": [],
+    "fetched_at": "2026-05-18T00:59:30.730Z",
+    "status": "active",
+    "etag": "W/\"ebed8b23b86f3ca9e384db1a9723b6e2c4c62c40a57073e11dfa3cb0375f298a\"",
+    "last_modified": null,
+    "content_hash": "214b285dadb8635e11cf152743017c338bc5911c93c84ee800e31c49d40619cf",
+    "history": [
+      {
+        "version": "2.0.0",
+        "hash": "214b285dadb8635e11cf152743017c338bc5911c93c84ee800e31c49d40619cf",
+        "paths_delta": 7,
+        "recorded_at": "2026-05-16T10:33:28.386Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:5GZORRO/slice-manager/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/5GZORRO/slice-manager/8c4758e4325ece7977b2d76ca5fbc4a1ad7d09e0/openapi.yaml",
+    "title": "Slice Manager API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0",
+    "description": "This API provides interaction between the 5GZORRO platform and the Slice Manager.",
+    "paths_count": 54,
+    "tags": [
+      "User",
+      "Edge/Cloud Compute Resource",
+      "Edge/Cloud Network Resource",
+      "Radio Access Network Resource",
+      "Resource Telemetry",
+      "Edge/Cloud Compute Chunk",
+      "Edge/Cloud Network Chunk",
+      "Radio Access Network Chunk",
+      "Network Slice (collection of chunks)",
+      "Radio Service",
+      "Generic Network Slice Template (GST)",
+      "Network Slice Type (NEST)",
+      "Network Slice Instance (NEST-based)",
+      "Network Service",
+      "Application Instance"
+    ],
+    "servers": [
+      "/api/v1.0"
+    ],
+    "fetched_at": "2026-05-18T00:59:30.776Z",
+    "status": "active",
+    "etag": "W/\"a6cbb5aa12cc78e60940f194ce5b6d35c5fdaae23e75fb70ef27ba2b35d0d6ba\"",
+    "last_modified": null,
+    "content_hash": "41071536e88eb78a08418eef73cc6b2bfe44dc71ac161c23f3cfa84fd7ab96b5",
+    "history": [
+      {
+        "version": "1.0",
+        "hash": "41071536e88eb78a08418eef73cc6b2bfe44dc71ac161c23f3cfa84fd7ab96b5",
+        "paths_delta": 54,
+        "recorded_at": "2026-05-16T10:33:28.827Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:zaproxy/zap-api-docs/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/zaproxy/zap-api-docs/8d96ac52aa84d374ad97af034758cfe7e3010bcf/openapi.yaml",
+    "title": "ZAP API",
+    "oas_version": "3.0.3",
+    "latest_version": "2.16.1",
+    "description": "The HTTP API for controlling and accessing ZAP.",
+    "paths_count": 735,
+    "tags": [],
+    "servers": [
+      "http://zap",
+      "http://{address}:{port}"
+    ],
+    "fetched_at": "2026-05-18T00:59:32.204Z",
+    "status": "active",
+    "etag": "W/\"d6581d62d03a1049e48f34edda1ac7bd7810994896692a21003e0f3b6b8212b0\"",
+    "last_modified": null,
+    "content_hash": "bbb71f68ed4c7f01466bd8c9c94adbb63b57f0ceb666835b77d3dd0fe54fb087",
+    "history": [
+      {
+        "version": "2.16.1",
+        "hash": "bbb71f68ed4c7f01466bd8c9c94adbb63b57f0ceb666835b77d3dd0fe54fb087",
+        "paths_delta": 735,
+        "recorded_at": "2026-05-16T10:33:30.196Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:Central-University-IT-prod/2025-final-command-team-35-Solution/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/Central-University-IT-prod/2025-final-command-team-35-Solution/10813206c6ee627644032d2048e2fb3b60a661f4/openapi.yaml",
+    "title": "User and Mentor Management API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0.0",
+    "description": "API for managing users, mentors, offers, and authentication",
+    "paths_count": 20,
+    "tags": [],
+    "servers": [
+      "https://prod-team-35-lg7sic6v.REDACTED/api"
+    ],
+    "fetched_at": "2026-05-18T00:59:32.906Z",
+    "status": "active",
+    "etag": "W/\"c3760a897f9545001caf67ce283dc5695f4bd049d407b0a0b6900c421b764598\"",
+    "last_modified": null,
+    "content_hash": "b374e331f5a60517da4dbc248f6933a1d1425ff9afd480277419b4d2c731400b",
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "b374e331f5a60517da4dbc248f6933a1d1425ff9afd480277419b4d2c731400b",
+        "paths_delta": 20,
+        "recorded_at": "2026-05-16T10:33:31.502Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:filipkowal/memberApp/openApi.yaml",
+    "source_url": "https://raw.githubusercontent.com/filipkowal/memberApp/701a988239dd80e87351a197fe88cb45c5b1d3db/openApi.yaml",
+    "title": "memberApp",
+    "oas_version": "3.0.2",
+    "latest_version": "1.0",
+    "description": "",
+    "paths_count": 7,
+    "tags": [],
+    "servers": [
+      "https://merge.digitalent.cloud/api/memberApp",
+      "https://virtserver.swaggerhub.com/filipkowal/memberApp/1.0"
+    ],
+    "fetched_at": "2026-05-18T00:59:32.950Z",
+    "status": "active",
+    "etag": "W/\"f5dcfc95589c24453e7a93155bc94091647b5404f30c0550c4d36e3af5662a76\"",
+    "last_modified": null,
+    "content_hash": "a7836ebc8712abb3222be26d5572abfef5217f0a6b00c12f41aff112d085a8a0",
+    "history": [
+      {
+        "version": "1.0",
+        "hash": "a7836ebc8712abb3222be26d5572abfef5217f0a6b00c12f41aff112d085a8a0",
+        "paths_delta": 7,
+        "recorded_at": "2026-05-16T10:33:31.947Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:KEEEENNNNYYYY/Formats-de-donn-es-textuels/template openAPI/openAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/KEEEENNNNYYYY/Formats-de-donn-es-textuels/7c9d9f103202f48bc2554856d84f0abf2f60ac15/template%20openAPI/openAPI.yaml",
+    "title": "STD23006 - TD1",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0.0",
+    "description": "",
+    "paths_count": 1,
+    "tags": [],
+    "servers": [
+      "https://localhost.STD23006.com"
+    ],
+    "fetched_at": "2026-05-18T00:59:33.389Z",
+    "status": "active",
+    "etag": "W/\"ba4f0e408c2ea9f0e71e7fc3df0df27fafc4a2fe309d3a44dc3126c5763df4f4\"",
+    "last_modified": null,
+    "content_hash": "2d18657da1bfc981bb98de158a6b8d1fbfb42f55ac208ca4099fa6e19d05c7f9",
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "2d18657da1bfc981bb98de158a6b8d1fbfb42f55ac208ca4099fa6e19d05c7f9",
+        "paths_delta": 1,
+        "recorded_at": "2026-05-16T10:33:32.849Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:splunk/splunk-cloud-sdk-python/splunk_sdk/action/v2alpha1/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/splunk/splunk-cloud-sdk-python/d8b72e17c2fcefd7e82716dfb61f9eb60799a74f/splunk_sdk/action/v2alpha1/openapi.yaml",
+    "title": "Action Service",
+    "oas_version": "3.0.0",
+    "latest_version": "v2alpha1.12",
+    "description": "With the Splunk Cloud Action service, you can receive incoming trigger events and use pre-defined action templates to turn these events into meaningful actions.",
+    "paths_count": 3,
+    "tags": [],
+    "servers": [],
+    "fetched_at": "2026-05-18T00:59:34.027Z",
+    "status": "active",
+    "etag": "W/\"55368a0d23938b1729076ac2014d555e33d78ed4d05aa861be6065d7ed0f6b23\"",
+    "last_modified": null,
+    "content_hash": "b11eb1f01d0f280c47e60c101120c4aad43061a9fd6a46cf9d11fb5676357066",
+    "history": [
+      {
+        "version": "v2alpha1.12",
+        "hash": "b11eb1f01d0f280c47e60c101120c4aad43061a9fd6a46cf9d11fb5676357066",
+        "paths_delta": 3,
+        "recorded_at": "2026-05-16T10:33:33.290Z"
+      }
+    ],
+    "retry_count": 0
+  },
+  {
+    "id": "github:logos-storage/logos-storage-nim/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/logos-storage/logos-storage-nim/1218a7edbebbccb6f0358b423944b0f6ada71f82/openapi.yaml",
+    "title": "Logos Storage API",
+    "oas_version": "3.0.3",
+    "latest_version": "0.0.1",
+    "description": "List of endpoints and interfaces available to Logos Storage API users",
+    "paths_count": 12,
+    "tags": [
+      "Data",
+      "Node",
+      "Debug"
+    ],
+    "servers": [
+      "http://localhost:8080/api/storage/v1"
+    ],
+    "fetched_at": "2026-05-18T00:59:34.075Z",
+    "status": "active",
+    "etag": "W/\"aa2aca8a766eea88128248749b00cd74292cf656be1462317c7940286d63418b\"",
+    "last_modified": null,
+    "content_hash": "93e6166489bc4d73667eb4d97d14a2722801b6f7275fee90c3b0ce0f6055c1be",
+    "retry_count": 0,
+    "history": [
+      {
+        "version": "0.0.1",
+        "hash": "93e6166489bc4d73667eb4d97d14a2722801b6f7275fee90c3b0ce0f6055c1be",
+        "paths_delta": 12,
+        "recorded_at": "2026-05-18T00:55:31.467Z"
+      }
     ]
+  },
+  {
+    "id": "github:Sjrobles/Barter/openAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/Sjrobles/Barter/8ea5b4b56c2518145d84a0307d973effd4a08ca2/openAPI.yaml",
+    "title": "Barter API",
+    "oas_version": "3.0.3",
+    "latest_version": "1.0.0",
+    "description": "API para un sistema de trueques que permite a los usuarios registrar, explorar, negociar y cerrar intercambios de productos o servicios.",
+    "paths_count": 9,
+    "tags": [],
+    "servers": [
+      "http://localhost:3000/api",
+      "https://api.barter.com"
+    ],
+    "fetched_at": "2026-05-18T00:59:34.131Z",
+    "status": "active",
+    "etag": "W/\"58ae9e19ecc00a6d1f77f27967b77d473717a47cce1e5107993284b90ecfe239\"",
+    "last_modified": null,
+    "content_hash": "ce97c16a4fd2d24c62b8b74bb3bf69cf4866c6a5bb886f404bf98d42e35790cf",
+    "retry_count": 0,
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "ce97c16a4fd2d24c62b8b74bb3bf69cf4866c6a5bb886f404bf98d42e35790cf",
+        "paths_delta": 9,
+        "recorded_at": "2026-05-18T00:55:34.372Z"
+      }
+    ]
+  },
+  {
+    "id": "github:EarthyGem/astrologicAPI/openAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/EarthyGem/astrologicAPI/fe6ec9353558d840035785ad6c7a4b67ec5660c3/openAPI.yaml",
+    "title": "Astrology API",
+    "oas_version": "3.1.0",
+    "latest_version": "1.0.0",
+    "description": "API for fetching astrological data such as planetary positions, power scores, and nodal details.",
+    "paths_count": 3,
+    "tags": [],
+    "servers": [
+      "https://lilaastrology.com"
+    ],
+    "fetched_at": "2026-05-18T00:59:34.201Z",
+    "status": "active",
+    "etag": "W/\"de9495c4cc86c6d509408ec832e90ae8dcefd03ef703f44c05727507b13c5227\"",
+    "last_modified": null,
+    "content_hash": "a8d0c7f0aa29ed251757ae78958bb43c880ff25dc8682cbec1a2a2869d3cb640",
+    "retry_count": 0,
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "a8d0c7f0aa29ed251757ae78958bb43c880ff25dc8682cbec1a2a2869d3cb640",
+        "paths_delta": 3,
+        "recorded_at": "2026-05-18T00:55:35.304Z"
+      }
+    ]
+  },
+  {
+    "id": "github:obeone/firecrawl-ui/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/obeone/firecrawl-ui/eac8262cfe3f82e4a8b284baf9cca5e8af0ef77a/openapi.yaml",
+    "title": "Firecrawl API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0.0",
+    "description": "API for interacting with Firecrawl services to perform web scraping and crawling tasks.",
+    "paths_count": 18,
+    "tags": [],
+    "servers": [
+      "https://api.firecrawl.dev/v1"
+    ],
+    "fetched_at": "2026-05-18T00:59:34.245Z",
+    "status": "active",
+    "etag": "W/\"f0a40ff6c0f51cfff2ac1665f38d97e1a22eeaa4b5fd2ee4f3c88b6b8a67d90d\"",
+    "last_modified": null,
+    "content_hash": "5992101a9e4c5893e3536a10bde2e79700ef75535d5364c82289b20b4b62cc37",
+    "retry_count": 0,
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "5992101a9e4c5893e3536a10bde2e79700ef75535d5364c82289b20b4b62cc37",
+        "paths_delta": 18,
+        "recorded_at": "2026-05-18T00:55:36.629Z"
+      }
+    ]
+  },
+  {
+    "id": "github:ray-sachin/vehicle-parking-app-v2/OPENAPI.yaml",
+    "source_url": "https://raw.githubusercontent.com/ray-sachin/vehicle-parking-app-v2/7f682c483aa02b8242ac142b982d91c49a7a8eb4/OPENAPI.yaml",
+    "title": "Vehicle Parking API",
+    "oas_version": "3.0.0",
+    "latest_version": "1.0.0",
+    "description": "API for Vehicle Parking Management System V2",
+    "paths_count": 23,
+    "tags": [],
+    "servers": [
+      "http://localhost:5000/api"
+    ],
+    "fetched_at": "2026-05-18T00:59:34.288Z",
+    "status": "active",
+    "etag": "W/\"51cefcab3455e9f0c933610bb1c0a81c9554c3aea3b8c5c1ff4ff346792bd558\"",
+    "last_modified": null,
+    "content_hash": "6f05dbc910da648bc1b015f845c08bcc0ebe47373ef9addac41a16b63741d46b",
+    "retry_count": 0,
+    "history": [
+      {
+        "version": "1.0.0",
+        "hash": "6f05dbc910da648bc1b015f845c08bcc0ebe47373ef9addac41a16b63741d46b",
+        "paths_delta": 23,
+        "recorded_at": "2026-05-18T00:55:37.064Z"
+      }
+    ]
+  },
+  {
+    "id": "github:vooon/esp-ota-server/openapi.yaml",
+    "source_url": "https://raw.githubusercontent.com/vooon/esp-ota-server/017026dea8d8cc4f5eeb3c55cb0083fce3ae7506/openapi.yaml",
+    "title": "",
+    "oas_version": "",
+    "latest_version": "",
+    "description": "",
+    "paths_count": 0,
+    "tags": [],
+    "servers": [],
+    "fetched_at": "2026-05-18T00:55:38.344Z",
+    "status": "invalid",
+    "etag": "W/\"cd17889b7e5e6f5236c1bad9d7136e997aebed57c980327e0c5d6a2b8ae2630f\"",
+    "last_modified": null,
+    "content_hash": "06a17c59edb5ef06d9c0d63ab6317225924cc776fa37bfe3a069dbe74f0ff9e6",
+    "retry_count": 0,
+    "history": []
   }
 ]

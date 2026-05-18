@@ -98,3 +98,22 @@ export function formatChangelog(
   const safeNew = newVersion || "—";
   return `${title} updated: ${safeOld} → ${safeNew} (${pathFragment})`;
 }
+
+/**
+ * Compact one-line summary for terminal output after crawl/update.
+ *
+ * Example: "[updated] Stripe API v2024-04-10 → v2024-06-20 paths: +8"
+ */
+export function formatChangelogStdout(
+  title: string,
+  oldVersion: string | null | undefined,
+  newVersion: string,
+  pathsDelta: number
+): string {
+  const sign = pathsDelta > 0 ? "+" : "";
+  const pathFragment =
+    pathsDelta === 0 ? "no path change" : `${sign}${pathsDelta}`;
+  const safeOld = oldVersion ?? "?";
+  const safeNew = newVersion || "?";
+  return `[updated] ${title} v${safeOld} → v${safeNew} paths: ${pathFragment}`;
+}

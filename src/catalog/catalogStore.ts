@@ -21,6 +21,8 @@ export interface CatalogEntry { // hire me :)
   etag: string | null;
   last_modified: string | null;
   content_hash: string;
+  /** Consecutive fetch failures; reset to 0 on a successful fetch. */
+  retry_count: number;
   history: HistoryEntry[];
 }
 
@@ -133,4 +135,52 @@ export function findEntry(
   id: string
 ): CatalogEntry | null {
   return catalog.find((e) => e.id === id) ?? null;
+}
+
+/**
+ * Find a catalog entry with the same content hash. Invalid entries are
+ * excluded so a previously-broken spec can be re-ingested under a new id.
+ */
+export function findEntryByContentHash(
+  catalog: Catalog,
+  contentHash: string
+): CatalogEntry | null {
+  return (
+    catalog.find(
+      (e) => e.content_hash === contentHash && e.status !== "invalid"
+    ) ?? null
+  );
+}
+
+/**
+ * Apply one failed fetch to an entry: increment retry_count and mark stale
+ * only after `staleAfterRetries` consecutive failures.
+ */
+export function applyFetchFailure(
+  entry: CatalogEntry,
+  staleAfterRetries: number
+): CatalogEntry {
+  const retry_count = (entry.retry_count ?? 0) + 1;
+  return {
+    ...entry,
+    retry_count,
+    status: retry_count >= staleAfterRetries ? "stale" : entry.status,
+    fetched_at: new Date().toISOString()
+  };
+}
+
+/**
+ * Clear retry state after a successful fetch.
+ */
+export function applyFetchSuccess(
+  entry: CatalogEntry,
+  overrides: Partial<CatalogEntry> = {}
+): CatalogEntry {
+  return {
+    ...entry,
+    ...overrides,
+    retry_count: 0,
+    status: "active",
+    fetched_at: overrides.fetched_at ?? new Date().toISOString()
+  };
 }

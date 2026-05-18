@@ -1,7 +1,8 @@
 import {
   hashContent,
   detectVersionChange,
-  formatChangelog
+  formatChangelog,
+  formatChangelogStdout
 } from "../src/versioner/versioner";
 import type { ParsedSpec } from "../src/parser/specParser";
 
@@ -134,5 +135,19 @@ describe("formatChangelog", () => {
   it("handles missing old version gracefully", () => {
     const line = formatChangelog("New API", null, "1.0.0", 5);
     expect(line).toBe("New API updated: — → 1.0.0 (+5 paths)");
+  });
+});
+
+describe("formatChangelogStdout", () => {
+  it("formats compact terminal output", () => {
+    const line = formatChangelogStdout(
+      "Stripe API",
+      "2024-04-10",
+      "2024-06-20",
+      8
+    );
+    expect(line).toBe(
+      "[updated] Stripe API v2024-04-10 → v2024-06-20 paths: +8"
+    );
   });
 });

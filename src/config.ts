@@ -10,6 +10,8 @@ export interface Config {
   maxSpecs: number;
   pollIntervalMs: number;
   maxRetries: number;
+  /** Consecutive failed update/crawl fetches before marking an entry stale. */
+  staleAfterRetries: number;
   catalogPath: string;
   logLevel: LogLevel;
   seedRepos: string[];
@@ -54,6 +56,10 @@ export const config: Config = {
   maxSpecs: parseIntEnv(process.env.MAX_SPECS, 50),
   pollIntervalMs: parseIntEnv(process.env.POLL_INTERVAL_MS, 86_400_000),
   maxRetries: parseIntEnv(process.env.MAX_RETRIES, 3),
+  staleAfterRetries: parseIntEnv(
+    process.env.STALE_AFTER_RETRIES,
+    parseIntEnv(process.env.MAX_RETRIES, 3)
+  ),
   catalogPath: path.resolve(
     process.cwd(),
     process.env.CATALOG_PATH || "data/catalog.json"

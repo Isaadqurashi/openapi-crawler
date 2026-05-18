@@ -7,8 +7,12 @@ import {
   saveCatalog,
   upsertEntry,
   findEntry,
+  findEntryByContentHash,
+  applyFetchFailure,
+  applyFetchSuccess,
   type CatalogEntry
 } from "../src/catalog/catalogStore";
+import { config } from "../src/config";
 
 function makeEntry(overrides: Partial<CatalogEntry> = {}): CatalogEntry {
   return {
@@ -27,6 +31,7 @@ function makeEntry(overrides: Partial<CatalogEntry> = {}): CatalogEntry {
     etag: '"abc123"',
     last_modified: "Tue, 14 May 2025 08:22:11 GMT",
     content_hash: "a".repeat(64),
+    retry_count: 0,
     history: [
       {
         version: "1.0.0",
@@ -98,6 +103,60 @@ describe("upsertEntry", () => {
       "github:a/b/c",
       "github:x/y/z"
     ]);
+  });
+});
+
+describe("findEntryByContentHash", () => {
+  it("returns the entry with a matching content hash", () => {
+    const entry = makeEntry({ content_hash: "deadbeef".repeat(8) });
+    expect(findEntryByContentHash([entry], entry.content_hash)).toEqual(entry);
+  });
+
+  it("returns null when no entry shares the hash", () => {
+    expect(findEntryByContentHash([makeEntry()], "b".repeat(64))).toBeNull();
+  });
+
+  it("ignores invalid entries", () => {
+    const invalid = makeEntry({
+      content_hash: "c".repeat(64),
+      status: "invalid"
+    });
+    expect(findEntryByContentHash([invalid], invalid.content_hash)).toBeNull();
+  });
+
+  it("deduplicates identical content across different ids", () => {
+    const hash = "d".repeat(64);
+    const first = makeEntry({ id: "github:a/b/spec.yaml", content_hash: hash });
+    const secondId = "github:x/y/spec.yaml";
+    const catalog = [first];
+    const duplicate = findEntryByContentHash(catalog, hash);
+    expect(duplicate).toEqual(first);
+    expect(duplicate?.id).not.toBe(secondId);
+    const afterSkip = upsertEntry(catalog, makeEntry({ id: secondId, content_hash: hash }));
+    expect(afterSkip).toHaveLength(2);
+    expect(findEntryByContentHash(afterSkip, hash)?.id).toBe(first.id);
+  });
+});
+
+describe("applyFetchFailure / applyFetchSuccess", () => {
+  it("marks stale only after staleAfterRetries consecutive failures", () => {
+    let entry = makeEntry({ status: "active", retry_count: 0 });
+    const n = config.staleAfterRetries;
+    for (let i = 1; i < n; i++) {
+      entry = applyFetchFailure(entry, n);
+      expect(entry.retry_count).toBe(i);
+      expect(entry.status).toBe("active");
+    }
+    entry = applyFetchFailure(entry, n);
+    expect(entry.retry_count).toBe(n);
+    expect(entry.status).toBe("stale");
+  });
+
+  it("resets retry_count and restores active on success", () => {
+    const stale = makeEntry({ status: "stale", retry_count: 3 });
+    const healed = applyFetchSuccess(stale);
+    expect(healed.retry_count).toBe(0);
+    expect(healed.status).toBe("active");
   });
 });
 
