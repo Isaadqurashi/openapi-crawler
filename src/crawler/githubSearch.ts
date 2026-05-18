@@ -1,6 +1,11 @@
 import axios, { AxiosError } from "axios";
 import { config } from "../config";
 import type { Logger } from "../logger";
+import {
+  loadSeedUrls,
+  seedsToDiscovered,
+  resolveSeedsPath
+} from "./seeds";
 
 export interface DiscoveredSpec {
   /** "github:{owner}/{repo}/{path}" — stable across runs. */
@@ -120,7 +125,7 @@ async function githubGet<T>(
       });
       // Courtesy delay so we don't burn through the per-minute search budget
       // — applied AFTER a successful call so a fresh run can start quickly.
-      await sleep(config.requestDelayMs);
+      await sleep(config.githubRequestDelayMs);
       return response.data;
     } catch (err) {
       const ax = err as AxiosError;
@@ -242,7 +247,12 @@ async function searchByFilename(
         path: filepath,
         branch
       });
-      logger.info("discovered spec", { id, source_url: raw, via: "search" });
+      logger.info("discovered spec", {
+        event: "spec_discovered",
+        id,
+        source_url: raw,
+        via: "search"
+      });
     }
 
     if (data.items.length < PER_PAGE) break;
@@ -306,9 +316,10 @@ async function discoverInRepo(
         };
         results.push(spec);
         logger.info("discovered spec", {
+          event: "spec_discovered",
           id: spec.id,
           source_url: spec.source_url,
-          via: "seed"
+          via: "seed_repo"
         });
       } else if (item.type === "dir" && depth < maxDepth) {
         queue.push({ path: item.path, depth: depth + 1 });
@@ -322,31 +333,76 @@ async function discoverInRepo(
 /**
  * Main discovery entry point. Strategy:
  *
- *   1. Run code search across all four canonical filenames. Stop early
- *      once we've collected `maxSpecs` deduplicated results.
- *   2. If search yielded fewer than `maxSpecs` (rate limited, sparse,
- *      or no token), top up from the configured seed repos.
+ *   1. Load `seeds.json` raw URLs and add them first (highest priority).
+ *   2. Run code search across all four canonical filenames with pagination.
+ *   3. Top up from SEED_REPOS repo walks if still under maxSpecs.
  *
- * Deduplication is by catalog `id` so we don't process the same path
- * twice even if both the .yaml and .json discovery happen to find it.
+ * Deduplication is by catalog `id`.
  */
 export async function discoverSpecs(
   logger: Logger,
   maxSpecs: number = config.maxSpecs
 ): Promise<DiscoveredSpec[]> {
+  if (!config.githubToken) {
+    logger.warn("GITHUB_TOKEN not set — search limited to 10 req/min", {
+      event: "auth_warning"
+    });
+  }
+
   const seen = new Set<string>();
   const collected: DiscoveredSpec[] = [];
 
+  const tryAdd = (item: DiscoveredSpec, via: string): boolean => {
+    if (collected.length >= maxSpecs) return false;
+    if (seen.has(item.id)) return false;
+    seen.add(item.id);
+    collected.push(item);
+    logger.info("discovered spec", {
+      event: "spec_discovered",
+      id: item.id,
+      source_url: item.source_url,
+      via
+    });
+    return true;
+  };
+
+  const seedUrls = loadSeedUrls(resolveSeedsPath(config.seedsPath));
+  const fromFile = seedsToDiscovered(seedUrls);
+  logger.info("processing seed URLs", {
+    event: "seeds_loaded",
+    count: fromFile.length,
+    seedsPath: config.seedsPath
+  });
+  for (const item of fromFile) {
+    if (collected.length >= maxSpecs) break;
+    tryAdd(item, "seed_file");
+  }
+
+  if (collected.length >= maxSpecs) {
+    logger.info("crawl limit reached during seed phase", {
+      event: "crawl_limit_hit",
+      maxSpecs
+    });
+    return collected;
+  }
+
+  const afterSeeds = collected.length;
+  const searchBudget = maxSpecs - afterSeeds;
+  const perFilename = Math.ceil(searchBudget / SEARCH_FILENAMES.length);
+
   for (const filename of SEARCH_FILENAMES) {
     if (collected.length >= maxSpecs) break;
-    const remaining = maxSpecs - collected.length;
+    const quota = Math.min(perFilename, maxSpecs - collected.length);
+    logger.info("searching github", {
+      event: "github_search_start",
+      filename,
+      quota
+    });
     try {
-      const batch = await searchByFilename(filename, remaining, logger);
+      const batch = await searchByFilename(filename, quota, logger);
       for (const item of batch) {
         if (collected.length >= maxSpecs) break;
-        if (seen.has(item.id)) continue;
-        seen.add(item.id);
-        collected.push(item);
+        tryAdd(item, "search");
       }
     } catch (err) {
       logger.warn("search batch failed, continuing", {
@@ -367,13 +423,18 @@ export async function discoverSpecs(
       const batch = await discoverInRepo(seed, remaining, logger);
       for (const item of batch) {
         if (collected.length >= maxSpecs) break;
-        if (seen.has(item.id)) continue;
-        seen.add(item.id);
-        collected.push(item);
+        tryAdd(item, "seed_repo");
       }
     }
   }
 
-  logger.info("discovery complete", { total: collected.length });
+  if (collected.length >= maxSpecs) {
+    logger.info("crawl limit reached", { event: "crawl_limit_hit", maxSpecs });
+  }
+
+  logger.info("discovery complete", {
+    event: "discovery_complete",
+    total: collected.length
+  });
   return collected;
 }

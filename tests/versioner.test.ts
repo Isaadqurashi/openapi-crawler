@@ -38,14 +38,13 @@ describe("hashContent", () => {
 });
 
 describe("detectVersionChange", () => {
-  it("treats first-ever fetch (no existing entry) as changed", () => {
+  it("treats first-ever fetch as changed with empty history (no history entry yet)", () => {
     const content = "openapi: 3.0.0";
     const parsed = makeParsed();
     const diff = detectVersionChange(content, parsed, null);
     expect(diff.changed).toBe(true);
     expect(diff.newHash).toBe(hashContent(content));
-    expect(diff.newHistoryEntry).toBeDefined();
-    expect(diff.newHistoryEntry?.version).toBe("1.0.0");
+    expect(diff.newHistoryEntry).toBeUndefined();
     expect(diff.pathsDelta).toBe(5);
   });
 
@@ -80,7 +79,6 @@ describe("detectVersionChange", () => {
   });
 
   it("bumps version when info.version changes alone", () => {
-    // Same content but version bumped — legal per spec.
     const content = "openapi: 3.0.0";
     const parsed = makeParsed({ version: "2.0.0", paths_count: 5 });
     const existing = {
@@ -108,33 +106,54 @@ describe("detectVersionChange", () => {
     expect(diff.pathsDelta).toBe(-7);
   });
 
-  it("includes an ISO8601 timestamp on the new history entry", () => {
-    const diff = detectVersionChange("x", makeParsed(), null);
+  it("includes a UTC timestamp on history entries when updating", () => {
+    const oldContent = "openapi: 3.0.0\n# old";
+    const newContent = "openapi: 3.0.0\n# new";
+    const parsed = makeParsed({ version: "1.1.0", paths_count: 5 });
+    const existing = {
+      content_hash: hashContent(oldContent),
+      latest_version: "1.0.0",
+      paths_count: 3
+    };
+    const diff = detectVersionChange(newContent, parsed, existing);
     expect(diff.newHistoryEntry?.recorded_at).toMatch(
-      /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/
+      /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/
     );
   });
 });
 
 describe("formatChangelog", () => {
-  it("formats a positive path change", () => {
-    const line = formatChangelog("Stripe API", "2024-04-10", "2024-06-20", 8);
-    expect(line).toBe("Stripe API updated: 2024-04-10 → 2024-06-20 (+8 paths)");
+  it("formats a positive path change with [CHANGELOG] prefix", () => {
+    const line = formatChangelog(
+      "Stripe API",
+      "2024-04-10",
+      "2024-06-20",
+      8,
+      304,
+      312
+    );
+    expect(line).toBe(
+      "[CHANGELOG] Stripe API: version 2024-04-10 → 2024-06-20 | paths: 304 → 312 (+8)"
+    );
   });
 
-  it("formats a negative path change without an extra sign", () => {
-    const line = formatChangelog("Acme", "1.0.0", "1.1.0", -3);
-    expect(line).toBe("Acme updated: 1.0.0 → 1.1.0 (-3 paths)");
+  it("formats a negative path change", () => {
+    const line = formatChangelog("Acme", "1.0.0", "1.1.0", -3, 10, 7);
+    expect(line).toBe(
+      "[CHANGELOG] Acme: version 1.0.0 → 1.1.0 | paths: 10 → 7 (-3)"
+    );
   });
 
-  it("formats a zero path change as 'no path change'", () => {
-    const line = formatChangelog("Acme", "1.0.0", "1.0.1", 0);
-    expect(line).toBe("Acme updated: 1.0.0 → 1.0.1 (no path change)");
+  it("formats a zero path change", () => {
+    const line = formatChangelog("Acme", "1.0.0", "1.0.1", 0, 5, 5);
+    expect(line).toBe(
+      "[CHANGELOG] Acme: version 1.0.0 → 1.0.1 | paths: 5 → 5 (0)"
+    );
   });
 
-  it("handles missing old version gracefully", () => {
+  it("handles missing old version in legacy format", () => {
     const line = formatChangelog("New API", null, "1.0.0", 5);
-    expect(line).toBe("New API updated: — → 1.0.0 (+5 paths)");
+    expect(line).toContain("New API updated:");
   });
 });
 

@@ -1,131 +1,86 @@
 # OpenAPI Spec Crawler
 
-A CLI tool that discovers public OpenAPI/Swagger specifications on GitHub, parses them, tracks version changes via content hashing, and persists a local catalog with full history.
+> APIMatic Intern Screening Task — discovers, parses, versions, and catalogs public OpenAPI specs from GitHub.
 
----
+## Setup
 
-## Setup instructions
-
-### Prerequisites
-
-Node.js ≥ 18, npm
-
-### Install
+1. Clone the repo
+2. Install dependencies:
 
 ```bash
 npm install
+```
+
+3. Copy `.env.example` to `.env` and fill in your GitHub token:
+
+```
+GITHUB_TOKEN=your_personal_access_token
+MAX_SPECS=50
+POLL_INTERVAL_HOURS=24
+SEEDS_PATH=seeds.json
+CATALOG_PATH=catalog.json
+```
+
+4. Build:
+
+```bash
 npx tsc
 ```
 
-### Set your GitHub token (required for 30 req/min instead of 10)
+## Running
 
 ```bash
-# bash / macOS / Linux
-export GITHUB_TOKEN=your_personal_access_token
-
-# PowerShell
-$env:GITHUB_TOKEN = "your_personal_access_token"
+make crawl         # run a one-time crawl
+make update        # re-fetch existing catalog entries (ETag-aware)
+make catalog       # print catalog summary
+make watch         # daemon: crawl on POLL_INTERVAL_HOURS
+make test          # run the test suite with coverage
+make validate      # validate catalog.json schema (after crawl)
 ```
 
-Copy `.env.example` to `.env` to persist settings. A token with no scopes is enough for public search.
-
-### Run
+Or without Make:
 
 ```bash
-npm test                              # run all tests with coverage
-node dist/index.js crawl              # discover and index specs
-node dist/index.js catalog            # view current catalog
-node dist/index.js update             # re-check all indexed specs
-```
-
-The catalog is written to `data/catalog.json` by default (`CATALOG_PATH` overrides).
-
----
-
-## Architecture overview
-
-The crawler is a five-stage pipeline. GitHub Code Search (plus optional seed repos) produces raw spec URLs; each URL is fetched with conditional HTTP headers, parsed into a normalized record, versioned by SHA-256 content hash, and persisted to a flat JSON catalog. A separate update pass re-fetches known entries and appends history when content changes.
-
-```
-GitHub Search API
-        ↓
-[githubSearch] — discovers raw spec URLs
-        ↓
-[fetcher] — downloads with ETag caching
-        ↓
-[specParser] — extracts title, version, paths, tags
-        ↓
-[versioner] — hashes content, diffs against stored version
-        ↓
-[catalogStore] — persists to catalog.json
-```
-
-| Module | Responsibility |
-|---|---|
-| `crawler/githubSearch` | Code Search + seed-repo walk; maps blob URLs to `raw.githubusercontent.com` |
-| `crawler/fetcher` | HTTP download with `If-None-Match` / `If-Modified-Since`, retries, backoff |
-| `parser/specParser` | OpenAPI 3.x + Swagger 2.0, YAML or JSON |
-| `versioner/versioner` | SHA-256 hashing, history entries, changelog formatting |
-| `catalog/catalogStore` | Atomic load/save, upsert, content-hash lookup, retry/stale helpers |
-| `updater/updater` | Re-fetch loop for existing catalog entries |
-
----
-
-## Design decisions
-
-**SHA-256 for change detection (not semantic diffing).** Hashing raw bytes is O(n), deterministic, and catches any edit—including whitespace and comments. Semantic diffing would be slower, require a full parse tree comparison, and could miss formatting-only changes that still matter for reproducible builds.
-
-**Flat JSON file (not a database).** The screening scope is a single-machine CLI with tens of specs, not thousands. A JSON array is human-readable, diff-friendly in git, and needs no migrations. Atomic write-to-tmp + rename keeps corruption risk low.
-
-**Content-hash deduplication (not URL-based).** The same OpenAPI file is often vendored across forks (`APIs-guru/openapi-directory`, mirrors, tutorials). Different `github:owner/repo/path` ids with identical bytes are one API. We skip inserts when `content_hash` already exists and log `skipped duplicate (same content hash)`.
-
-**Rate limiting on GitHub.** Authenticated requests use a 200ms courtesy delay; anonymous uses 1s. On 403/429 we honor `Retry-After` and `X-RateLimit-Reset`, else exponential backoff (capped). Fetches run sequentially to stay predictable and within quota.
-
-**Stale after N consecutive failures.** A single transient 503 does not mark an entry stale. `retry_count` increments per failed update/crawl fetch; after `STALE_AFTER_RETRIES` (default 3) the entry becomes `stale`. Successful fetches reset the counter and restore `active`.
-
----
-
-## Known tradeoffs
-
-1. **GitHub search is capped** — Code Search returns at most ~30 results per query page and ~1000 total per query. Discovery is useful but not exhaustive; seed repos top up known-good sources.
-2. **Content-hash dedup is byte-exact** — Two semantically identical specs with different YAML formatting remain separate entries.
-3. **No persistent retry state across processes** — `retry_count` lives in `catalog.json`; deleting the catalog resets failure tracking.
-4. **ETag support varies** — `raw.githubusercontent.com` often supports conditional requests, but not every host does; without ETags every update re-downloads full content.
-5. **Shallow path counting** — `paths_count` is top-level path keys, not per-operation counts.
-6. **Default branch only** — Specs on release branches or tags are not discovered unless search happens to index them.
-
----
-
-## Catalog schema
-
-Each entry includes `oas_version`, `content_hash`, `retry_count`, and an append-only `history[]`. See `data/catalog.sample.json` for examples.
-
----
-
-## Environment variables
-
-| Variable | Default | Description |
-|---|---|---|
-| `GITHUB_TOKEN` | _(none)_ | PAT for higher search quota (30 vs 10 req/min) |
-| `MAX_SPECS` | `50` | Max specs ingested per crawl |
-| `MAX_RETRIES` | `3` | HTTP retries per fetch inside `fetcher` |
-| `STALE_AFTER_RETRIES` | `3` | Consecutive failed catalog fetches before `stale` |
-| `POLL_INTERVAL_MS` | `86400000` | Update loop interval when polling |
-| `CATALOG_PATH` | `data/catalog.json` | Catalog file location |
-| `LOG_LEVEL` | `info` | `debug`, `info`, `warn`, `error` |
-| `SEED_REPOS` | _(empty)_ | Comma-separated `owner/repo` fallback list |
-
----
-
-## Testing
-
-```bash
+node dist/index.js crawl
+node dist/index.js watch
 npm test
 ```
 
-Unit tests cover parser, versioner, catalog store, fetcher (mocked axios), GitHub search (mocked API), and updater (mocked fetch + catalog). Target overall coverage is above 70% for `src/**/*.ts` (excluding CLI entry).
+## Architecture
 
----
+The system follows a linear pipeline:
+
+```
+Crawler → Parser → Versioner → Catalog → (Optional) Updater
+```
+
+- **Crawler** (`src/crawler/githubSearch.ts`, `seeds.ts`, `fetcher.ts`): Loads `seeds.json` raw URLs first, then queries GitHub Code Search for `openapi.yaml`, `openapi.json`, `swagger.yaml`, `swagger.json`. Handles pagination, rate limits (2s delay between API calls), and seed-repo bootstrapping.
+
+- **Parser** (`src/parser/specParser.ts`): Parses YAML or JSON, detects OAS 2.x / 3.x, extracts `title`, `version`, `description`, `servers`, `paths_count`, `tags`, `oas_version`.
+
+- **Versioner** (`src/versioner/versioner.ts`): Detects changes via `info.version` and SHA-256 content hash. Maintains append-only `history[]` with `paths_delta`. First ingest keeps `history: []`; updates append history entries.
+
+- **Catalog** (`src/catalog/catalogStore.ts`): Persists entries to `catalog.json` using atomic write (temp file + rename). Indexes by `source_url` for lookups. Content-hash deduplication skips byte-identical specs from different forks.
+
+- **Updater** (`src/updater/updater.ts`): Re-fetch cycle with ETag/Last-Modified, exponential backoff retries, and `stale` status after consecutive failures.
+
+## Design Decisions & Tradeoffs
+
+1. **SHA-256 content hashing** — Catches silent path edits when `info.version` is unchanged. History stores a 16-char hash prefix per task spec; full hash is kept on the entry for dedup.
+
+2. **Atomic catalog writes** — Avoids corrupt `catalog.json` if the process is killed mid-write.
+
+3. **Seed list first** — `seeds.json` raw URLs are processed before GitHub search so the catalog contains high-quality APIs even when search is rate-limited.
+
+4. **Content-hash deduplication** — Same spec vendored across forks becomes one catalog entry (first wins).
+
+5. **Crawl limit** — `MAX_SPECS` caps ingestion per run; logged when reached.
+
+6. **Known tradeoffs**:
+   - GitHub Code Search can return noisy filename matches; we filter to exact canonical filenames.
+   - Rate limiting means a full crawl of 50 specs takes several minutes.
+   - Byte-identical dedup does not merge semantically identical specs with different formatting.
+   - `retry_count` resets only in-catalog; deleting `catalog.json` clears failure state.
 
 ## License
 

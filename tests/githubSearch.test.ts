@@ -1,3 +1,26 @@
+jest.mock("axios");
+jest.mock("../src/config", () => ({
+  config: {
+    githubToken: "test-token",
+    maxSpecs: 80,
+    pollIntervalMs: 86_400_000,
+    pollIntervalHours: 24,
+    maxRetries: 0,
+    staleAfterRetries: 3,
+    catalogPath: "/tmp/catalog.json",
+    seedsPath: "/fake/seeds.json",
+    logLevel: "error",
+    seedRepos: [],
+    githubRequestDelayMs: 0,
+    requestTimeoutMs: 10_000
+  }
+}));
+jest.mock("../src/crawler/seeds", () => ({
+  loadSeedUrls: jest.fn(() => []),
+  seedsToDiscovered: jest.fn(() => []),
+  resolveSeedsPath: jest.fn(() => "/fake/seeds.json")
+}));
+
 import axios from "axios";
 import {
   htmlUrlToRawUrl,
@@ -5,7 +28,6 @@ import {
 } from "../src/crawler/githubSearch";
 import { createLogger } from "../src/logger";
 
-jest.mock("axios");
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("htmlUrlToRawUrl", () => {
@@ -28,11 +50,6 @@ describe("discoverSpecs", () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    jest.useFakeTimers();
-  });
-
-  afterEach(() => {
-    jest.useRealTimers();
   });
 
   it("maps search API items to discovered specs with raw URLs", async () => {
@@ -61,9 +78,7 @@ describe("discoverSpecs", () => {
       throw new Error(`unexpected url ${url}`);
     });
 
-    const promise = discoverSpecs(logger, 1);
-    await jest.runAllTimersAsync();
-    const results = await promise;
+    const results = await discoverSpecs(logger, 4);
 
     expect(results).toHaveLength(1);
     expect(results[0]).toMatchObject({
@@ -75,6 +90,7 @@ describe("discoverSpecs", () => {
       path: "openapi.yaml",
       branch: "main"
     });
+    expect(mockedAxios.get).toHaveBeenCalled();
   });
 
   it("returns empty array when search has no items", async () => {
@@ -82,11 +98,10 @@ describe("discoverSpecs", () => {
       data: { total_count: 0, incomplete_results: false, items: [] }
     });
 
-    const promise = discoverSpecs(logger, 5);
-    await jest.runAllTimersAsync();
-    const results = await promise;
+    const results = await discoverSpecs(logger, 8);
 
     expect(results).toEqual([]);
+    expect(mockedAxios.get).toHaveBeenCalled();
   });
 
   it("handles rate-limit responses without throwing", async () => {
@@ -95,10 +110,32 @@ describe("discoverSpecs", () => {
     });
     mockedAxios.get.mockRejectedValue(rateLimited);
 
-    const promise = discoverSpecs(logger, 1);
-    await jest.runAllTimersAsync();
-    const results = await promise;
+    const results = await discoverSpecs(logger, 4);
 
     expect(results).toEqual([]);
+  });
+
+  it("runs a github search for each canonical filename", async () => {
+    mockedAxios.get.mockResolvedValue({
+      data: { total_count: 0, incomplete_results: false, items: [] }
+    });
+
+    await discoverSpecs(logger, 12);
+
+    const searchCalls = mockedAxios.get.mock.calls.filter((c) =>
+      String(c[0]).includes("/search/code")
+    );
+    expect(searchCalls).toHaveLength(4);
+    const filenames = searchCalls.map(
+      (c) => (c[1] as { params?: { q?: string } })?.params?.q
+    );
+    expect(filenames).toEqual(
+      expect.arrayContaining([
+        "filename:openapi.yaml",
+        "filename:openapi.json",
+        "filename:swagger.yaml",
+        "filename:swagger.json"
+      ])
+    );
   });
 });

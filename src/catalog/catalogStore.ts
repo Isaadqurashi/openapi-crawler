@@ -2,6 +2,7 @@ import * as fs from "fs";
 import * as fsp from "fs/promises";
 import * as path from "path";
 import { config } from "../config";
+import { utcTimestamp } from "../logger";
 import type { HistoryEntry } from "../versioner/versioner";
 
 export type CatalogStatus = "active" | "stale" | "invalid";
@@ -137,6 +138,20 @@ export function findEntry(
   return catalog.find((e) => e.id === id) ?? null;
 }
 
+export function findEntryBySourceUrl(
+  catalog: Catalog,
+  sourceUrl: string
+): CatalogEntry | null {
+  return catalog.find((e) => e.source_url === sourceUrl) ?? null;
+}
+
+/** O(1) lookup map keyed by source_url. */
+export function indexBySourceUrl(catalog: Catalog): Map<string, CatalogEntry> {
+  return new Map(catalog.map((e) => [e.source_url, e]));
+}
+
+export { utcTimestamp };
+
 /**
  * Find a catalog entry with the same content hash. Invalid entries are
  * excluded so a previously-broken spec can be re-ingested under a new id.
@@ -165,7 +180,7 @@ export function applyFetchFailure(
     ...entry,
     retry_count,
     status: retry_count >= staleAfterRetries ? "stale" : entry.status,
-    fetched_at: new Date().toISOString()
+    fetched_at: utcTimestamp()
   };
 }
 
@@ -181,6 +196,6 @@ export function applyFetchSuccess(
     ...overrides,
     retry_count: 0,
     status: "active",
-    fetched_at: overrides.fetched_at ?? new Date().toISOString()
+    fetched_at: overrides.fetched_at ?? utcTimestamp()
   };
 }

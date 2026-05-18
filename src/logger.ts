@@ -9,6 +9,7 @@ const LEVEL_PRIORITY: Record<LogLevel, number> = {
 };
 
 export interface LogContext {
+  event?: string;
   [key: string]: unknown;
 }
 
@@ -21,33 +22,34 @@ export interface Logger {
   child: (extra: LogContext) => Logger;
 }
 
-/**
- * Build a logger that emits one JSON object per line. Every line carries the
- * same `runId` so an entire crawl run can be filtered out of a log stream.
- *
- * We bind level checks to the priority table so a noisy `debug` call costs
- * effectively nothing when LOG_LEVEL=info.
- */
+/** UTC ISO 8601 timestamp ending in `Z`. */
+export function utcTimestamp(date: Date = new Date()): string {
+  return date.toISOString().replace(/\.\d{3}Z$/, "Z");
+}
+
 export function createLogger(initialExtra: LogContext = {}): Logger {
   const runId =
-    (initialExtra.runId as string | undefined) ?? uuidv4();
+    (initialExtra.runId as string | undefined) ?? uuidv4().slice(0, 8);
   const threshold = LEVEL_PRIORITY[config.logLevel];
 
   function emit(level: LogLevel, message: string, extra?: LogContext): void {
     if (LEVEL_PRIORITY[level] < threshold) return;
 
+    const event =
+      extra?.event ?? (initialExtra.event as string | undefined) ?? message;
+
     const line = {
-      runId,
-      level,
+      timestamp: utcTimestamp(),
+      level: level.toUpperCase(),
+      run_id: runId,
+      event,
       message,
-      timestamp: new Date().toISOString(),
       ...initialExtra,
       ...(extra || {})
     };
 
     const serialized = JSON.stringify(line);
     if (level === "error") {
-      // Send errors to stderr so they survive shell redirection of stdout.
       process.stderr.write(serialized + "\n");
     } else {
       process.stdout.write(serialized + "\n");
@@ -66,7 +68,6 @@ export function createLogger(initialExtra: LogContext = {}): Logger {
   return logger;
 }
 
-// Default singleton logger used by modules that don't need a child context.
 export const logger = createLogger();
 
 export default logger;

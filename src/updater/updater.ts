@@ -103,7 +103,9 @@ export async function runUpdateCycle(logger: Logger): Promise<RunSummary> {
         parsed.title || entry.title,
         entry.latest_version,
         parsed.version,
-        diff.pathsDelta
+        diff.pathsDelta,
+        diff.oldPathsCount,
+        parsed.paths_count
       );
       const stdoutLine = formatChangelogStdout(
         parsed.title || entry.title,
@@ -127,9 +129,12 @@ export async function runUpdateCycle(logger: Logger): Promise<RunSummary> {
       });
       current = upsertEntry(current, updated);
       logger.info(changelog, {
-        id: entry.id,
-        changelog,
-        pathsDelta: diff.pathsDelta
+        event: "spec_updated",
+        spec_id: entry.id,
+        old_version: entry.latest_version,
+        new_version: parsed.version,
+        paths_delta: diff.pathsDelta,
+        changelog
       });
     } else {
       summary.unchanged++;

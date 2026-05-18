@@ -7,6 +7,8 @@ import {
   saveCatalog,
   upsertEntry,
   findEntry,
+  findEntryBySourceUrl,
+  indexBySourceUrl,
   findEntryByContentHash,
   applyFetchFailure,
   applyFetchSuccess,
@@ -157,6 +159,24 @@ describe("applyFetchFailure / applyFetchSuccess", () => {
     const healed = applyFetchSuccess(stale);
     expect(healed.retry_count).toBe(0);
     expect(healed.status).toBe("active");
+  });
+});
+
+describe("findEntryBySourceUrl / indexBySourceUrl", () => {
+  it("finds entry by source_url", () => {
+    const entry = makeEntry();
+    expect(findEntryBySourceUrl([entry], entry.source_url)).toEqual(entry);
+  });
+
+  it("builds a source_url index map", () => {
+    const a = makeEntry({ id: "github:a/b/c" });
+    const b = makeEntry({
+      id: "github:x/y/z",
+      source_url: "https://raw.githubusercontent.com/x/y/main/z.yaml"
+    });
+    const map = indexBySourceUrl([a, b]);
+    expect(map.get(a.source_url)?.id).toBe("github:a/b/c");
+    expect(map.get(b.source_url)?.id).toBe("github:x/y/z");
   });
 });
 

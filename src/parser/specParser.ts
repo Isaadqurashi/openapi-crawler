@@ -181,9 +181,12 @@ export function parseSpec(content: string, source?: string): ParsedSpec {
   const paths =
     spec.paths && typeof spec.paths === "object" ? spec.paths : {};
 
+  const title = toStr(info.title);
+  const version = toStr(info.version);
+
   return {
-    title: toStr(info.title),
-    version: toStr(info.version),
+    title: title || "Untitled",
+    version: version || "unknown",
     description: truncate(toStr(info.description), DESCRIPTION_MAX),
     oas_version: oasVersion,
     paths_count: Object.keys(paths).length,

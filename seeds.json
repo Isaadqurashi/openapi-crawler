@@ -1,0 +1,7 @@
+{
+  "seeds": [
+    "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.yaml",
+    "https://raw.githubusercontent.com/twilio/twilio-oai/main/spec/yaml/twilio_api_v2010.yaml",
+    "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json"
+  ]
+}

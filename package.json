@@ -11,6 +11,7 @@
     "crawl": "node dist/index.js crawl",
     "update": "node dist/index.js update",
     "catalog": "node dist/index.js catalog",
+    "watch": "node dist/index.js watch",
     "test": "jest --coverage",
     "clean": "rm -rf dist"
   },

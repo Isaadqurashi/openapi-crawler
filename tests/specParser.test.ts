@@ -176,7 +176,7 @@ paths: {}
       });
       const result = parseSpec(spec);
       expect(result.status).toBe("active");
-      expect(result.version).toBe("");
+      expect(result.version).toBe("unknown");
       expect(result.version).not.toContain("object");
     });
 
