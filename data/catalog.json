@@ -1,1189 +1,2540 @@
-[
-  {
-    "id": "github:APIs-guru/openapi-directory/APIs/ip2location.io/1.0/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/APIs-guru/openapi-directory/f04b8d0bcd39c52e1cf3ad7a5fe744709832ae49/APIs/ip2location.io/1.0/openapi.yaml",
-    "title": "IP2Location.io IP Geolocation API",
-    "oas_version": "3.0.0",
-    "latest_version": "0.0.1",
-    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
-    "paths_count": 1,
-    "tags": [],
-    "servers": [
-      "https://api.ip2location.io"
-    ],
-    "fetched_at": "2026-05-18T01:13:56Z",
-    "status": "active",
-    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
-    "last_modified": null,
-    "content_hash": "fakehash000",
-    "history": [
-      {
-        "version": "1.0",
-        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-        "paths_delta": 1,
-        "recorded_at": "2026-05-15T20:19:04.372Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:Tierion/boltwall/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/Tierion/boltwall/1ef61a13b15e68dabea47123ab7e1e00600594c1/openapi.yaml",
-    "title": "Boltwall API",
-    "oas_version": "3.0.2",
-    "latest_version": "2.0.0-beta-oas3",
-    "description": "API Documentation for Boltwall - A middleware to enable self-sovereign paywalls for the new internet",
-    "paths_count": 4,
-    "tags": [],
-    "servers": [
-      "https://tierion-boltwall.tierion.now.sh/"
-    ],
-    "fetched_at": "2026-05-18T01:11:38Z",
-    "status": "active",
-    "etag": "W/\"d27841d433e87d0743cda7907f8e9bc51654196066503ecf0beafdc160e57487\"",
-    "last_modified": null,
-    "content_hash": "b76134cf9060c44d8e8cb166d5597885db1933c7ca2a31fdfd9f32ce9b763f1f",
-    "history": [
-      {
-        "version": "2.0.0-beta-oas3",
-        "hash": "b76134cf9060c44d8e8cb166d5597885db1933c7ca2a31fdfd9f32ce9b763f1f",
-        "paths_delta": 4,
-        "recorded_at": "2026-05-15T20:19:04.873Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:harshadapr/todo-app/openAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/harshadapr/todo-app/2281a733eba67094bf015cf8612752eeedb8b259/openAPI.yaml",
-    "title": "Todo Application API",
-    "oas_version": "3.0.1",
-    "latest_version": "1.0.0",
-    "description": "A simple Todo application with authentication.",
-    "paths_count": 5,
-    "tags": [],
-    "servers": [
-      "http://localhost:3000"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"471726d875e360fbcc1e6b157acc91ef662d06b3e4ccca36d739e2278d532bfe\"",
-    "last_modified": null,
-    "content_hash": "3d0dc2453d9c60cfab3481e9c9d9d3be11c7acbd84b0deb7a3f5c93914bfc99e",
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "3d0dc2453d9c60cfab3481e9c9d9d3be11c7acbd84b0deb7a3f5c93914bfc99e",
-        "paths_delta": 5,
-        "recorded_at": "2026-05-15T20:19:05.378Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:Kanishk1420/Game-library-service/OpenAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/Kanishk1420/Game-library-service/c5957c30e02a43583674faddf489e4e8f5f0e69f/OpenAPI.yaml",
-    "title": "Video Games API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0.0",
-    "description": "A comprehensive API for video game information, management, and discovery.",
-    "paths_count": 13,
-    "tags": [],
-    "servers": [
-      "http://localhost:5000"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"cff2a4f567aaa3ac3c3c0e9b84519596924d7a653784acc4691cad7ef867c6fb\"",
-    "last_modified": null,
-    "content_hash": "4078c9aaebde507e9f745765e2dad42fb84bf31a46d4044d6738f02a878da303",
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "4078c9aaebde507e9f745765e2dad42fb84bf31a46d4044d6738f02a878da303",
-        "paths_delta": 13,
-        "recorded_at": "2026-05-15T20:19:06.214Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:toheart/goanalysis/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/toheart/goanalysis/cd102da9318f07b67a1f038fe9243ed280e39203/openapi.yaml",
-    "title": "",
-    "oas_version": "3.0.3",
-    "latest_version": "0.0.1",
-    "description": "",
-    "paths_count": 33,
-    "tags": [
-      "Analysis",
-      "FileManager",
-      "StaticAnalysis"
-    ],
-    "servers": [],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"3e436fc9d3b4b434f66cd71082b607a620b9ad147e80dd6212e09b622b1ce3af\"",
-    "last_modified": null,
-    "content_hash": "68730bf11fbb4fe33852fbaed57f684ec84309c01159008e72c81abc2c23ae73",
-    "history": [
-      {
-        "version": "0.0.1",
-        "hash": "68730bf11fbb4fe33852fbaed57f684ec84309c01159008e72c81abc2c23ae73",
-        "paths_delta": 33,
-        "recorded_at": "2026-05-15T20:19:06.948Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:ga4gh/ga4gh-registry/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/ga4gh/ga4gh-registry/5ebc1d0efa9d5b479eb62b372856a426425362b9/openapi.yaml",
-    "title": "GA4GH Planet API",
-    "oas_version": "3.0.3",
-    "latest_version": "0.5.0",
-    "description": "The production API base url is: https://registry.ga4gh.org/v1/\n* https://registry.ga4gh.org/v1/service-info\n* https://registry.ga4gh.org/v1/standards\n* https://registry.ga4gh.org/v1/services\n* https://registry.ga4gh.org/v1/implementations\n* https://registry.ga4gh.org/v1/organizations\n# Introduction\n",
-    "paths_count": 10,
-    "tags": [
-      "Service Info",
-      "Standards",
-      "Services",
-      "Implementations",
-      "Organizations"
-    ],
-    "servers": [
-      "https://registry.ga4gh.org"
-    ],
-    "fetched_at": "2026-05-18T01:11:39Z",
-    "status": "active",
-    "etag": "W/\"763bd7f93daf4feb6e9d94523adb014c82ccca3f64ea74b474c5fbf93f752ab4\"",
-    "last_modified": null,
-    "content_hash": "1e7e8204014b801177bc5b9a03bcbc4eb4ba76b68a0940b3fb53eee411065ef8",
-    "history": [
-      {
-        "version": "0.5.0",
-        "hash": "1e7e8204014b801177bc5b9a03bcbc4eb4ba76b68a0940b3fb53eee411065ef8",
-        "paths_delta": 10,
-        "recorded_at": "2026-05-15T20:19:07.749Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:fabiantax87/technovium-unlimited-api/openAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/fabiantax87/technovium-unlimited-api/fd3ade01820280c027dcc5a0b01fef61004060cb/openAPI.yaml",
-    "title": "Technovium Unlimited API version 1.0.0",
-    "oas_version": "3.0.0",
-    "latest_version": "0.1.0",
-    "description": "TU API version to connect to Unity3D of any other client",
-    "paths_count": 14,
-    "tags": [],
-    "servers": [
-      "http://localhost:5000/api/v1"
-    ],
-    "fetched_at": "2026-05-18T01:11:39Z",
-    "status": "active",
-    "etag": "W/\"51f996cc2e1d47a52f77bb9f119f8f7f1fb0afb78a7483e75bc05ee7565045b7\"",
-    "last_modified": null,
-    "content_hash": "f7f293dd7e8e8825605b82b671c06d410f09e374fb15b451803336d4c67ae983",
-    "history": [
-      {
-        "version": "0.1.0",
-        "hash": "f7f293dd7e8e8825605b82b671c06d410f09e374fb15b451803336d4c67ae983",
-        "paths_delta": 14,
-        "recorded_at": "2026-05-15T20:19:08.197Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:MioraNomenjanahary/openAPI/openAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/MioraNomenjanahary/openAPI/ca6ebe9895666593d1da546590fbac9c2c5a8f68/openAPI.yaml",
-    "title": "Onboarding API",
-    "oas_version": "3.0.3",
-    "latest_version": "1.0.11",
-    "description": "It's my student reference: STD22014",
-    "paths_count": 3,
-    "tags": [],
-    "servers": [
-      "https://STD22014.com"
-    ],
-    "fetched_at": "2026-05-18T01:11:40Z",
-    "status": "active",
-    "etag": "W/\"c0e732bf5d57819b2e023abda791d606ec9661bcb0f600e39e9e58b30942e71f\"",
-    "last_modified": null,
-    "content_hash": "674cdb16b2222f9418b0a6ded6850d316c324a3643ff150481b23bf4642b724e",
-    "history": [
-      {
-        "version": "1.0.11",
-        "hash": "674cdb16b2222f9418b0a6ded6850d316c324a3643ff150481b23bf4642b724e",
-        "paths_delta": 3,
-        "recorded_at": "2026-05-15T20:19:08.642Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:acacoop/vehiculos-backend/openAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/acacoop/vehiculos-backend/f9aacc5d744b3ae59a5c643cf7c850f42d4fe378/openAPI.yaml",
-    "title": "Vehicle Management API",
-    "oas_version": "3.0.3",
-    "latest_version": "2.0.0",
-    "description": "Secure and scalable API for managing users, vehicles, assignments, and maintenance operations.\n\n## Features\n- RESTful endpoints with consistent plural naming\n- Comprehensive error handling\n- Input validation and sanitization\n- Pagination support\n- Security headers and rate limiting\n\n## Authenticatio",
-    "paths_count": 62,
-    "tags": [],
-    "servers": [
-      "http://localhost:3000",
-      "https://app-vehiculos-api-prod.azurewebsites.net",
-      "https://app-vehiculos-api-test.azurewebsites.net"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"c42d91b5308e036041cfaf051201cebd82530c1edb18a271ee278f039322d7be\"",
-    "last_modified": null,
-    "content_hash": "baf337814596ca5ba891932871fc8c44a55427d83ea41b02ab0f27fe9753ea83",
-    "history": [
-      {
-        "version": "2.0.0",
-        "hash": "baf337814596ca5ba891932871fc8c44a55427d83ea41b02ab0f27fe9753ea83",
-        "paths_delta": 62,
-        "recorded_at": "2026-05-15T20:19:09.212Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:hendripermana2021/BE_PSI/OpenAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/hendripermana2021/BE_PSI/d546bb205095b22da245cf1f8df5fad4a1b793b4/OpenAPI.yaml",
-    "title": "MY SWEET SKRIPSI",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0.0",
-    "description": "",
-    "paths_count": 36,
-    "tags": [
-      "For Dashboard",
-      "For Data Province",
-      "For Data Users",
-      "For Data Kriteria and Sub-kriteria",
-      "For Data Requests Proposal",
-      "For Report",
-      "For Calculated"
-    ],
-    "servers": [
-      "http://localhost:8000/v1/api",
-      "https://be-permission.up.railway.app/v1/api"
-    ],
-    "fetched_at": "2026-05-18T01:11:41Z",
-    "status": "active",
-    "etag": "W/\"89bd5676b2ba18a96ee1b2595122a27cf676907ce460f1b82441579633c190b9\"",
-    "last_modified": null,
-    "content_hash": "bf7fa9597f80863f6cfedc42b9576b87a4fba804c4a50bd5e13f58083dba752d",
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "bf7fa9597f80863f6cfedc42b9576b87a4fba804c4a50bd5e13f58083dba752d",
-        "paths_delta": 36,
-        "recorded_at": "2026-05-15T20:19:09.698Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:Monika-dhiman/resilient-message-architecture/openApi.yaml",
-    "source_url": "https://raw.githubusercontent.com/Monika-dhiman/resilient-message-architecture/98a3e909538e3226ec4cdcf4c826b380338c05ef/openApi.yaml",
-    "title": "Sample API",
-    "oas_version": "3.0.3",
-    "latest_version": "1.0.0",
-    "description": "",
-    "paths_count": 8,
-    "tags": [],
-    "servers": [],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"f48922fc0640210bfef8d98dec9e4bf1fb264d3546c7aa9b4779d605b52bcb85\"",
-    "last_modified": null,
-    "content_hash": "0208863ac286c1f93e09d8bff9733f6aace9a58e8e6ff3a0951d4179361ad06d",
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "0208863ac286c1f93e09d8bff9733f6aace9a58e8e6ff3a0951d4179361ad06d",
-        "paths_delta": 8,
-        "recorded_at": "2026-05-15T20:19:10.190Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:link-it/govway/resources/openapi/3.0/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/link-it/govway/1052320ddae245109874cc3f014fa075ba4e9bc7/resources/openapi/3.0/openapi.yaml",
-    "title": "Swagger Petstore - OpenAPI 3.0",
-    "oas_version": "3.0.3",
-    "latest_version": "1.0.11",
-    "description": "This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\nYou can now help us improve the API whether it's by making",
-    "paths_count": 13,
-    "tags": [
-      "pet",
-      "store",
-      "user"
-    ],
-    "servers": [
-      "https://petstore3.swagger.io/api/v3"
-    ],
-    "fetched_at": "2026-05-18T01:11:41Z",
-    "status": "active",
-    "etag": "W/\"914769821d02175903badfac8c20742bcfbd0f1ec45fe7a92096dc3a56acfc68\"",
-    "last_modified": null,
-    "content_hash": "850aef3ee4df1c02ae24eb45b7051a8cecc31c2f87b749dab3fda637ef930c1d",
-    "history": [
-      {
-        "version": "1.0.11",
-        "hash": "850aef3ee4df1c02ae24eb45b7051a8cecc31c2f87b749dab3fda637ef930c1d",
-        "paths_delta": 13,
-        "recorded_at": "2026-05-15T20:19:10.709Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:codingsoo/nlp2rest/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/codingsoo/nlp2rest/ae3783b7e4475947bd27511ca4dadc4a273d046c/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
-    "title": "IP2Location.io IP Geolocation API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0",
-    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
-    "paths_count": 1,
-    "tags": [],
-    "servers": [
-      "https://api.ip2location.io"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
-    "last_modified": null,
-    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-    "history": [
-      {
-        "version": "1.0",
-        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-        "paths_delta": 1,
-        "recorded_at": "2026-05-15T20:19:11.216Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:LoriMarshall/openapidir/APIs/ip2location.io/1.0/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/LoriMarshall/openapidir/433a94f3e9e268f2b000b0b497785ede34332a7f/APIs/ip2location.io/1.0/openapi.yaml",
-    "title": "IP2Location.io IP Geolocation API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0",
-    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
-    "paths_count": 1,
-    "tags": [],
-    "servers": [
-      "https://api.ip2location.io"
-    ],
-    "fetched_at": "2026-05-18T01:11:42Z",
-    "status": "active",
-    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
-    "last_modified": null,
-    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-    "history": [
-      {
-        "version": "1.0",
-        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-        "paths_delta": 1,
-        "recorded_at": "2026-05-15T20:19:11.675Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:vinit-agr/vinit-website/public/APIs/ip2location.io/1.0/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/vinit-agr/vinit-website/a0bc9f6a5692ce38dadefb859fad52f963df7298/public/APIs/ip2location.io/1.0/openapi.yaml",
-    "title": "IP2Location.io IP Geolocation API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0",
-    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
-    "paths_count": 1,
-    "tags": [],
-    "servers": [
-      "https://api.ip2location.io"
-    ],
-    "fetched_at": "2026-05-18T01:11:42Z",
-    "status": "active",
-    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
-    "last_modified": null,
-    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-    "history": [
-      {
-        "version": "1.0",
-        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-        "paths_delta": 1,
-        "recorded_at": "2026-05-15T20:19:12.137Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:adityaghatge/nlp2rest/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/adityaghatge/nlp2rest/23fc8dc5e37f7ef1681c135abfba30e6cfad2a91/rule_extractor/APIs-guru/specifications/ip2location.io/1.0/openapi.yaml",
-    "title": "IP2Location.io IP Geolocation API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0",
-    "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type",
-    "paths_count": 1,
-    "tags": [],
-    "servers": [
-      "https://api.ip2location.io"
-    ],
-    "fetched_at": "2026-05-18T01:11:43Z",
-    "status": "active",
-    "etag": "W/\"3870d7b54ae8dcd7d580a1d42b06704cf05c9e4d5bf7413e7eacf377f568b9dd\"",
-    "last_modified": null,
-    "content_hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-    "history": [
-      {
-        "version": "1.0",
-        "hash": "678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
-        "paths_delta": 1,
-        "recorded_at": "2026-05-15T20:19:12.651Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:tobi-bams/boltwall-cln-support/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/tobi-bams/boltwall-cln-support/cfc66e95db7dbbc4ec667b3244139e94acd7460e/openapi.yaml",
-    "title": "Boltwall API",
-    "oas_version": "3.0.2",
-    "latest_version": "2.0.0-beta-oas3",
-    "description": "API Documentation for Boltwall - A middleware to enable self-sovereign paywalls for the new internet",
-    "paths_count": 4,
-    "tags": [],
-    "servers": [
-      "https://tierion-boltwall.tierion.now.sh/"
-    ],
-    "fetched_at": "2026-05-18T01:11:43Z",
-    "status": "active",
-    "etag": "W/\"d27841d433e87d0743cda7907f8e9bc51654196066503ecf0beafdc160e57487\"",
-    "last_modified": null,
-    "content_hash": "b76134cf9060c44d8e8cb166d5597885db1933c7ca2a31fdfd9f32ce9b763f1f",
-    "history": [
-      {
-        "version": "2.0.0-beta-oas3",
-        "hash": "b76134cf9060c44d8e8cb166d5597885db1933c7ca2a31fdfd9f32ce9b763f1f",
-        "paths_delta": 4,
-        "recorded_at": "2026-05-15T20:19:13.176Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:harshadapr/todo-app-fullstack/openAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/harshadapr/todo-app-fullstack/1c8a0563b113e4e57e9c4f811409314f3c4dd5a8/openAPI.yaml",
-    "title": "Todo Application API",
-    "oas_version": "3.0.1",
-    "latest_version": "1.0.0",
-    "description": "A simple Todo application with authentication.",
-    "paths_count": 5,
-    "tags": [],
-    "servers": [
-      "http://localhost:3000"
-    ],
-    "fetched_at": "2026-05-18T01:11:43Z",
-    "status": "active",
-    "etag": "W/\"471726d875e360fbcc1e6b157acc91ef662d06b3e4ccca36d739e2278d532bfe\"",
-    "last_modified": null,
-    "content_hash": "3d0dc2453d9c60cfab3481e9c9d9d3be11c7acbd84b0deb7a3f5c93914bfc99e",
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "3d0dc2453d9c60cfab3481e9c9d9d3be11c7acbd84b0deb7a3f5c93914bfc99e",
-        "paths_delta": 5,
-        "recorded_at": "2026-05-15T20:19:13.674Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:jukasdrj/swiftwing/swiftwing/Generated/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/jukasdrj/swiftwing/f79ddd2a1f32449d0e7a28dff84faad405e32d3e/swiftwing/Generated/openapi.yaml",
-    "title": "Talaria V3 API",
-    "oas_version": "3.0.3",
-    "latest_version": "3.7.0",
-    "description": "High-speed bookshelf scanning API with Gemini Vision",
-    "paths_count": 9,
-    "tags": [
-      "Scans",
-      "Books",
-      "Admin"
-    ],
-    "servers": [
-      "https://api.oooefam.net",
-      "http://localhost:8787"
-    ],
-    "fetched_at": "2026-05-18T01:11:44Z",
-    "status": "active",
-    "etag": "W/\"853f3ca3a421b38a9365b95ffde8ec5309af6d709340fbfd3e2c4e31018a62e1\"",
-    "last_modified": null,
-    "content_hash": "d4035cbe0386cab53154e801ba4dd4f9ff4fb7392d659bde5ccaf0e4022260c4",
-    "history": [
-      {
-        "version": "3.7.0",
-        "hash": "d4035cbe0386cab53154e801ba4dd4f9ff4fb7392d659bde5ccaf0e4022260c4",
-        "paths_delta": 9,
-        "recorded_at": "2026-05-15T20:19:14.407Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:KOBI12345678910/KOBI-EL-System-2026/GPS-Connect/lib/api-spec/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/KOBI12345678910/KOBI-EL-System-2026/d3e0080da018f2b10330682b7d5919137c93b728/GPS-Connect/lib/api-spec/openapi.yaml",
-    "title": "Api",
-    "oas_version": "3.1.0",
-    "latest_version": "0.1.0",
-    "description": "API specification",
-    "paths_count": 9,
-    "tags": [
-      "health",
-      "locations",
-      "savedPlaces"
-    ],
-    "servers": [
-      "/api"
-    ],
-    "fetched_at": "2026-05-18T01:11:44Z",
-    "status": "active",
-    "etag": "W/\"0f402000118b9ceb00bf6223c985bd12557234dd67a54026d27fb22e9db0a854\"",
-    "last_modified": null,
-    "content_hash": "85388080c2070c12e10c55647c6a1360ef2464981a8c1925fed968d8f7dad195",
-    "history": [
-      {
-        "version": "0.1.0",
-        "hash": "85388080c2070c12e10c55647c6a1360ef2464981a8c1925fed968d8f7dad195",
-        "paths_delta": 9,
-        "recorded_at": "2026-05-15T20:19:14.902Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:Hendri-Welpie/store-main/OpenAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/Hendri-Welpie/store-main/7e75fd4d93d687fc715888290d018b55cba2ecf0/OpenAPI.yaml",
-    "title": "Store API",
-    "oas_version": "3.0.3",
-    "latest_version": "1.0.0",
-    "description": "REST API for managing customers, orders, and products.\n\n## Pagination\nAll collection endpoints accept `page` (0-based index) and `size` query parameters.\n\n## Error responses\nEvery 4xx / 5xx response returns an `ErrorResponse` object with a consistent structure.\n\n## Tracing\nEvery response includes an",
-    "paths_count": 6,
-    "tags": [
-      "Orders",
-      "Customers",
-      "Products"
-    ],
-    "servers": [
-      "http://localhost:8080",
-      "http://localhost:8080"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"ec082399bf124d3f908a20c992b38790626074b127c5ef1fb83f065c9d5697d6\"",
-    "last_modified": null,
-    "content_hash": "9f7e30f6fe1561aa137e8d5f251bb33a07fb4ae24ebb90489d8ede2a74ae7409",
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "9f7e30f6fe1561aa137e8d5f251bb33a07fb4ae24ebb90489d8ede2a74ae7409",
-        "paths_delta": 6,
-        "recorded_at": "2026-05-16T10:33:27.118Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:Mtynan/Thunderwings/OpenAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/Mtynan/Thunderwings/ad9fb54b64658c56db626bbef535e6805b1d92d1/OpenAPI.yaml",
-    "title": "Thunderwings API",
-    "oas_version": "3.0.1",
-    "latest_version": "v1",
-    "description": "Allows for filtering of Military Jets. Basket process for creating a basket, adding or removing items from the basket. Checkout Process.",
-    "paths_count": 6,
-    "tags": [],
-    "servers": [],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"fd6af6cc0aab0ce465848b6b1d83d42ad19f4edaed2a209d4e9b7b0f3df49764\"",
-    "last_modified": null,
-    "content_hash": "595873f1778cc93f585d8987a9364ae3d54e6a76477d4f098f2a48a55f46838a",
-    "history": [
-      {
-        "version": "v1",
-        "hash": "595873f1778cc93f585d8987a9364ae3d54e6a76477d4f098f2a48a55f46838a",
-        "paths_delta": 6,
-        "recorded_at": "2026-05-16T10:33:27.536Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:bitNathan/ECE46100-phase-2/OpenAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/bitNathan/ECE46100-phase-2/8ca1d64c044962dafffa0253c6a00042f892348d/OpenAPI.yaml",
-    "title": "ECE 461 - Fall 2024 - Project Phase 2",
-    "oas_version": "3.1.2",
-    "latest_version": "2.0.0",
-    "description": "API for ECE 461/Fall 2024/Project Phase 2: A Trustworthy Module Registry\n\nThis spec ONLY covers endpoints that will be targeted by the autograder, and thus expect a consistent format.\n\nThis means that just the baseline requirements are covered by this spec, along with /recommend for the ML track.",
-    "paths_count": 7,
-    "tags": [],
-    "servers": [],
-    "fetched_at": "2026-05-18T01:11:45Z",
-    "status": "active",
-    "etag": "W/\"ebed8b23b86f3ca9e384db1a9723b6e2c4c62c40a57073e11dfa3cb0375f298a\"",
-    "last_modified": null,
-    "content_hash": "214b285dadb8635e11cf152743017c338bc5911c93c84ee800e31c49d40619cf",
-    "history": [
-      {
-        "version": "2.0.0",
-        "hash": "214b285dadb8635e11cf152743017c338bc5911c93c84ee800e31c49d40619cf",
-        "paths_delta": 7,
-        "recorded_at": "2026-05-16T10:33:28.386Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:5GZORRO/slice-manager/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/5GZORRO/slice-manager/8c4758e4325ece7977b2d76ca5fbc4a1ad7d09e0/openapi.yaml",
-    "title": "Slice Manager API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0",
-    "description": "This API provides interaction between the 5GZORRO platform and the Slice Manager.",
-    "paths_count": 54,
-    "tags": [
-      "User",
-      "Edge/Cloud Compute Resource",
-      "Edge/Cloud Network Resource",
-      "Radio Access Network Resource",
-      "Resource Telemetry",
-      "Edge/Cloud Compute Chunk",
-      "Edge/Cloud Network Chunk",
-      "Radio Access Network Chunk",
-      "Network Slice (collection of chunks)",
-      "Radio Service",
-      "Generic Network Slice Template (GST)",
-      "Network Slice Type (NEST)",
-      "Network Slice Instance (NEST-based)",
-      "Network Service",
-      "Application Instance"
-    ],
-    "servers": [
-      "/api/v1.0"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"a6cbb5aa12cc78e60940f194ce5b6d35c5fdaae23e75fb70ef27ba2b35d0d6ba\"",
-    "last_modified": null,
-    "content_hash": "41071536e88eb78a08418eef73cc6b2bfe44dc71ac161c23f3cfa84fd7ab96b5",
-    "history": [
-      {
-        "version": "1.0",
-        "hash": "41071536e88eb78a08418eef73cc6b2bfe44dc71ac161c23f3cfa84fd7ab96b5",
-        "paths_delta": 54,
-        "recorded_at": "2026-05-16T10:33:28.827Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:zaproxy/zap-api-docs/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/zaproxy/zap-api-docs/8d96ac52aa84d374ad97af034758cfe7e3010bcf/openapi.yaml",
-    "title": "ZAP API",
-    "oas_version": "3.0.3",
-    "latest_version": "2.16.1",
-    "description": "The HTTP API for controlling and accessing ZAP.",
-    "paths_count": 735,
-    "tags": [],
-    "servers": [
-      "http://zap",
-      "http://{address}:{port}"
-    ],
-    "fetched_at": "2026-05-18T01:11:46Z",
-    "status": "active",
-    "etag": "W/\"d6581d62d03a1049e48f34edda1ac7bd7810994896692a21003e0f3b6b8212b0\"",
-    "last_modified": null,
-    "content_hash": "bbb71f68ed4c7f01466bd8c9c94adbb63b57f0ceb666835b77d3dd0fe54fb087",
-    "history": [
-      {
-        "version": "2.16.1",
-        "hash": "bbb71f68ed4c7f01466bd8c9c94adbb63b57f0ceb666835b77d3dd0fe54fb087",
-        "paths_delta": 735,
-        "recorded_at": "2026-05-16T10:33:30.196Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:Central-University-IT-prod/2025-final-command-team-35-Solution/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/Central-University-IT-prod/2025-final-command-team-35-Solution/10813206c6ee627644032d2048e2fb3b60a661f4/openapi.yaml",
-    "title": "User and Mentor Management API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0.0",
-    "description": "API for managing users, mentors, offers, and authentication",
-    "paths_count": 20,
-    "tags": [],
-    "servers": [
-      "https://prod-team-35-lg7sic6v.REDACTED/api"
-    ],
-    "fetched_at": "2026-05-18T01:11:46Z",
-    "status": "active",
-    "etag": "W/\"c3760a897f9545001caf67ce283dc5695f4bd049d407b0a0b6900c421b764598\"",
-    "last_modified": null,
-    "content_hash": "b374e331f5a60517da4dbc248f6933a1d1425ff9afd480277419b4d2c731400b",
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "b374e331f5a60517da4dbc248f6933a1d1425ff9afd480277419b4d2c731400b",
-        "paths_delta": 20,
-        "recorded_at": "2026-05-16T10:33:31.502Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:filipkowal/memberApp/openApi.yaml",
-    "source_url": "https://raw.githubusercontent.com/filipkowal/memberApp/701a988239dd80e87351a197fe88cb45c5b1d3db/openApi.yaml",
-    "title": "memberApp",
-    "oas_version": "3.0.2",
-    "latest_version": "1.0",
-    "description": "",
-    "paths_count": 7,
-    "tags": [],
-    "servers": [
-      "https://merge.digitalent.cloud/api/memberApp",
-      "https://virtserver.swaggerhub.com/filipkowal/memberApp/1.0"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"f5dcfc95589c24453e7a93155bc94091647b5404f30c0550c4d36e3af5662a76\"",
-    "last_modified": null,
-    "content_hash": "a7836ebc8712abb3222be26d5572abfef5217f0a6b00c12f41aff112d085a8a0",
-    "history": [
-      {
-        "version": "1.0",
-        "hash": "a7836ebc8712abb3222be26d5572abfef5217f0a6b00c12f41aff112d085a8a0",
-        "paths_delta": 7,
-        "recorded_at": "2026-05-16T10:33:31.947Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:KEEEENNNNYYYY/Formats-de-donn-es-textuels/template openAPI/openAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/KEEEENNNNYYYY/Formats-de-donn-es-textuels/7c9d9f103202f48bc2554856d84f0abf2f60ac15/template%20openAPI/openAPI.yaml",
-    "title": "STD23006 - TD1",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0.0",
-    "description": "",
-    "paths_count": 1,
-    "tags": [],
-    "servers": [
-      "https://localhost.STD23006.com"
-    ],
-    "fetched_at": "2026-05-18T01:11:47Z",
-    "status": "active",
-    "etag": "W/\"ba4f0e408c2ea9f0e71e7fc3df0df27fafc4a2fe309d3a44dc3126c5763df4f4\"",
-    "last_modified": null,
-    "content_hash": "2d18657da1bfc981bb98de158a6b8d1fbfb42f55ac208ca4099fa6e19d05c7f9",
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "2d18657da1bfc981bb98de158a6b8d1fbfb42f55ac208ca4099fa6e19d05c7f9",
-        "paths_delta": 1,
-        "recorded_at": "2026-05-16T10:33:32.849Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:splunk/splunk-cloud-sdk-python/splunk_sdk/action/v2alpha1/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/splunk/splunk-cloud-sdk-python/d8b72e17c2fcefd7e82716dfb61f9eb60799a74f/splunk_sdk/action/v2alpha1/openapi.yaml",
-    "title": "Action Service",
-    "oas_version": "3.0.0",
-    "latest_version": "v2alpha1.12",
-    "description": "With the Splunk Cloud Action service, you can receive incoming trigger events and use pre-defined action templates to turn these events into meaningful actions.",
-    "paths_count": 3,
-    "tags": [],
-    "servers": [],
-    "fetched_at": "2026-05-18T01:11:47Z",
-    "status": "active",
-    "etag": "W/\"55368a0d23938b1729076ac2014d555e33d78ed4d05aa861be6065d7ed0f6b23\"",
-    "last_modified": null,
-    "content_hash": "b11eb1f01d0f280c47e60c101120c4aad43061a9fd6a46cf9d11fb5676357066",
-    "history": [
-      {
-        "version": "v2alpha1.12",
-        "hash": "b11eb1f01d0f280c47e60c101120c4aad43061a9fd6a46cf9d11fb5676357066",
-        "paths_delta": 3,
-        "recorded_at": "2026-05-16T10:33:33.290Z"
-      }
-    ],
-    "retry_count": 0
-  },
-  {
-    "id": "github:logos-storage/logos-storage-nim/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/logos-storage/logos-storage-nim/1218a7edbebbccb6f0358b423944b0f6ada71f82/openapi.yaml",
-    "title": "Logos Storage API",
-    "oas_version": "3.0.3",
-    "latest_version": "0.0.1",
-    "description": "List of endpoints and interfaces available to Logos Storage API users",
-    "paths_count": 12,
-    "tags": [
-      "Data",
-      "Node",
-      "Debug"
-    ],
-    "servers": [
-      "http://localhost:8080/api/storage/v1"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"aa2aca8a766eea88128248749b00cd74292cf656be1462317c7940286d63418b\"",
-    "last_modified": null,
-    "content_hash": "93e6166489bc4d73667eb4d97d14a2722801b6f7275fee90c3b0ce0f6055c1be",
-    "retry_count": 0,
-    "history": [
-      {
-        "version": "0.0.1",
-        "hash": "93e6166489bc4d73667eb4d97d14a2722801b6f7275fee90c3b0ce0f6055c1be",
-        "paths_delta": 12,
-        "recorded_at": "2026-05-18T00:55:31.467Z"
-      }
-    ]
-  },
-  {
-    "id": "github:Sjrobles/Barter/openAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/Sjrobles/Barter/8ea5b4b56c2518145d84a0307d973effd4a08ca2/openAPI.yaml",
-    "title": "Barter API",
-    "oas_version": "3.0.3",
-    "latest_version": "1.0.0",
-    "description": "API para un sistema de trueques que permite a los usuarios registrar, explorar, negociar y cerrar intercambios de productos o servicios.",
-    "paths_count": 9,
-    "tags": [],
-    "servers": [
-      "http://localhost:3000/api",
-      "https://api.barter.com"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"58ae9e19ecc00a6d1f77f27967b77d473717a47cce1e5107993284b90ecfe239\"",
-    "last_modified": null,
-    "content_hash": "ce97c16a4fd2d24c62b8b74bb3bf69cf4866c6a5bb886f404bf98d42e35790cf",
-    "retry_count": 0,
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "ce97c16a4fd2d24c62b8b74bb3bf69cf4866c6a5bb886f404bf98d42e35790cf",
-        "paths_delta": 9,
-        "recorded_at": "2026-05-18T00:55:34.372Z"
-      }
-    ]
-  },
-  {
-    "id": "github:EarthyGem/astrologicAPI/openAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/EarthyGem/astrologicAPI/fe6ec9353558d840035785ad6c7a4b67ec5660c3/openAPI.yaml",
-    "title": "Astrology API",
-    "oas_version": "3.1.0",
-    "latest_version": "1.0.0",
-    "description": "API for fetching astrological data such as planetary positions, power scores, and nodal details.",
-    "paths_count": 3,
-    "tags": [],
-    "servers": [
-      "https://lilaastrology.com"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"de9495c4cc86c6d509408ec832e90ae8dcefd03ef703f44c05727507b13c5227\"",
-    "last_modified": null,
-    "content_hash": "a8d0c7f0aa29ed251757ae78958bb43c880ff25dc8682cbec1a2a2869d3cb640",
-    "retry_count": 0,
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "a8d0c7f0aa29ed251757ae78958bb43c880ff25dc8682cbec1a2a2869d3cb640",
-        "paths_delta": 3,
-        "recorded_at": "2026-05-18T00:55:35.304Z"
-      }
-    ]
-  },
-  {
-    "id": "github:obeone/firecrawl-ui/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/obeone/firecrawl-ui/eac8262cfe3f82e4a8b284baf9cca5e8af0ef77a/openapi.yaml",
-    "title": "Firecrawl API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0.0",
-    "description": "API for interacting with Firecrawl services to perform web scraping and crawling tasks.",
-    "paths_count": 18,
-    "tags": [],
-    "servers": [
-      "https://api.firecrawl.dev/v1"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"f0a40ff6c0f51cfff2ac1665f38d97e1a22eeaa4b5fd2ee4f3c88b6b8a67d90d\"",
-    "last_modified": null,
-    "content_hash": "5992101a9e4c5893e3536a10bde2e79700ef75535d5364c82289b20b4b62cc37",
-    "retry_count": 0,
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "5992101a9e4c5893e3536a10bde2e79700ef75535d5364c82289b20b4b62cc37",
-        "paths_delta": 18,
-        "recorded_at": "2026-05-18T00:55:36.629Z"
-      }
-    ]
-  },
-  {
-    "id": "github:ray-sachin/vehicle-parking-app-v2/OPENAPI.yaml",
-    "source_url": "https://raw.githubusercontent.com/ray-sachin/vehicle-parking-app-v2/7f682c483aa02b8242ac142b982d91c49a7a8eb4/OPENAPI.yaml",
-    "title": "Vehicle Parking API",
-    "oas_version": "3.0.0",
-    "latest_version": "1.0.0",
-    "description": "API for Vehicle Parking Management System V2",
-    "paths_count": 23,
-    "tags": [],
-    "servers": [
-      "http://localhost:5000/api"
-    ],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"51cefcab3455e9f0c933610bb1c0a81c9554c3aea3b8c5c1ff4ff346792bd558\"",
-    "last_modified": null,
-    "content_hash": "6f05dbc910da648bc1b015f845c08bcc0ebe47373ef9addac41a16b63741d46b",
-    "retry_count": 0,
-    "history": [
-      {
-        "version": "1.0.0",
-        "hash": "6f05dbc910da648bc1b015f845c08bcc0ebe47373ef9addac41a16b63741d46b",
-        "paths_delta": 23,
-        "recorded_at": "2026-05-18T00:55:37.064Z"
-      }
-    ]
-  },
-  {
-    "id": "github:vooon/esp-ota-server/openapi.yaml",
-    "source_url": "https://raw.githubusercontent.com/vooon/esp-ota-server/017026dea8d8cc4f5eeb3c55cb0083fce3ae7506/openapi.yaml",
-    "title": "",
-    "oas_version": "",
-    "latest_version": "",
-    "description": "",
-    "paths_count": 0,
-    "tags": [],
-    "servers": [],
-    "fetched_at": "2026-05-18T01:13:57Z",
-    "status": "active",
-    "etag": "W/\"cd17889b7e5e6f5236c1bad9d7136e997aebed57c980327e0c5d6a2b8ae2630f\"",
-    "last_modified": null,
-    "content_hash": "06a17c59edb5ef06d9c0d63ab6317225924cc776fa37bfe3a069dbe74f0ff9e6",
-    "retry_count": 0,
-    "history": []
-  },
-  {
-    "id": "github:stripe/openapi/openapi/spec3.yaml",
-    "source_url": "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.yaml",
-    "title": "Stripe API",
-    "oas_version": "3.0.0",
-    "latest_version": "2026-04-22.dahlia",
-    "description": "The Stripe REST API. Please see https://stripe.com/docs/api for more details.",
-    "paths_count": 414,
-    "tags": [],
-    "servers": [
-      "https://api.stripe.com/"
-    ],
-    "fetched_at": "2026-05-18T01:13:55Z",
-    "status": "active",
-    "etag": "W/\"55219618b41594570c0300eb785a58903fb5475ad4a607e0f77d0eaca492a346\"",
-    "last_modified": null,
-    "content_hash": "4d801316f5789bc0ad4bb0f4dccfe9d672e011cf44aa888a60a285b90fd96c76",
-    "retry_count": 0,
-    "history": []
-  },
-  {
-    "id": "github:twilio/twilio-oai/spec/yaml/twilio_api_v2010.yaml",
-    "source_url": "https://raw.githubusercontent.com/twilio/twilio-oai/main/spec/yaml/twilio_api_v2010.yaml",
-    "title": "Twilio - Api",
-    "oas_version": "3.0.1",
-    "latest_version": "1.0.0",
-    "description": "This is the public Twilio REST API.",
-    "paths_count": 121,
-    "tags": [
-      "Api20100401Account",
-      "Api20100401AddOnResult",
-      "Api20100401Address",
-      "Api20100401AllTime",
-      "Api20100401Application",
-      "Api20100401AssignedAddOn",
-      "Api20100401AssignedAddOnExtension",
-      "Api20100401AuthCallsCredentialListMapping",
-      "Api20100401AuthCallsIpAccessControlListMapping",
-      "Api20100401AuthRegistrationsCredentialListMapping",
-      "Api20100401AuthorizedConnectApp",
-      "Api20100401AvailablePhoneNumberCountry",
-      "Api20100401AvailablePhoneNumberTypeParameterized",
-      "Api20100401Balance",
-      "Api20100401Call",
-      "Api20100401CallNotification",
-      "Api20100401CallRecording",
-      "Api20100401CallTranscription",
-      "Api20100401Conference",
-      "Api20100401ConferenceRecording",
-      "Api20100401ConnectApp",
-      "Api20100401Credential",
-      "Api20100401CredentialList",
-      "Api20100401CredentialListMapping",
-      "Api20100401Daily",
-      "Api20100401Data",
-      "Api20100401DependentPhoneNumber",
-      "Api20100401Domain",
-      "Api20100401Event",
-      "Api20100401Feedback",
-      "Api20100401HealthCheck",
-      "Api20100401IncomingPhoneNumber",
-      "Api20100401IncomingPhoneNumberLocal",
-      "Api20100401IncomingPhoneNumberMobile",
-      "Api20100401IncomingPhoneNumberTollFree",
-      "Api20100401IndexNode",
-      "Api20100401IpAccessControlList",
-      "Api20100401IpAccessControlListMapping",
-      "Api20100401IpAddress",
-      "Api20100401Key",
-      "Api20100401LastMonth",
-      "Api20100401Local",
-      "Api20100401MachineToMachine",
-      "Api20100401Media",
-      "Api20100401MediaInstance",
-      "Api20100401Member",
-      "Api20100401Message",
-      "Api20100401Mobile",
-      "Api20100401Monthly",
-      "Api20100401National",
-      "Api20100401NewKey",
-      "Api20100401NewSigningKey",
-      "Api20100401Notification",
-      "Api20100401OutgoingCallerId",
-      "Api20100401Participant",
-      "Api20100401Payload",
-      "Api20100401Payment",
-      "Api20100401Queue",
-      "Api20100401Record",
-      "Api20100401Recording",
-      "Api20100401RecordingTranscription",
-      "Api20100401Region",
-      "Api20100401SharedCost",
-      "Api20100401ShortCode",
-      "Api20100401SigningKey",
-      "Api20100401Sip",
-      "Api20100401SipIpAddress",
-      "Api20100401Siprec",
-      "Api20100401Sms",
-      "Api20100401SmsFeedback",
-      "Api20100401SmsMessage",
-      "Api20100401Stream",
-      "Api20100401ThisMonth",
-      "Api20100401Today",
-      "Api20100401Token",
-      "Api20100401TollFree",
-      "Api20100401Transcription",
-      "Api20100401Trigger",
-      "Api20100401TwimlSession",
-      "Api20100401Usage",
-      "Api20100401UsageRecordTimeParameterized",
-      "Api20100401UserDefinedMessage",
-      "Api20100401UserDefinedMessageSubscription",
-      "Api20100401ValidationRequest",
-      "Api20100401VersionNode",
-      "Api20100401Voip",
-      "Api20100401Yearly",
-      "Api20100401Yesterday"
-    ],
-    "servers": [
-      "https://api.twilio.com"
-    ],
-    "fetched_at": "2026-05-18T01:13:56Z",
-    "status": "active",
-    "etag": "W/\"76391fc30733fb2d12e68f7bfb2208b25803c2e4f315ce06fe6c78a045e7a66b\"",
-    "last_modified": null,
-    "content_hash": "768720d76b47f1b75896c8fe092fac59b886bd3370278b27b6962b83cacae12e",
-    "retry_count": 0,
-    "history": []
-  },
-  {
-    "id": "github:github/rest-api-description/descriptions/api.github.com/api.github.com.json",
-    "source_url": "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json",
-    "title": "GitHub v3 REST API",
-    "oas_version": "3.0.3",
-    "latest_version": "1.1.4",
-    "description": "GitHub's v3 REST API.",
-    "paths_count": 783,
-    "tags": [
-      "actions",
-      "activity",
-      "apps",
-      "billing",
-      "checks",
-      "code-scanning",
-      "codes-of-conduct",
-      "emojis",
-      "dependabot",
-      "dependency-graph",
-      "gists",
-      "git",
-      "gitignore",
-      "issues",
-      "licenses",
-      "markdown",
-      "merge-queue",
-      "meta",
-      "migrations",
-      "oidc",
-      "orgs",
-      "packages",
-      "pulls",
-      "rate-limit",
-      "reactions",
-      "repos",
-      "search",
-      "secret-scanning",
-      "teams",
-      "users",
-      "code-quality",
-      "codespaces",
-      "copilot",
-      "copilot-spaces",
-      "security-advisories",
-      "interactions",
-      "classroom",
-      "desktop",
-      "enterprise-teams",
-      "enterprise-team-memberships",
-      "enterprise-team-organizations",
-      "code-security",
-      "private-registries",
-      "hosted-compute",
-      "credentials",
-      "campaigns",
-      "projects",
-      "agent-tasks",
-      "agents"
-    ],
-    "servers": [
-      "https://api.github.com"
-    ],
-    "fetched_at": "2026-05-18T01:13:56Z",
-    "status": "active",
-    "etag": "W/\"83c8ba411f3cbb0863c736a03ab73600d5854a17bcd4c9c0a7e3637a13391f95\"",
-    "last_modified": null,
-    "content_hash": "0d106d91bafdcbdfe0ad0b4e39c2b3da605183b04fbce19eb7cd3ea2edf187eb",
-    "retry_count": 0,
-    "history": []
-  }
-]
+{
+  "generated_at": "2026-05-18T20:31:59.555805+00:00",
+  "count": 54,
+  "entries": [
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/1forge.com/0.0.1/swagger.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/1forge.com/0.0.1/swagger.yaml",
+      "title": "1Forge Finance APIs",
+      "oas_version": "2.0",
+      "latest_version": "0.0.1",
+      "paths_count": 2,
+      "fetched_at": "2026-05-18T20:31:43.242796+00:00",
+      "status": "active",
+      "description": "Stock and Forex Data and Realtime Quotes",
+      "servers": [
+        "https://1forge.com/forex-quotes",
+        "http://1forge.com/forex-quotes"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "0.0.1",
+          "hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "paths_count": 2,
+          "paths_delta": {
+            "added": [
+              "/quotes",
+              "/symbols"
+            ],
+            "removed": [],
+            "net": 2
+          },
+          "fetched_at": "2026-05-18T18:40:25.483643+00:00"
+        },
+        {
+          "version": "0.0.1",
+          "hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "paths_count": 2,
+          "paths_delta": {
+            "added": [],
+            "removed": [],
+            "net": 0
+          },
+          "fetched_at": "2026-05-18T18:41:37.015402+00:00",
+          "hash_changed": true,
+          "version_changed": false
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/1password.com/events/1.2.0/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/1password.com/events/1.2.0/openapi.yaml",
+      "title": "Events API",
+      "oas_version": "3.0.0",
+      "latest_version": "1.2.0",
+      "paths_count": 5,
+      "fetched_at": "2026-05-18T20:31:43.301512+00:00",
+      "status": "active",
+      "description": "1Password Events API Specification.",
+      "servers": [
+        "https://events.1password.com",
+        "https://events.1password.ca",
+        "https://events.1password.eu",
+        "https://events.ent.1password.com"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "1.2.0",
+          "hash": "sha256:567a912a79601940095aa6100f29b5cf9c9f12a10b94099b1a7952bb213914f4",
+          "paths_count": 5,
+          "paths_delta": {
+            "added": [
+              "/api/auth/introspect",
+              "/api/v1/auditevents",
+              "/api/v1/itemusages",
+              "/api/v1/signinattempts",
+              "/api/v2/auth/introspect"
+            ],
+            "removed": [],
+            "net": 5
+          },
+          "fetched_at": "2026-05-18T18:40:25.558832+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/1password.local/connect/1.5.7/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/1password.local/connect/1.5.7/openapi.yaml",
+      "title": "1Password Connect",
+      "oas_version": "3.0.2",
+      "latest_version": "1.5.7",
+      "paths_count": 11,
+      "fetched_at": "2026-05-18T20:31:43.361345+00:00",
+      "status": "active",
+      "description": "REST API interface for 1Password Connect.",
+      "servers": [
+        "http://1password.local",
+        "http://localhost:8080/v1"
+      ],
+      "tags": [
+        "Items",
+        "Vaults",
+        "Activity"
+      ],
+      "history": [
+        {
+          "version": "1.5.7",
+          "hash": "sha256:0e14a654c095fe0763108359c8369a6e35e3ca2e8309d1009d4d867df4d12426",
+          "paths_count": 11,
+          "paths_delta": {
+            "added": [
+              "/activity",
+              "/health",
+              "/heartbeat",
+              "/metrics",
+              "/vaults",
+              "/vaults/{vaultUuid}",
+              "/vaults/{vaultUuid}/items",
+              "/vaults/{vaultUuid}/items/{itemUuid}",
+              "/vaults/{vaultUuid}/items/{itemUuid}/files",
+              "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}",
+              "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}/content"
+            ],
+            "removed": [],
+            "net": 11
+          },
+          "fetched_at": "2026-05-18T18:40:25.651570+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/6-dot-authentiqio.appspot.com/6/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/6-dot-authentiqio.appspot.com/6/openapi.yaml",
+      "title": "Authentiq API",
+      "oas_version": "3.0.0",
+      "latest_version": "6",
+      "paths_count": 5,
+      "fetched_at": "2026-05-18T20:31:43.422345+00:00",
+      "status": "active",
+      "description": "Strong authentication, without the passwords.",
+      "servers": [
+        "https://6-dot-authentiqio.appspot.com"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "6",
+          "hash": "sha256:848cd48a639d89d7a1ec58d821ea3c19220c9efbaa88ebfd3e6a7f18c0d48b3a",
+          "paths_count": 5,
+          "paths_delta": {
+            "added": [
+              "/key",
+              "/key/{PK}",
+              "/login",
+              "/scope",
+              "/scope/{job}"
+            ],
+            "removed": [],
+            "net": 5
+          },
+          "fetched_at": "2026-05-18T18:40:25.733062+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/ably.io/platform/1.1.0/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ably.io/platform/1.1.0/openapi.yaml",
+      "title": "Platform API",
+      "oas_version": "3.0.1",
+      "latest_version": "1.1.0",
+      "paths_count": 14,
+      "fetched_at": "2026-05-18T20:31:43.481532+00:00",
+      "status": "active",
+      "description": "The [REST API specification](https://www.ably.io/documentation/rest-api) for Ably.",
+      "servers": [
+        "https://rest.ably.io"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "1.1.0",
+          "hash": "sha256:87a9a24552041b3a7cd6f175be52ecd36f95e357ccef44241a41d62e3bcf1ad4",
+          "paths_count": 14,
+          "paths_delta": {
+            "added": [
+              "/channels",
+              "/channels/{channel_id}",
+              "/channels/{channel_id}/messages",
+              "/channels/{channel_id}/presence",
+              "/channels/{channel_id}/presence/history",
+              "/keys/{keyName}/requestToken",
+              "/push/channelSubscriptions",
+              "/push/channels",
+              "/push/deviceRegistrations",
+              "/push/deviceRegistrations/{device_id}",
+              "/push/deviceRegistrations/{device_id}/resetUpdateToken",
+              "/push/publish",
+              "/stats",
+              "/time"
+            ],
+            "removed": [],
+            "net": 14
+          },
+          "fetched_at": "2026-05-18T18:40:25.841611+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/ably.net/control/1.0.14/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ably.net/control/1.0.14/openapi.yaml",
+      "title": "Control API v1",
+      "oas_version": "3.0.1",
+      "latest_version": "1.0.14",
+      "paths_count": 13,
+      "fetched_at": "2026-05-18T20:31:43.541527+00:00",
+      "status": "active",
+      "description": "Use the Control API to manage your applications, namespaces, keys, queues, rules, and more.\n\nDetailed information on using this API can be found in the Ably <a href=\"https://ably.com/documentation/control-api\">developer documentation</a>.\n\nControl API is currently in Beta.",
+      "servers": [
+        "https://control.ably.net/v1"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "1.0.14",
+          "hash": "sha256:4c5fa2121c6427caf4e672f6b0238e93f33324d2236383206ee6111d1d323315",
+          "paths_count": 13,
+          "paths_delta": {
+            "added": [
+              "/accounts/{account_id}/apps",
+              "/apps/{app_id}/keys",
+              "/apps/{app_id}/keys/{key_id}",
+              "/apps/{app_id}/keys/{key_id}/revoke",
+              "/apps/{app_id}/namespaces",
+              "/apps/{app_id}/namespaces/{namespace_id}",
+              "/apps/{app_id}/queues",
+              "/apps/{app_id}/queues/{queue_id}",
+              "/apps/{app_id}/rules",
+              "/apps/{app_id}/rules/{rule_id}",
+              "/apps/{id}",
+              "/apps/{id}/pkcs12",
+              "/me"
+            ],
+            "removed": [],
+            "net": 13
+          },
+          "fetched_at": "2026-05-18T18:40:26.054461+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/ably.net/control/v1/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ably.net/control/v1/openapi.yaml",
+      "title": "API V1",
+      "oas_version": "3.0.1",
+      "latest_version": "v1",
+      "paths_count": 13,
+      "fetched_at": "2026-05-18T20:31:43.602274+00:00",
+      "status": "active",
+      "description": "",
+      "servers": [
+        "https://control.ably.net/v1"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "v1",
+          "hash": "sha256:16ee2033835007cfbb243d10ef407ea7aae10c8d753a03181151b1afcd2d2b4a",
+          "paths_count": 13,
+          "paths_delta": {
+            "added": [
+              "/accounts/{account_id}/apps",
+              "/apps/{app_id}/keys",
+              "/apps/{app_id}/keys/{key_id}",
+              "/apps/{app_id}/keys/{key_id}/revoke",
+              "/apps/{app_id}/namespaces",
+              "/apps/{app_id}/namespaces/{namespace_id}",
+              "/apps/{app_id}/queues",
+              "/apps/{app_id}/queues/{queue_id}",
+              "/apps/{app_id}/rules",
+              "/apps/{app_id}/rules/{rule_id}",
+              "/apps/{id}",
+              "/apps/{id}/pkcs12",
+              "/me"
+            ],
+            "removed": [],
+            "net": 13
+          },
+          "fetched_at": "2026-05-18T18:40:26.224742+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/abstractapi.com/geolocation/1.0.0/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/abstractapi.com/geolocation/1.0.0/openapi.yaml",
+      "title": "IP geolocation API",
+      "oas_version": "3.0.1",
+      "latest_version": "1.0.0",
+      "paths_count": 1,
+      "fetched_at": "2026-05-18T20:31:43.661340+00:00",
+      "status": "active",
+      "description": "Abstract IP geolocation API allows developers to retrieve the region, country and city behind any IP worldwide. The API covers the geolocation of IPv4 and IPv6 addresses in 180+ countries worldwide. Extra information can be retrieved like the currency, flag or language associated to an IP.",
+      "servers": [
+        "https://ipgeolocation.abstractapi.com"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "1.0.0",
+          "hash": "sha256:1a95baf91f7cd7f62f85d1e08ab93b74e8c38b373d0d31b41b3ace184de1aacb",
+          "paths_count": 1,
+          "paths_delta": {
+            "added": [
+              "/v1/"
+            ],
+            "removed": [],
+            "net": 1
+          },
+          "fetched_at": "2026-05-18T18:40:26.287687+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adafruit.com/2.0.0/swagger.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adafruit.com/2.0.0/swagger.yaml",
+      "title": "Adafruit IO REST API",
+      "oas_version": "2.0",
+      "latest_version": "2.0.0",
+      "paths_count": 36,
+      "fetched_at": "2026-05-18T20:31:43.722363+00:00",
+      "status": "active",
+      "description": "### The Internet of Things for Everyone\n\nThe Adafruit IO HTTP API provides access to your Adafruit IO data from any programming language or hardware environment that can speak HTTP. The easiest way to get started is with [an Adafruit IO learn guide](https://learn.adafruit.com/series/adafruit-io-basics) and [a simple Internet of Things capable device like the Feather Huzzah](https://www.adafruit.com/product/2821).\n\nThis API documentation is hosted on GitHub Pages and is available at [https://github.com/adafruit/io-api](https://github.com/adafruit/io-api). For questions or comments visit the [Adafruit IO Forums](https://forums.adafruit.com/viewforum.php?f=56) or the [adafruit-io channel on the Adafruit Discord server](https://discord.gg/adafruit).\n\n#### Authentication\n\nAuthentication for every API request happens through the `X-AIO-Key` header or query parameter and your IO API key. A simple cURL request to get all available feeds for a user with the username \"io_username\" and the key \"io_key_12345\" could look like this:\n\n    $ curl -H \"X-AIO-Key: io_key_12345\" https://io.adafruit.com/api/v2/io_username/feeds\n\nOr like this:\n\n    $ curl \"https://io.adafruit.com/api/v2/io_username/feeds?X-AIO-Key=io_key_12345\n\nUsing the node.js [request](https://github.com/request/request) library, IO HTTP requests are as easy as:\n\n```js\nvar request = require('request');\n\nvar options = {\n  url: 'https://io.adafruit.com/api/v2/io_username/feeds',\n  headers: {\n    'X-AIO-Key': 'io_key_12345',\n    'Content-Type': 'application/json'\n  }\n};\n\nfunction callback(error, response, body) {\n  if (!error && response.statusCode == 200) {\n    var feeds = JSON.parse(body);\n    console.log(feeds.length + \" FEEDS AVAILABLE\");\n\n    feeds.forEach(function (feed) {\n      console.log(feed.name, feed.key);\n    })\n  }\n}\n\nrequest(options, callback);\n```\n\nUsing the ESP8266 Arduino HTTPClient library, an HTTPS GET request would look like this (replacing `---` with your own values in the appropriate locations):\n\n```arduino\n/// based on\n/// https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266HTTPClient/examples/Authorization/Authorization.ino\n\n#include <Arduino.h>\n#include <ESP8266WiFi.h>\n#include <ESP8266WiFiMulti.h>\n#include <ESP8266HTTPClient.h>\n\nESP8266WiFiMulti WiFiMulti;\n\nconst char* ssid = \"---\";\nconst char* password = \"---\";\n\nconst char* host = \"io.adafruit.com\";\n\nconst char* io_key = \"---\";\nconst char* path_with_username = \"/api/v2/---/dashboards\";\n\n// Use web browser to view and copy\n// SHA1 fingerprint of the certificate\nconst char* fingerprint = \"77 00 54 2D DA E7 D8 03 27 31 23 99 EB 27 DB CB A5 4C 57 18\";\n\nvoid setup() {\n  Serial.begin(115200);\n\n  for(uint8_t t = 4; t > 0; t--) {\n    Serial.printf(\"[SETUP] WAIT %d...\\n\", t);\n    Serial.flush();\n    delay(1000);\n  }\n\n  WiFi.mode(WIFI_STA);\n  WiFiMulti.addAP(ssid, password);\n\n  // wait for WiFi connection\n  while(WiFiMulti.run() != WL_CONNECTED) {\n    Serial.print('.');\n    delay(1000);\n  }\n\n  Serial.println(\"[WIFI] connected!\");\n\n  HTTPClient http;\n\n  // start request with URL and TLS cert fingerprint for verification\n  http.begin(\"https://\" + String(host) + String(path_with_username), fingerprint);\n\n  // IO API authentication\n  http.addHeader(\"X-AIO-Key\", io_key);\n\n  // start connection and send HTTP header\n  int httpCode = http.GET();\n\n  // httpCode will be negative on error\n  if(httpCode > 0) {\n    // HTTP header has been send and Server response header has been handled\n    Serial.printf(\"[HTTP] GET response: %d\\n\", httpCode);\n\n    // HTTP 200 OK\n    if(httpCode == HTTP_CODE_OK) {\n      String payload = http.getString();\n      Serial.println(payload);\n    }\n\n    http.end();\n  }\n}\n\nvoid loop() {}\n```\n\n#### Client Libraries\n\nWe have client libraries to help you get started with your project: [Python](https://github.com/adafruit/io-client-python), [Ruby](https://github.com/adafruit/io-client-ruby), [Arduino C++](https://github.com/adafruit/Adafruit_IO_Arduino), [Javascript](https://github.com/adafruit/adafruit-io-node), and [Go](https://github.com/adafruit/io-client-go) are available. They're all open source, so if they don't already do what you want, you can fork and add any feature you'd like.",
+      "servers": [
+        "https://io.adafruit.com/api/v2",
+        "http://io.adafruit.com/api/v2"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "2.0.0",
+          "hash": "sha256:d324e686da5c655f36157b5e794200e09d53e3696cbd1427cc608b814a6a4a79",
+          "paths_count": 36,
+          "paths_delta": {
+            "added": [
+              "/user",
+              "/webhooks/feed/:token",
+              "/webhooks/feed/:token/raw",
+              "/{username}/activities",
+              "/{username}/activities/{type}",
+              "/{username}/dashboards",
+              "/{username}/dashboards/{dashboard_id}/blocks",
+              "/{username}/dashboards/{dashboard_id}/blocks/{id}",
+              "/{username}/dashboards/{id}",
+              "/{username}/feeds",
+              "/{username}/feeds/{feed_key}",
+              "/{username}/feeds/{feed_key}/data",
+              "/{username}/feeds/{feed_key}/data/batch",
+              "/{username}/feeds/{feed_key}/data/chart",
+              "/{username}/feeds/{feed_key}/data/first",
+              "/{username}/feeds/{feed_key}/data/last",
+              "/{username}/feeds/{feed_key}/data/next",
+              "/{username}/feeds/{feed_key}/data/previous",
+              "/{username}/feeds/{feed_key}/data/retain",
+              "/{username}/feeds/{feed_key}/data/{id}",
+              "/{username}/feeds/{feed_key}/details",
+              "/{username}/groups",
+              "/{username}/groups/{group_key}",
+              "/{username}/groups/{group_key}/add",
+              "/{username}/groups/{group_key}/data",
+              "/{username}/groups/{group_key}/feeds",
+              "/{username}/groups/{group_key}/feeds/{feed_key}/data",
+              "/{username}/groups/{group_key}/feeds/{feed_key}/data/batch",
+              "/{username}/groups/{group_key}/remove",
+              "/{username}/throttle",
+              "/{username}/tokens",
+              "/{username}/tokens/{id}",
+              "/{username}/triggers",
+              "/{username}/triggers/{id}",
+              "/{username}/{type}/{type_id}/acl",
+              "/{username}/{type}/{type_id}/acl/{id}"
+            ],
+            "removed": [],
+            "net": 36
+          },
+          "fetched_at": "2026-05-18T18:40:26.428158+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adobe.com/aem/3.7.1-pre.0/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adobe.com/aem/3.7.1-pre.0/openapi.yaml",
+      "title": "Adobe Experience Manager (AEM) API",
+      "oas_version": "3.0.0",
+      "latest_version": "3.7.1-pre.0",
+      "paths_count": 43,
+      "fetched_at": "2026-05-18T20:31:43.781115+00:00",
+      "status": "active",
+      "description": "Swagger AEM is an OpenAPI specification for Adobe Experience Manager (AEM) API",
+      "servers": [
+        "/",
+        "http://adobe.local"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "3.7.1-pre.0",
+          "hash": "sha256:707f5c6241d4948054cc7d1b3b06008c2472f84e88afd49dafb4c168a282da6b",
+          "paths_count": 43,
+          "paths_delta": {
+            "added": [
+              "/.cqactions.html",
+              "/apps/system/config/com.adobe.granite.auth.saml.SamlAuthenticationHandler.config",
+              "/apps/system/config/com.shinesolutions.aem.passwordreset.Activator",
+              "/apps/system/config/com.shinesolutions.healthcheck.hc.impl.ActiveBundleHealthCheck",
+              "/apps/system/config/org.apache.felix.http",
+              "/apps/system/config/org.apache.http.proxyconfigurator.config",
+              "/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet",
+              "/apps/system/config/org.apache.sling.security.impl.ReferrerFilter",
+              "/apps/system/config/org.apache.sling.servlets.get.DefaultGetServlet",
+              "/apps/system/config/{configNodeName}",
+              "/bin/querybuilder.json",
+              "/crx/explorer/ui/setpassword.jsp",
+              "/crx/packmgr/installstatus.jsp",
+              "/crx/packmgr/service.jsp",
+              "/crx/packmgr/service/.json/{path}",
+              "/crx/packmgr/service/script.html",
+              "/crx/packmgr/update.jsp",
+              "/crx/server/crx.default/jcr:root/.1.json",
+              "/etc/packages/{group}/{name}-{version}.zip",
+              "/etc/packages/{group}/{name}-{version}.zip/jcr:content/vlt:definition/filter.tidy.2.json",
+              "/etc/replication/agents.{runmode}.-1.json",
+              "/etc/replication/agents.{runmode}/{name}",
+              "/etc/truststore",
+              "/etc/truststore/truststore.p12",
+              "/libs/granite/core/content/login.html",
+              "/libs/granite/security/post/authorizables",
+              "/libs/granite/security/post/sslSetup.html",
+              "/libs/granite/security/post/truststore",
+              "/libs/granite/security/truststore.json",
+              "/libs/replication/treeactivation.html",
+              "/system/console/bundles/{name}",
+              "/system/console/bundles/{name}.json",
+              "/system/console/configMgr",
+              "/system/console/configMgr/com.adobe.granite.auth.saml.SamlAuthenticationHandler",
+              "/system/console/jmx/com.adobe.granite:type=Repository/op/{action}",
+              "/system/console/status-productinfo.json",
+              "/system/health",
+              "/{intermediatePath}/{authorizableId}.ks.html",
+              "/{intermediatePath}/{authorizableId}.ks.json",
+              "/{intermediatePath}/{authorizableId}/keystore/store.p12",
+              "/{path}/",
+              "/{path}/{name}",
+              "/{path}/{name}.rw.html"
+            ],
+            "removed": [],
+            "net": 43
+          },
+          "fetched_at": "2026-05-18T18:40:26.566112+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/AccountService/3/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/AccountService/3/openapi.yaml",
+      "title": "Account API",
+      "oas_version": "3.1.0",
+      "latest_version": "3",
+      "paths_count": 17,
+      "fetched_at": "2026-05-18T20:31:43.841923+00:00",
+      "status": "active",
+      "description": "This API is used for the classic integration. If you are just starting your implementation, refer to our [new integration guide](https://docs.adyen.com/marketplaces-and-platforms) instead.\n\nThe Account API provides endpoints for managing account-related entities on your platform. These related entities include account holders, accounts, bank accounts, shareholders, and verification-related documents. The management operations include actions such as creation, retrieval, updating, and deletion of them.\n\nFor more information, refer to our [documentation](https://docs.adyen.com/marketplaces-and-platforms/classic).\n## Authentication\nYour Adyen contact will provide your API credential and an API key. To connect to the API, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication. For example:\n\n```\ncurl\n-U \"ws@MarketPlace.YOUR_PLATFORM_ACCOUNT\":\"YOUR_WS_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\nWhen going live, you need to generate new web service user credentials to access the [live endpoints](https://docs.adyen.com/development-resources/live-endpoints).\n\n## Versioning\nThe Account API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://cal-test.adyen.com/cal/services/Account/v3/createAccountHolder\n```",
+      "servers": [
+        "https://cal-test.adyen.com/cal/services/Account/v3"
+      ],
+      "tags": [
+        "Account holders",
+        "Verification",
+        "Accounts"
+      ],
+      "history": [
+        {
+          "version": "3",
+          "hash": "sha256:3c4bb25d2c9c62322017716fb124bbfe7a6266a604b7fa76035a85d981a200f0",
+          "paths_count": 17,
+          "paths_delta": {
+            "added": [
+              "/closeAccount",
+              "/closeAccountHolder",
+              "/createAccount",
+              "/createAccountHolder",
+              "/deleteBankAccounts",
+              "/deleteLegalArrangements",
+              "/deleteShareholders",
+              "/deleteSignatories",
+              "/getAccountHolder",
+              "/getTaxForm",
+              "/getUploadedDocuments",
+              "/suspendAccountHolder",
+              "/unSuspendAccountHolder",
+              "/updateAccount",
+              "/updateAccountHolder",
+              "/updateAccountHolderState",
+              "/uploadDocument"
+            ],
+            "removed": [],
+            "net": 17
+          },
+          "fetched_at": "2026-05-18T18:40:26.739110+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/AccountService/4/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/AccountService/4/openapi.yaml",
+      "title": "Account API",
+      "oas_version": "3.1.0",
+      "latest_version": "4",
+      "paths_count": 17,
+      "fetched_at": "2026-05-18T20:31:43.901474+00:00",
+      "status": "active",
+      "description": "This API is used for the classic integration. If you are just starting your implementation, refer to our [new integration guide](https://docs.adyen.com/marketplaces-and-platforms) instead.\n\nThe Account API provides endpoints for managing account-related entities on your platform. These related entities include account holders, accounts, bank accounts, shareholders, and verification-related documents. The management operations include actions such as creation, retrieval, updating, and deletion of them.\n\nFor more information, refer to our [documentation](https://docs.adyen.com/marketplaces-and-platforms/classic).\n## Authentication\nYour Adyen contact will provide your API credential and an API key. To connect to the API, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication. For example:\n\n```\ncurl\n-U \"ws@MarketPlace.YOUR_PLATFORM_ACCOUNT\":\"YOUR_WS_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\nWhen going live, you need to generate new web service user credentials to access the [live endpoints](https://docs.adyen.com/development-resources/live-endpoints).\n\n## Versioning\nThe Account API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://cal-test.adyen.com/cal/services/Account/v4/createAccountHolder\n```",
+      "servers": [
+        "https://cal-test.adyen.com/cal/services/Account/v4"
+      ],
+      "tags": [
+        "Account holders",
+        "Verification",
+        "Accounts"
+      ],
+      "history": [
+        {
+          "version": "4",
+          "hash": "sha256:ebd1860f1976085a426cf81c779499f99bc9c22933bc99fcf16bbddaf7f3da55",
+          "paths_count": 17,
+          "paths_delta": {
+            "added": [
+              "/closeAccount",
+              "/closeAccountHolder",
+              "/createAccount",
+              "/createAccountHolder",
+              "/deleteBankAccounts",
+              "/deleteLegalArrangements",
+              "/deleteShareholders",
+              "/deleteSignatories",
+              "/getAccountHolder",
+              "/getTaxForm",
+              "/getUploadedDocuments",
+              "/suspendAccountHolder",
+              "/unSuspendAccountHolder",
+              "/updateAccount",
+              "/updateAccountHolder",
+              "/updateAccountHolderState",
+              "/uploadDocument"
+            ],
+            "removed": [],
+            "net": 17
+          },
+          "fetched_at": "2026-05-18T18:40:26.904699+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/AccountService/5/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/AccountService/5/openapi.yaml",
+      "title": "Account API",
+      "oas_version": "3.1.0",
+      "latest_version": "5",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:43.960567+00:00",
+      "status": "active",
+      "description": "This API is used for the classic integration. If you are just starting your implementation, refer to our [new integration guide](https://docs.adyen.com/marketplaces-and-platforms) instead.\n\nThe Account API provides endpoints for managing account-related entities on your platform. These related entities include account holders, accounts, bank accounts, shareholders, and verification-related documents. The management operations include actions such as creation, retrieval, updating, and deletion of them.\n\nFor more information, refer to our [documentation](https://docs.adyen.com/marketplaces-and-platforms/classic).\n## Authentication\nYour Adyen contact will provide your API credential and an API key. To connect to the API, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication. For example:\n\n```\ncurl\n-U \"ws@MarketPlace.YOUR_PLATFORM_ACCOUNT\":\"YOUR_WS_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\nWhen going live, you need to generate new web service user credentials to access the [live endpoints](https://docs.adyen.com/development-resources/live-endpoints).\n\n## Versioning\nThe Account API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://cal-test.adyen.com/cal/services/Account/v5/createAccountHolder\n```",
+      "servers": [
+        "https://cal-test.adyen.com/cal/services/Account/v5"
+      ],
+      "tags": [
+        "Account holders",
+        "Verification",
+        "Accounts"
+      ],
+      "history": [
+        {
+          "version": "5",
+          "hash": "sha256:778215c50a5d4d4556b1f3d89d66f2ac4ae0e61ac98762e3c0eb0dcf24da5281",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/checkAccountHolder",
+              "/closeAccount",
+              "/closeAccountHolder",
+              "/closeStores",
+              "/createAccount",
+              "/createAccountHolder",
+              "/deleteBankAccounts",
+              "/deleteLegalArrangements",
+              "/deletePayoutMethods",
+              "/deleteShareholders",
+              "/deleteSignatories",
+              "/getAccountHolder",
+              "/getTaxForm",
+              "/getUploadedDocuments",
+              "/suspendAccountHolder",
+              "/unSuspendAccountHolder",
+              "/updateAccount",
+              "/updateAccountHolder",
+              "/updateAccountHolderState",
+              "/uploadDocument"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T18:40:27.091698+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/AccountService/6/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/AccountService/6/openapi.yaml",
+      "title": "Account API",
+      "oas_version": "3.1.0",
+      "latest_version": "6",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:44.021458+00:00",
+      "status": "active",
+      "description": "This API is used for the classic integration. If you are just starting your implementation, refer to our [new integration guide](https://docs.adyen.com/marketplaces-and-platforms) instead.\n\nThe Account API provides endpoints for managing account-related entities on your platform. These related entities include account holders, accounts, bank accounts, shareholders, and verification-related documents. The management operations include actions such as creation, retrieval, updating, and deletion of them.\n\nFor more information, refer to our [documentation](https://docs.adyen.com/marketplaces-and-platforms/classic).\n## Authentication\nYour Adyen contact will provide your API credential and an API key. To connect to the API, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication. For example:\n\n```\ncurl\n-U \"ws@MarketPlace.YOUR_PLATFORM_ACCOUNT\":\"YOUR_WS_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\nWhen going live, you need to generate new web service user credentials to access the [live endpoints](https://docs.adyen.com/development-resources/live-endpoints).\n\n## Versioning\nThe Account API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://cal-test.adyen.com/cal/services/Account/v6/createAccountHolder\n```",
+      "servers": [
+        "https://cal-test.adyen.com/cal/services/Account/v6"
+      ],
+      "tags": [
+        "Account holders",
+        "Verification",
+        "Accounts"
+      ],
+      "history": [
+        {
+          "version": "6",
+          "hash": "sha256:ffd77e1f88df68e2e02cb63ae847521c09d797f9552b6ec381e29dbcd2b5a6e2",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/checkAccountHolder",
+              "/closeAccount",
+              "/closeAccountHolder",
+              "/closeStores",
+              "/createAccount",
+              "/createAccountHolder",
+              "/deleteBankAccounts",
+              "/deleteLegalArrangements",
+              "/deletePayoutMethods",
+              "/deleteShareholders",
+              "/deleteSignatories",
+              "/getAccountHolder",
+              "/getTaxForm",
+              "/getUploadedDocuments",
+              "/suspendAccountHolder",
+              "/unSuspendAccountHolder",
+              "/updateAccount",
+              "/updateAccountHolder",
+              "/updateAccountHolderState",
+              "/uploadDocument"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T18:40:27.302905+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BalanceControlService/1/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BalanceControlService/1/openapi.yaml",
+      "title": "Adyen Balance Control API",
+      "oas_version": "3.1.0",
+      "latest_version": "1",
+      "paths_count": 1,
+      "fetched_at": "2026-05-18T20:31:44.081571+00:00",
+      "status": "active",
+      "description": "The Balance Control API lets you transfer funds between merchant accounts that belong to the same legal entity and are under the same company account.\n\n## Authentication\nTo connect to the Balance Control API, you must authenticate your requests with an [API key or basic auth username and password](https://docs.adyen.com/development-resources/api-authentication). To learn how you can generate these, see [API credentials](https://docs.adyen.com/development-resources/api-credentials).Here is an example of authenticating a request with an API key:\n\n```\ncurl\n-H \"X-API-Key: Your_API_key\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\nNote that when going live, you need to generate API credentials to access the [live endpoints](https://docs.adyen.com/development-resources/live-endpoints).\n\n## Versioning\nThe Balance Control API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n\n```\nhttps://pal-test.adyen.com/pal/servlet/BalanceControl/v1/balanceTransfer\n```",
+      "servers": [
+        "https://pal-test.adyen.com/pal/servlet/BalanceControl/v1"
+      ],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "1",
+          "hash": "sha256:426fd6797c7cfbfaa7177db6e331367ed4478d5e49ba9f8366917ed14e303da1",
+          "paths_count": 1,
+          "paths_delta": {
+            "added": [
+              "/balanceTransfer"
+            ],
+            "removed": [],
+            "net": 1
+          },
+          "fetched_at": "2026-05-18T18:40:27.369120+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BalancePlatformConfigurationNotification-v1/1/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BalancePlatformConfigurationNotification-v1/1/openapi.yaml",
+      "title": "Configuration webhooks",
+      "oas_version": "3.1.0",
+      "latest_version": "1",
+      "paths_count": 0,
+      "fetched_at": "2026-05-18T20:31:44.140981+00:00",
+      "status": "active",
+      "description": "Adyen sends webhooks to inform your system about events that occur in your platform. These events include, for example, when an account holder's capabilities are updated, or when a sweep configuration is created or updated. \nWhen an event occurs, Adyen makes an HTTP POST request to a URL on your server and includes the details of the event in the request body.\n\nYou can use these webhooks to build your implementation. For example, you can use this information to update internal statuses when the status of a capability is changed.",
+      "servers": [],
+      "tags": [
+        "Account holder",
+        "Balance account",
+        "Payment instrument",
+        "Card order"
+      ],
+      "history": [
+        {
+          "version": "1",
+          "hash": "sha256:98cf26dd332dd085a524024b6177c7f854cb5528ba8ebe12e4225710a1d7c852",
+          "paths_count": 0,
+          "paths_delta": {
+            "added": [],
+            "removed": [],
+            "net": 0
+          },
+          "fetched_at": "2026-05-18T18:40:27.500168+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BalancePlatformPaymentNotification-v1/1/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BalancePlatformPaymentNotification-v1/1/openapi.yaml",
+      "title": "Payment webhooks (deprecated)",
+      "oas_version": "3.1.0",
+      "latest_version": "1",
+      "paths_count": 0,
+      "fetched_at": "2026-05-18T20:31:44.201221+00:00",
+      "status": "active",
+      "description": "The payment webhooks are deprecated. Use the [accounting webhooks](https://docs.adyen.com/api-explorer/transfer-webhooks/latest/overview) instead.\n\nAdyen sends webhooks to inform your system about the creation of payment resources and money movements in your platform.\n\nYou can use these webhooks to build your implementation. For example, you can use this information to update balances in your own dashboards or to keep track of incoming funds.",
+      "servers": [],
+      "tags": [
+        "Payment authorisation, refund, or funds transfer initiated",
+        "Fund movements"
+      ],
+      "history": [
+        {
+          "version": "1",
+          "hash": "sha256:7b51bdade297f58f51032bce03b3ae7557d093d3a62bbc35eeb28fcd2492ee9b",
+          "paths_count": 0,
+          "paths_delta": {
+            "added": [],
+            "removed": [],
+            "net": 0
+          },
+          "fetched_at": "2026-05-18T18:40:27.615030+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BalancePlatformReportNotification-v1/1/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BalancePlatformReportNotification-v1/1/openapi.yaml",
+      "title": "Report webhooks",
+      "oas_version": "3.1.0",
+      "latest_version": "1",
+      "paths_count": 0,
+      "fetched_at": "2026-05-18T20:31:44.261458+00:00",
+      "status": "active",
+      "description": "Adyen sends webhooks to inform your system that reports were generated and are ready to be downloaded.\n\nYou can download reports programmatically by making an HTTP GET request, or manually from your [Balance Platform Customer Area](https://balanceplatform-test.adyen.com/balanceplatform).",
+      "servers": [],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "1",
+          "hash": "sha256:1ca47e599fbdb0d6685c8be4b9068eadf3ad929eb77a128da5b71d74925c3f07",
+          "paths_count": 0,
+          "paths_delta": {
+            "added": [],
+            "removed": [],
+            "net": 0
+          },
+          "fetched_at": "2026-05-18T18:40:27.678234+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BalancePlatformService/1/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BalancePlatformService/1/openapi.yaml",
+      "title": "Configuration API",
+      "oas_version": "3.1.0",
+      "latest_version": "1",
+      "paths_count": 24,
+      "fetched_at": "2026-05-18T20:31:44.322468+00:00",
+      "status": "active",
+      "description": "The Configuration API enables you to create a platform where you can onboard your users as account holders and create balance accounts, cards, and business accounts.\n\n## Authentication\nYour Adyen contact will provide your API credential and an API key. To connect to the API, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication. For example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-U \"ws@BalancePlatform.YOUR_BALANCE_PLATFORM\":\"YOUR_WS_PASSWORD\" \\\n...\n```\n## Versioning\nThe Configuration API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://balanceplatform-api-test.adyen.com/bcl/v1/accountHolders\n```\n## Going live\nWhen going live, your Adyen contact will provide your API credential for the live environment. You can then use the API key or the username and password to send requests to `https://balanceplatform-api-live.adyen.com/bcl/v1`.",
+      "servers": [
+        "https://balanceplatform-api-test.adyen.com/bcl/v1"
+      ],
+      "tags": [
+        "Platform",
+        "Payment instrument groups",
+        "Account holders",
+        "Payment instruments",
+        "Bank account validation",
+        "Balance accounts",
+        "Transaction rules",
+        "Legal entities",
+        "Documents",
+        "Transfer instruments"
+      ],
+      "history": [
+        {
+          "version": "1",
+          "hash": "sha256:c32d623c861a2896a6582435e973046ee6821a579637aa170f836141371ad030",
+          "paths_count": 24,
+          "paths_delta": {
+            "added": [
+              "/accountHolders",
+              "/accountHolders/{id}",
+              "/accountHolders/{id}/balanceAccounts",
+              "/balanceAccounts",
+              "/balanceAccounts/{id}",
+              "/balanceAccounts/{id}/paymentInstruments",
+              "/balancePlatforms/{id}",
+              "/balancePlatforms/{id}/accountHolders",
+              "/documents",
+              "/documents/{id}",
+              "/legalEntities",
+              "/legalEntities/{id}",
+              "/paymentInstrumentGroups",
+              "/paymentInstrumentGroups/{id}",
+              "/paymentInstrumentGroups/{id}/transactionRules",
+              "/paymentInstruments",
+              "/paymentInstruments/{id}",
+              "/paymentInstruments/{id}/reveal",
+              "/paymentInstruments/{id}/transactionRules",
+              "/transactionRules",
+              "/transactionRules/{transactionRuleId}",
+              "/transferInstruments",
+              "/transferInstruments/{id}",
+              "/validateBankAccountIdentification"
+            ],
+            "removed": [],
+            "net": 24
+          },
+          "fetched_at": "2026-05-18T18:40:27.959665+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BalancePlatformService/2/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BalancePlatformService/2/openapi.yaml",
+      "title": "Configuration API",
+      "oas_version": "3.1.0",
+      "latest_version": "2",
+      "paths_count": 33,
+      "fetched_at": "2026-05-18T20:31:44.380728+00:00",
+      "status": "active",
+      "description": "The Configuration API enables you to create a platform where you can onboard your users as account holders and create balance accounts, cards, and business accounts.\n\n## Authentication\nYour Adyen contact will provide your API credential and an API key. To connect to the API, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication. For example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-U \"ws@BalancePlatform.YOUR_BALANCE_PLATFORM\":\"YOUR_WS_PASSWORD\" \\\n...\n```\n## Versioning\nThe Configuration API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://balanceplatform-api-test.adyen.com/bcl/v2/accountHolders\n```\n## Going live\nWhen going live, your Adyen contact will provide your API credential for the live environment. You can then use the API key or the username and password to send requests to `https://balanceplatform-api-live.adyen.com/bcl/v2`.",
+      "servers": [
+        "https://balanceplatform-api-test.adyen.com/bcl/v2"
+      ],
+      "tags": [
+        "Platform",
+        "Account holders",
+        "Balance accounts",
+        "Payment instruments",
+        "Payment instrument groups",
+        "Transaction rules",
+        "Bank account validation",
+        "Network tokens",
+        "Grant accounts",
+        "Grant offers",
+        "Card orders",
+        "Manage card PIN",
+        "Transfer routes"
+      ],
+      "history": [
+        {
+          "version": "2",
+          "hash": "sha256:d5260da754ecd2c914866cfbfc5c3515f6dfa433c94172c06ee0813c4a1139ce",
+          "paths_count": 33,
+          "paths_delta": {
+            "added": [
+              "/accountHolders",
+              "/accountHolders/{id}",
+              "/accountHolders/{id}/balanceAccounts",
+              "/accountHolders/{id}/taxForms",
+              "/balanceAccounts",
+              "/balanceAccounts/{balanceAccountId}/sweeps",
+              "/balanceAccounts/{balanceAccountId}/sweeps/{sweepId}",
+              "/balanceAccounts/{id}",
+              "/balanceAccounts/{id}/paymentInstruments",
+              "/balancePlatforms/{id}",
+              "/balancePlatforms/{id}/accountHolders",
+              "/cardorders",
+              "/cardorders/{id}/items",
+              "/grantAccounts/{id}",
+              "/grantOffers",
+              "/grantOffers/{grantOfferId}",
+              "/networkTokens/{networkTokenId}",
+              "/paymentInstrumentGroups",
+              "/paymentInstrumentGroups/{id}",
+              "/paymentInstrumentGroups/{id}/transactionRules",
+              "/paymentInstruments",
+              "/paymentInstruments/reveal",
+              "/paymentInstruments/{id}",
+              "/paymentInstruments/{id}/networkTokens",
+              "/paymentInstruments/{id}/reveal",
+              "/paymentInstruments/{id}/transactionRules",
+              "/pins/change",
+              "/pins/reveal",
+              "/publicKey",
+              "/transactionRules",
+              "/transactionRules/{transactionRuleId}",
+              "/transferRoutes/calculate",
+              "/validateBankAccountIdentification"
+            ],
+            "removed": [],
+            "net": 33
+          },
+          "fetched_at": "2026-05-18T18:40:28.346136+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BalancePlatformTransferNotification-v3/3/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BalancePlatformTransferNotification-v3/3/openapi.yaml",
+      "title": "Transfer webhooks",
+      "oas_version": "3.1.0",
+      "latest_version": "3",
+      "paths_count": 0,
+      "fetched_at": "2026-05-18T20:31:44.442122+00:00",
+      "status": "active",
+      "description": "Adyen sends webhooks to inform your system about incoming and outgoing transfers in your platform.\n\nYou can use these webhooks to build your implementation. For example, you can use this information to update balances in your own dashboards or to keep track of incoming funds.",
+      "servers": [],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "3",
+          "hash": "sha256:ab8d3e8ad3631f5a1b13c9bf0d40a2ec1f3cec9a656806c0d5192c53a8de5967",
+          "paths_count": 0,
+          "paths_delta": {
+            "added": [],
+            "removed": [],
+            "net": 0
+          },
+          "fetched_at": "2026-05-18T18:40:28.447010+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BinLookupService/40/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BinLookupService/40/openapi.yaml",
+      "title": "Adyen BinLookup API",
+      "oas_version": "3.1.0",
+      "latest_version": "40",
+      "paths_count": 2,
+      "fetched_at": "2026-05-18T20:31:44.503229+00:00",
+      "status": "active",
+      "description": "The BIN Lookup API provides endpoints for retrieving information, such as cost estimates, and 3D Secure supported version based on a given BIN.\n\n## Authentication\nYou need an [API credential](https://docs.adyen.com/development-resources/api-credentials) to authenticate to the API.\n\nIf using an API key, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication, for example:\n\n```\ncurl\n-U \"ws@Company.YOUR_COMPANY_ACCOUNT\":\"YOUR_BASIC_AUTHENTICATION_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\n\n## Versioning\nThe BinLookup API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://pal-test.adyen.com/pal/servlet/BinLookup/v40/get3dsAvailability\n```## Going live\n\nTo authneticate to the live endpoints, you need an [API credential](https://docs.adyen.com/development-resources/api-credentials) from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account:\n```\n\nhttps://{PREFIX}-pal-live.adyenpayments.com/pal/servlet/BinLookup/v40/get3dsAvailability\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.",
+      "servers": [
+        "https://pal-test.adyen.com/pal/servlet/BinLookup/v40"
+      ],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "40",
+          "hash": "sha256:02e89be803f4ef8a73f4e8a9dfb12d711af3ddc108bddc2710c5831d01f14f27",
+          "paths_count": 2,
+          "paths_delta": {
+            "added": [
+              "/get3dsAvailability",
+              "/getCostEstimate"
+            ],
+            "removed": [],
+            "net": 2
+          },
+          "fetched_at": "2026-05-18T18:40:28.524202+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BinLookupService/50/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BinLookupService/50/openapi.yaml",
+      "title": "Adyen BinLookup API",
+      "oas_version": "3.1.0",
+      "latest_version": "50",
+      "paths_count": 2,
+      "fetched_at": "2026-05-18T20:31:44.560142+00:00",
+      "status": "active",
+      "description": "The BIN Lookup API provides endpoints for retrieving information, such as cost estimates, and 3D Secure supported version based on a given BIN.\n\n## Authentication\nYou need an [API credential](https://docs.adyen.com/development-resources/api-credentials) to authenticate to the API.\n\nIf using an API key, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication, for example:\n\n```\ncurl\n-U \"ws@Company.YOUR_COMPANY_ACCOUNT\":\"YOUR_BASIC_AUTHENTICATION_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\n\n## Versioning\nThe BinLookup API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://pal-test.adyen.com/pal/servlet/BinLookup/v50/get3dsAvailability\n```## Going live\n\nTo authneticate to the live endpoints, you need an [API credential](https://docs.adyen.com/development-resources/api-credentials) from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account:\n```\n\nhttps://{PREFIX}-pal-live.adyenpayments.com/pal/servlet/BinLookup/v50/get3dsAvailability\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.",
+      "servers": [
+        "https://pal-test.adyen.com/pal/servlet/BinLookup/v50"
+      ],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "50",
+          "hash": "sha256:78dac5069ab17645713bc339c983d16c55843db1b4e137bd31ccff2fcb3884d8",
+          "paths_count": 2,
+          "paths_delta": {
+            "added": [
+              "/get3dsAvailability",
+              "/getCostEstimate"
+            ],
+            "removed": [],
+            "net": 2
+          },
+          "fetched_at": "2026-05-18T18:40:28.814068+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BinLookupService/52/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BinLookupService/52/openapi.yaml",
+      "title": "Adyen BinLookup API",
+      "oas_version": "3.1.0",
+      "latest_version": "52",
+      "paths_count": 2,
+      "fetched_at": "2026-05-18T20:31:44.613500+00:00",
+      "status": "active",
+      "description": "The BIN Lookup API provides endpoints for retrieving information, such as cost estimates, and 3D Secure supported version based on a given BIN.\n\n## Authentication\nYou need an [API credential](https://docs.adyen.com/development-resources/api-credentials) to authenticate to the API.\n\nIf using an API key, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication, for example:\n\n```\ncurl\n-U \"ws@Company.YOUR_COMPANY_ACCOUNT\":\"YOUR_BASIC_AUTHENTICATION_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\n\n## Versioning\nThe BinLookup API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://pal-test.adyen.com/pal/servlet/BinLookup/v52/get3dsAvailability\n```## Going live\n\nTo authneticate to the live endpoints, you need an [API credential](https://docs.adyen.com/development-resources/api-credentials) from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account:\n```\n\nhttps://{PREFIX}-pal-live.adyenpayments.com/pal/servlet/BinLookup/v52/get3dsAvailability\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.",
+      "servers": [
+        "https://pal-test.adyen.com/pal/servlet/BinLookup/v52"
+      ],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "52",
+          "hash": "sha256:935a42a67f668d6d50e9be86e2fd4b71af92ff7d9e3ba3afcb79b0257d60975b",
+          "paths_count": 2,
+          "paths_delta": {
+            "added": [
+              "/get3dsAvailability",
+              "/getCostEstimate"
+            ],
+            "removed": [],
+            "net": 2
+          },
+          "fetched_at": "2026-05-18T18:40:28.894644+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BinLookupService/53/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BinLookupService/53/openapi.yaml",
+      "title": "Adyen BinLookup API",
+      "oas_version": "3.1.0",
+      "latest_version": "53",
+      "paths_count": 2,
+      "fetched_at": "2026-05-18T20:31:44.674903+00:00",
+      "status": "active",
+      "description": "The BIN Lookup API provides endpoints for retrieving information, such as cost estimates, and 3D Secure supported version based on a given BIN.\n\n## Authentication\nYou need an [API credential](https://docs.adyen.com/development-resources/api-credentials) to authenticate to the API.\n\nIf using an API key, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication, for example:\n\n```\ncurl\n-U \"ws@Company.YOUR_COMPANY_ACCOUNT\":\"YOUR_BASIC_AUTHENTICATION_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\n\n## Versioning\nThe BinLookup API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://pal-test.adyen.com/pal/servlet/BinLookup/v53/get3dsAvailability\n```## Going live\n\nTo authneticate to the live endpoints, you need an [API credential](https://docs.adyen.com/development-resources/api-credentials) from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account:\n```\n\nhttps://{PREFIX}-pal-live.adyenpayments.com/pal/servlet/BinLookup/v53/get3dsAvailability\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.",
+      "servers": [
+        "https://pal-test.adyen.com/pal/servlet/BinLookup/v53"
+      ],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "53",
+          "hash": "sha256:9fc5945a5e2ec453b8c9902575bbda31158045b2bf4095bd7dc2177dcf855b16",
+          "paths_count": 2,
+          "paths_delta": {
+            "added": [
+              "/get3dsAvailability",
+              "/getCostEstimate"
+            ],
+            "removed": [],
+            "net": 2
+          },
+          "fetched_at": "2026-05-18T18:40:28.975739+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/BinLookupService/54/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/BinLookupService/54/openapi.yaml",
+      "title": "Adyen BinLookup API",
+      "oas_version": "3.1.0",
+      "latest_version": "54",
+      "paths_count": 2,
+      "fetched_at": "2026-05-18T20:31:44.728057+00:00",
+      "status": "active",
+      "description": "The BIN Lookup API provides endpoints for retrieving information, such as cost estimates, and 3D Secure supported version based on a given BIN.\n\n## Authentication\nYou need an [API credential](https://docs.adyen.com/development-resources/api-credentials) to authenticate to the API.\n\nIf using an API key, add an `X-API-Key` header with the API key as the value, for example:\n\n ```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n\nAlternatively, you can use the username and password to connect to the API using basic authentication, for example:\n\n```\ncurl\n-U \"ws@Company.YOUR_COMPANY_ACCOUNT\":\"YOUR_BASIC_AUTHENTICATION_PASSWORD\" \\\n-H \"Content-Type: application/json\" \\\n...\n```\n\n## Versioning\nThe BinLookup API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://pal-test.adyen.com/pal/servlet/BinLookup/v54/get3dsAvailability\n```## Going live\n\nTo authneticate to the live endpoints, you need an [API credential](https://docs.adyen.com/development-resources/api-credentials) from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account:\n```\n\nhttps://{PREFIX}-pal-live.adyenpayments.com/pal/servlet/BinLookup/v54/get3dsAvailability\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.",
+      "servers": [
+        "https://pal-test.adyen.com/pal/servlet/BinLookup/v54"
+      ],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "54",
+          "hash": "sha256:dd71e6cd54964f9e587a5c86cf9ca5b7ff747e3de614373883c59fd28e96ef17",
+          "paths_count": 2,
+          "paths_delta": {
+            "added": [
+              "/get3dsAvailability",
+              "/getCostEstimate"
+            ],
+            "removed": [],
+            "net": 2
+          },
+          "fetched_at": "2026-05-18T18:40:29.053927+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService-v71/71/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService-v71/71/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "71",
+      "paths_count": 24,
+      "fetched_at": "2026-05-18T20:31:44.781040+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v71/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v71/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=71) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v71"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "71",
+          "hash": "sha256:20e6ea6ee3074f2329617d72b1c2addfa41cfc64be09c95a6c452793da89978d",
+          "paths_count": 24,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals",
+              "/sessions",
+              "/sessions/{sessionId}",
+              "/storedPaymentMethods",
+              "/storedPaymentMethods/{storedPaymentMethodId}"
+            ],
+            "removed": [],
+            "net": 24
+          },
+          "fetched_at": "2026-05-18T18:40:29.686559+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/37/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/37/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "37",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:44.831027+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v37/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v37/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=37) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v37"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "37",
+          "hash": "sha256:2c3ccbdd8e846ea3d578f18e6e01a27bbb6ca74f71505c0587c8a27f95be4296",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T18:40:30.279626+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/40/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/40/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "40",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:44.885014+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v40/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v40/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=40) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v40"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "40",
+          "hash": "sha256:ce4218d5f7c63f5300603154a29e5b40a2f6a507f38a9f4b2d6e6346c491339a",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T18:40:30.811650+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/41/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/41/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "41",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:44.937073+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v41/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v41/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=41) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v41"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "41",
+          "hash": "sha256:b5d3fee1659a812bc1fcebfaa409a20d1f297c89911ae4630d034ab36e24a718",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T18:40:31.354574+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/46/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/46/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "46",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:44.990298+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v46/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v46/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=46) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v46"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "46",
+          "hash": "sha256:a1fe2f424f11b25753c0ee82dbd79cad3d23761221dd58a5ddec506a82f66c69",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:12:40.637445+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/49/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/49/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "49",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:45.044182+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v49/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v49/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=49) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v49"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "49",
+          "hash": "sha256:f1aa16881790c41b5db7581a26adaa1f4bf4125578cba6878e2c34fcd6285a28",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:12:42.066127+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/50/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/50/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "50",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:45.096848+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v50/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v50/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=50) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v50"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "50",
+          "hash": "sha256:9a28ae7c0b70b43bb7e13616d5ef9bf455b31585a6d96c7b7d1ef365fb18d605",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:12:43.149725+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/51/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/51/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "51",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:45.153811+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v51/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v51/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=51) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v51"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "51",
+          "hash": "sha256:437060e406e1968475b8e9b6ebba6bad6869b83cd1f6230fc0cc20ef1b1272ca",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:12:45.327634+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/52/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/52/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "52",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:45.214148+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v52/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v52/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=52) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v52"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "52",
+          "hash": "sha256:a7f72980e14719c1ff86de0ade16ac5031e64ee416a773666d740da068b6318a",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:12:47.820202+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/53/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/53/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "53",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:45.267284+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v53/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v53/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=53) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v53"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "53",
+          "hash": "sha256:878631f07547e822cf0040410aa9751bfaeeb5361e8b9b7d2d783285bb6b13c2",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:12:50.377686+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/64/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/64/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "64",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:45.319403+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v64/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v64/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=64) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v64"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "64",
+          "hash": "sha256:85df1e153e631aecdc742970577c9db8760ffbf418e663cbd40dcde75e807a3f",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:12:51.583091+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/65/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/65/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "65",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:47.848553+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v65/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v65/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=65) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v65"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "65",
+          "hash": "sha256:c013f8bd06d89dcf8c22bfb7bf5619fffc39c4cc3c58a0ce89930357f8d83e45",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:31:47.848553+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/66/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/66/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "66",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:49.219248+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v66/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v66/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=66) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v66"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "66",
+          "hash": "sha256:b1e7fb94375765cc03dc505a9b41ccbc33c6273bd74f431bdda964a2d05ffdf5",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:31:49.219248+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/67/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/67/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "67",
+      "paths_count": 20,
+      "fetched_at": "2026-05-18T20:31:50.623588+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v67/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v67/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=67) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v67"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "67",
+          "hash": "sha256:4dba8dad14f40120b2be0c6c0d1ac44367e69a40f9de6e37f360bb37b67e748c",
+          "paths_count": 20,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals"
+            ],
+            "removed": [],
+            "net": 20
+          },
+          "fetched_at": "2026-05-18T20:31:50.623588+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/68/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/68/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "68",
+      "paths_count": 22,
+      "fetched_at": "2026-05-18T20:31:52.041278+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v68/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v68/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=68) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v68"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "68",
+          "hash": "sha256:fefb8f13d61e9a5f156459ecc481a30365a61c56621dc701e506cb22af3446eb",
+          "paths_count": 22,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals",
+              "/sessions",
+              "/sessions/{sessionId}"
+            ],
+            "removed": [],
+            "net": 22
+          },
+          "fetched_at": "2026-05-18T20:31:52.041278+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/69/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/69/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "69",
+      "paths_count": 22,
+      "fetched_at": "2026-05-18T20:31:55.592217+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v69/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v69/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=69) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v69"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "69",
+          "hash": "sha256:d383d90a14bae6ce14175aec224dec988ea4ca2d651a9e67408220aeb0f051e6",
+          "paths_count": 22,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals",
+              "/sessions",
+              "/sessions/{sessionId}"
+            ],
+            "removed": [],
+            "net": 22
+          },
+          "fetched_at": "2026-05-18T20:31:55.592217+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutService/70/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/70/openapi.yaml",
+      "title": "Adyen Checkout API",
+      "oas_version": "3.1.0",
+      "latest_version": "70",
+      "paths_count": 24,
+      "fetched_at": "2026-05-18T20:31:57.941007+00:00",
+      "status": "active",
+      "description": "Adyen Checkout API provides a simple and flexible way to initiate and authorise online payments. You can use the same integration for payments made with cards (including 3D Secure), mobile wallets, and local payment methods (for example, iDEAL and Sofort).\n\nThis API reference provides information on available endpoints and how to interact with them. To learn more about the API, visit [online payments documentation](https://docs.adyen.com/online-payments).\n\n## Authentication\nEach request to Checkout API must be signed with an API key. For this, [get your API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key) from your Customer Area, and set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: YOUR_API_KEY\" \\\n...\n```\n## Versioning\nCheckout API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v70/payments\n```\n\n## Going live\n\nTo access the live endpoints, you need an API key from your live Customer Area.\n\nThe live endpoint URLs contain a prefix which is unique to your company account, for example:\n```\nhttps://{PREFIX}-checkout-live.adyenpayments.com/checkout/v70/payments\n```\n\nGet your `{PREFIX}` from your live Customer Area under **Developers** > **API URLs** > **Prefix**.\n\nWhen preparing to do live transactions with Checkout API, follow the [go-live checklist](https://docs.adyen.com/online-payments/go-live-checklist) to make sure you've got all the required configuration in place.\n\n## Release notes\nHave a look at the [release notes](https://docs.adyen.com/online-payments/release-notes?integration_type=api&version=70) to find out what changed in this version!",
+      "servers": [
+        "https://checkout-test.adyen.com/v70"
+      ],
+      "tags": [
+        "Payments",
+        "Donations",
+        "Payment links",
+        "Modifications",
+        "Recurring",
+        "Orders",
+        "Utility",
+        "Classic Checkout SDK"
+      ],
+      "history": [
+        {
+          "version": "70",
+          "hash": "sha256:4a46201a5b0d13cddf0671dc2fd91a35126061c800c1dcc37062508b77baf7fd",
+          "paths_count": 24,
+          "paths_delta": {
+            "added": [
+              "/applePay/sessions",
+              "/cancels",
+              "/cardDetails",
+              "/donations",
+              "/orders",
+              "/orders/cancel",
+              "/originKeys",
+              "/paymentLinks",
+              "/paymentLinks/{linkId}",
+              "/paymentMethods",
+              "/paymentMethods/balance",
+              "/paymentSession",
+              "/payments",
+              "/payments/details",
+              "/payments/result",
+              "/payments/{paymentPspReference}/amountUpdates",
+              "/payments/{paymentPspReference}/cancels",
+              "/payments/{paymentPspReference}/captures",
+              "/payments/{paymentPspReference}/refunds",
+              "/payments/{paymentPspReference}/reversals",
+              "/sessions",
+              "/sessions/{sessionId}",
+              "/storedPaymentMethods",
+              "/storedPaymentMethods/{storedPaymentMethodId}"
+            ],
+            "removed": [],
+            "net": 24
+          },
+          "fetched_at": "2026-05-18T20:31:57.941007+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/CheckoutUtilityService/1/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutUtilityService/1/openapi.yaml",
+      "title": "Adyen Checkout Utility Service",
+      "oas_version": "3.0.0",
+      "latest_version": "1",
+      "paths_count": 1,
+      "fetched_at": "2026-05-18T20:31:58.365577+00:00",
+      "status": "active",
+      "description": "A web service containing utility functions available for merchants integrating with Checkout APIs.\n## Authentication\nEach request to the Checkout Utility API must be signed with an API key. For this, obtain an API Key from your Customer Area, as described in [How to get the Checkout API key](https://docs.adyen.com/developers/user-management/how-to-get-the-checkout-api-key). Then set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: Your_Checkout_API_key\" \\\n...\n```\nNote that when going live, you need to generate a new API Key to access the [live endpoints](https://docs.adyen.com/developers/api-reference/live-endpoints).\n\n## Versioning\nCheckout API supports versioning of its endpoints through a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://checkout-test.adyen.com/v1/originKeys\n```",
+      "servers": [
+        "https://checkout-test.adyen.com/v1"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "1",
+          "hash": "sha256:6c5102841a1c54bcfaa82c893aa399943e4633f07edc181c9b8368ffe6aad4ea",
+          "paths_count": 1,
+          "paths_delta": {
+            "added": [
+              "/originKeys"
+            ],
+            "removed": [],
+            "net": 1
+          },
+          "fetched_at": "2026-05-18T20:31:58.365577+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/DataProtectionService/1/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/DataProtectionService/1/openapi.yaml",
+      "title": "Adyen Data Protection API",
+      "oas_version": "3.1.0",
+      "latest_version": "1",
+      "paths_count": 1,
+      "fetched_at": "2026-05-18T20:31:58.835429+00:00",
+      "status": "active",
+      "description": "Adyen Data Protection API provides a way for you to process [Subject Erasure Requests](https://gdpr-info.eu/art-17-gdpr/) as mandated in GDPR.\n\nUse our API to submit a request to delete shopper's data, including payment details and other related information (for example, delivery address or shopper email).## Authentication\nEach request to the Data Protection API must be signed with an API key. Get your API Key from your Customer Area, as described in [How to get the API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key). Then set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: Your_API_key\" \\\n...\n```\nNote that when going live, you need to generate a new API Key to access the [live endpoints](https://docs.adyen.com/development-resources/live-endpoints).\n\n## Versioning\nData Protection Service API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://ca-test.adyen.com/ca/services/DataProtectionService/v1/requestSubjectErasure\n```",
+      "servers": [
+        "https://ca-test.adyen.com/ca/services/DataProtectionService/v1"
+      ],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "1",
+          "hash": "sha256:bf7332f7c6d64a6381b35f6f6f2aecac93b3fd82e0df3a46dfffc510af5fb421",
+          "paths_count": 1,
+          "paths_delta": {
+            "added": [
+              "/requestSubjectErasure"
+            ],
+            "removed": [],
+            "net": 1
+          },
+          "fetched_at": "2026-05-18T20:31:58.835429+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/adyen.com/DisputeService-v30/30/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/DisputeService-v30/30/openapi.yaml",
+      "title": "Disputes API",
+      "oas_version": "3.1.0",
+      "latest_version": "30",
+      "paths_count": 5,
+      "fetched_at": "2026-05-18T20:31:59.553814+00:00",
+      "status": "active",
+      "description": "You can use the [Disputes API](https://docs.adyen.com/risk-management/disputes-api) to automate the dispute handling process so that you can respond to disputes and chargebacks as soon as they are initiated. The Disputes API lets you retrieve defense reasons, supply and delete defense documents, and accept or defend disputes.\n\n## Authentication\nEach request to the Disputes API must be signed with an API key. For this, obtain an API Key from your Customer Area, as described in [How to get the API key](https://docs.adyen.com/development-resources/api-credentials#generate-api-key). Then set this key to the `X-API-Key` header value, for example:\n\n```\ncurl\n-H \"Content-Type: application/json\" \\\n-H \"X-API-Key: Your_API_key\" \\\n...\n```\nNote that when going live, you need to generate new web service user credentials to access the [live endpoints](https://docs.adyen.com/development-resources/live-endpoints).\n\n## Versioning\nDisputes API supports [versioning](https://docs.adyen.com/development-resources/versioning) using a version suffix in the endpoint URL. This suffix has the following format: \"vXX\", where XX is the version number.\n\nFor example:\n```\nhttps://ca-test.adyen.com/ca/services/DisputeService/v30/defendDispute\n```",
+      "servers": [
+        "https://ca-test.adyen.com/ca/services/DisputeService/v30"
+      ],
+      "tags": [
+        "General"
+      ],
+      "history": [
+        {
+          "version": "30",
+          "hash": "sha256:246df063e92fd674d302eaa0e282ca4acb7629d3c2df2279fa0774d00dc11fdd",
+          "paths_count": 5,
+          "paths_delta": {
+            "added": [
+              "/acceptDispute",
+              "/defendDispute",
+              "/deleteDisputeDefenseDocument",
+              "/retrieveApplicableDefenseReasons",
+              "/supplyDefenseDocument"
+            ],
+            "removed": [],
+            "net": 5
+          },
+          "fetched_at": "2026-05-18T20:31:59.553814+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/ip2location.io/1.0/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/f04b8d0bcd39c52e1cf3ad7a5fe744709832ae49/APIs/ip2location.io/1.0/openapi.yaml",
+      "title": "IP2Location.io IP Geolocation API",
+      "oas_version": "3.0.0",
+      "latest_version": "1.0",
+      "paths_count": 1,
+      "fetched_at": "2026-05-18T20:31:42.992468+00:00",
+      "status": "active",
+      "description": "IP2Location.io IP Geolocation API provides RESTful API to obtain visitors’ geolocation information such as country, region, district, city, latitude & longitude, ZIP code, time zone, ASN, ISP, domain, net speed, IDD code, area code, weather station data, MNC, MCC, mobile brand, elevation, usage type, address type, advertisement category, ASN and proxy data with an IP address.",
+      "servers": [
+        "https://api.ip2location.io"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "1.0",
+          "hash": "sha256:678b9bdad00e589169d27f634c689d3b075f701fa7b0a26d9a7290087de9adbf",
+          "paths_count": 1,
+          "paths_delta": {
+            "added": [
+              "/"
+            ],
+            "removed": [],
+            "net": 1
+          },
+          "fetched_at": "2026-05-18T18:40:24.287205+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/polygon.io/1.0.0/swagger.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/f04b8d0bcd39c52e1cf3ad7a5fe744709832ae49/APIs/polygon.io/1.0.0/swagger.yaml",
+      "title": "Polygon",
+      "oas_version": "2.0",
+      "latest_version": "1.0.0",
+      "paths_count": 10,
+      "fetched_at": "2026-05-18T20:30:47.691087+00:00",
+      "status": "active",
+      "description": "The future of fintech.",
+      "servers": [
+        "https://api.polygon.io"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "1.0.0",
+          "hash": "sha256:588a87efdb88730d0bec63a76b8fc54503e54dd05e460a3c30040a1f6490e4d9",
+          "paths_count": 10,
+          "paths_delta": {
+            "added": [
+              "/v1/companies",
+              "/v1/currencies",
+              "/v1/historic/agg/{size}/{symbol}/{date}",
+              "/v1/historic/forex/{from}/{to}/{date}",
+              "/v1/historic/quotes/{symbol}/{date}",
+              "/v1/historic/trades/{symbol}/{date}",
+              "/v1/last/currencies/{from}/{to}",
+              "/v1/last/stocks/{symbol}",
+              "/v1/last_quote/currencies/{from}/{to}",
+              "/v1/last_quote/stocks/{symbol}"
+            ],
+            "removed": [],
+            "net": 10
+          },
+          "fetched_at": "2026-05-18T18:40:24.896094+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:Akkudoktor-EOS/EOS/openapi.json",
+      "source_url": "https://github.com/Akkudoktor-EOS/EOS/blob/a6bd06b5479a38862568b23619343ba4f7d59005/openapi.json",
+      "title": "Akkudoktor-EOS",
+      "oas_version": "3.1.0",
+      "latest_version": "v0.3.0.dev2604141105859917",
+      "paths_count": 39,
+      "fetched_at": "2026-05-18T20:30:46.571089+00:00",
+      "status": "active",
+      "description": "This project provides a comprehensive solution for simulating and optimizing an energy system based on renewable energy sources. With a focus on photovoltaic (PV) systems, battery storage (batteries), load management (consumer requirements), heat pumps, electric vehicles, and consideration of electricity price data, this system enables forecasting and optimization of energy flow and costs over a specified period.",
+      "servers": [],
+      "tags": [],
+      "history": [
+        {
+          "version": "v0.3.0.dev2604141105859917",
+          "hash": "sha256:5418e5bae8bc78949ce4e5acc251e1eba6d59da82f9be7f0605d9c4c8bb7d256",
+          "paths_count": 39,
+          "paths_delta": {
+            "added": [
+              "/gesamtlast",
+              "/gesamtlast_simple",
+              "/optimize",
+              "/pvforecast",
+              "/strompreis",
+              "/v1/admin/cache",
+              "/v1/admin/cache/clear",
+              "/v1/admin/cache/clear-expired",
+              "/v1/admin/cache/load",
+              "/v1/admin/cache/save",
+              "/v1/admin/database/stats",
+              "/v1/admin/database/vacuum",
+              "/v1/admin/server/restart",
+              "/v1/admin/server/shutdown",
+              "/v1/config",
+              "/v1/config/backup",
+              "/v1/config/file",
+              "/v1/config/reset",
+              "/v1/config/revert",
+              "/v1/config/{path}",
+              "/v1/energy-management/optimization/solution",
+              "/v1/energy-management/plan",
+              "/v1/health",
+              "/v1/logging/log",
+              "/v1/measurement/data",
+              "/v1/measurement/dataframe",
+              "/v1/measurement/keys",
+              "/v1/measurement/series",
+              "/v1/measurement/value",
+              "/v1/prediction/dataframe",
+              "/v1/prediction/import/{provider_id}",
+              "/v1/prediction/keys",
+              "/v1/prediction/list",
+              "/v1/prediction/providers",
+              "/v1/prediction/series",
+              "/v1/prediction/update",
+              "/v1/prediction/update/{provider_id}",
+              "/v1/resource/status",
+              "/visualization_results.pdf"
+            ],
+            "removed": [],
+            "net": 39
+          },
+          "fetched_at": "2026-05-18T18:40:24.703683+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:CatoTH/antragsgruen/docs/openapi.yaml",
+      "source_url": "https://github.com/CatoTH/antragsgruen/blob/4f0f35fb9063742426b8fe4c92086df690e8a97f/docs/openapi.yaml",
+      "title": "Antragsgrün API",
+      "oas_version": "3.0.0",
+      "latest_version": "0.3.0",
+      "paths_count": 6,
+      "fetched_at": "2026-05-18T19:26:14.916559+00:00",
+      "status": "active",
+      "description": "Read-Only-API for [Antragsgrün](https://antragsgruen.de/)",
+      "servers": [],
+      "tags": [],
+      "history": [
+        {
+          "version": "0.3.0",
+          "hash": "sha256:6dc7d3c3355f90a0a1d8e5ca7cd9ef227a579ef309c056a7e75151956cb734f9",
+          "paths_count": 6,
+          "paths_delta": {
+            "added": [
+              "/rest",
+              "/rest/{consultationPath}",
+              "/rest/{consultationPath}/agenda",
+              "/rest/{consultationPath}/motion/{motionSlug}",
+              "/rest/{consultationPath}/motion/{motionSlug}/amendment/{amendmentId}",
+              "/rest/{consultationPath}/proposed-procedure"
+            ],
+            "removed": [],
+            "net": 6
+          },
+          "fetched_at": "2026-05-18T19:26:14.916559+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:MAIF/izanami/swagger.json",
+      "source_url": "https://github.com/MAIF/izanami/blob/df75ffa3de4eb4bfaa73dc786dbb6b53bcf1c810/swagger.json",
+      "title": "Izanami client API",
+      "oas_version": "3.0.3",
+      "latest_version": "2.0.0",
+      "paths_count": 15,
+      "fetched_at": "2026-05-18T20:31:43.181293+00:00",
+      "status": "active",
+      "description": "This describes client endpoints exposed by Izanami. These endpoints are accessible using an api key. This swagger does not yet include 'admin' endpoints that are used by backoffice.",
+      "servers": [],
+      "tags": [],
+      "history": [
+        {
+          "version": "2.0.0",
+          "hash": "sha256:74a8b0e7b88e3a2c0ab3fff1c805484634ef6952371c0fefd039b056c0276d3d",
+          "paths_count": 15,
+          "paths_delta": {
+            "added": [
+              "/api/_health",
+              "/api/admin/tenants/{name}",
+              "/api/admin/tenants/{tenant}/_export",
+              "/api/admin/tenants/{tenant}/_import",
+              "/api/admin/tenants/{tenant}/_import/{id}",
+              "/api/admin/tenants/{tenant}/features/{id}",
+              "/api/admin/tenants/{tenant}/keys/{key}",
+              "/api/admin/tenants/{tenant}/projects/{project}",
+              "/api/events",
+              "/api/features",
+              "/api/features/_checks",
+              "/api/features/{id}/check",
+              "/api/v2/events",
+              "/api/v2/features",
+              "/api/v2/features/{id}"
+            ],
+            "removed": [],
+            "net": 15
+          },
+          "fetched_at": "2026-05-18T20:12:22.895987+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:Pham-Nguyen-Khoa/Project_Task_Management/Swagger.yaml",
+      "source_url": "https://github.com/Pham-Nguyen-Khoa/Project_Task_Management/blob/3f4ebb71238472ca5d7d5455aa67956fb6f8851a/Swagger.yaml",
+      "title": "TaskManagement - OpenAPI 3.0",
+      "oas_version": "3.0.3",
+      "latest_version": "1.0.11",
+      "paths_count": 1,
+      "fetched_at": "2026-05-18T20:30:51.560656+00:00",
+      "status": "active",
+      "description": "This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.\n\n_If you're looking for the Swagger 2.0/OAS 2.0 version of Petstore, then click [here](https://editor.swagger.io/?url=https://petstore.swagger.io/v2/swagger.yaml). Alternatively, you can load via the `Edit > Load Petstore OAS 2.0` menu option!_\n\nSome useful links:\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\n- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)",
+      "servers": [
+        "https://petstore3.swagger.io/api/v3"
+      ],
+      "tags": [
+        "Task",
+        "Author",
+        "User"
+      ],
+      "history": [
+        {
+          "version": "1.0.11",
+          "hash": "sha256:aec915af20c9b017dda1baa5165abf4ffd09b778519fea579ca3b960cf72610c",
+          "paths_count": 1,
+          "paths_delta": {
+            "added": [
+              "/tasks"
+            ],
+            "removed": [],
+            "net": 1
+          },
+          "fetched_at": "2026-05-18T20:12:23.998898+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:fabiantax87/technovium-unlimited-api/openAPI.yaml",
+      "source_url": "https://github.com/fabiantax87/technovium-unlimited-api/blob/fd3ade01820280c027dcc5a0b01fef61004060cb/openAPI.yaml",
+      "title": "Technovium Unlimited API version 1.0.0",
+      "oas_version": "3.0.0",
+      "latest_version": "0.1.0",
+      "paths_count": 14,
+      "fetched_at": "2026-05-18T19:26:20.596655+00:00",
+      "status": "active",
+      "description": "TU API version to connect to Unity3D of any other client",
+      "servers": [
+        "http://localhost:5000/api/v1"
+      ],
+      "tags": [],
+      "history": [
+        {
+          "version": "0.1.0",
+          "hash": "sha256:f7f293dd7e8e8825605b82b671c06d410f09e374fb15b451803336d4c67ae983",
+          "paths_count": 14,
+          "paths_delta": {
+            "added": [
+              "/games",
+              "/games/{id}",
+              "/levels",
+              "/levels/{game_id}",
+              "/users",
+              "/users/game/latestLocation/{user_id}",
+              "/users/game/level/{level_id}/started",
+              "/users/game/level/{level_id}/success",
+              "/users/game/score/{user_id}",
+              "/users/login",
+              "/users/resetpassword",
+              "/users/settings",
+              "/users/signup",
+              "/users/{id}"
+            ],
+            "removed": [],
+            "net": 14
+          },
+          "fetched_at": "2026-05-18T19:26:20.596655+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github:gate-computer/gate/openapi.yaml",
+      "source_url": "https://github.com/gate-computer/gate/blob/80bdd1704a230ab33641c89fadbbfc3030923f11/openapi.yaml",
+      "title": "Gate API",
+      "oas_version": "3.1.0",
+      "latest_version": "0",
+      "paths_count": 8,
+      "fetched_at": "2026-05-18T20:31:43.052428+00:00",
+      "status": "active",
+      "description": "",
+      "servers": [],
+      "tags": [],
+      "history": [
+        {
+          "version": "0",
+          "hash": "sha256:ed5375211e8420f6a8f1a0b5db584556edbd5b51e6f3392d497294246cd2d787",
+          "paths_count": 8,
+          "paths_delta": {
+            "added": [
+              "/",
+              "/instance/",
+              "/instance/{id}",
+              "/module/",
+              "/module/sha256/",
+              "/module/sha256/{key}",
+              "/module/{source}/",
+              "/module/{source}/{key}"
+            ],
+            "removed": [],
+            "net": 8
+          },
+          "fetched_at": "2026-05-18T19:43:57.982444+00:00"
+        }
+      ]
+    }
+  ]
+}

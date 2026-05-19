@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: Sample Petstore
+  version: 1.0.0
+  description: A small test spec used by the unit suite.
+servers:
+  - url: https://api.example.com/v1
+  - url: https://staging.api.example.com/v1
+tags:
+  - name: pets
+  - name: store
+paths:
+  /pets:
+    get:
+      summary: List pets
+      responses:
+        '200':
+          description: OK
+  /pets/{id}:
+    get:
+      summary: Get a pet
+      responses:
+        '200':
+          description: OK
+  /store:
+    get:
+      summary: Store info
+      responses:
+        '200':
+          description: OK

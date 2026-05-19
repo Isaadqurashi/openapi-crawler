@@ -1,0 +1,79 @@
+# =============================================================================
+# OpenAPI Catalog Configuration
+# All operational parameters live here. No values are hardcoded in the code.
+# =============================================================================
+
+crawler:
+  # GitHub Code Search filename patterns to discover specs across public repos.
+  # Each pattern becomes a separate `filename:<pat>` search query.
+  search_filenames:
+    - openapi.yaml
+    - openapi.json
+    - swagger.yaml
+    - swagger.json
+
+  # Optional {API NAME}.json patterns (e.g. "stripe" → searches filename:stripe.json).
+  #
+  # Design decision — left empty by default:
+  #   Searching arbitrary names like "stripe.json" returns false positives (any JSON
+  #   file of that name in any project, not necessarily an OpenAPI spec). The four
+  #   canonical patterns above cover the vast majority of real-world specs.
+  #   Add known API provider names here when you want to target specific publishers.
+  #
+  # Examples (uncomment to enable):
+  #   - stripe
+  #   - github
+  #   - slack
+  #   - twilio
+  api_name_filenames: []
+
+  # Bootstrap repos. Each entry is "owner/repo[:branch]".
+  # The crawler will fetch the repo tree and pull any matching spec files,
+  # which avoids depending solely on GitHub Code Search (which is rate limited).
+  bootstrap_repos:
+    - "github/rest-api-description:main"
+    - "stripe/openapi:master"
+    - "APIs-guru/openapi-directory:main"
+    - "kubernetes/kubernetes:master"
+    - "twilio/twilio-oai:main"
+
+  # Maximum number of specs to ingest in a single run (across all sources).
+  max_specs_per_run: 50
+
+  # Maximum results per GitHub Code Search query (GitHub max is 100).
+  # 30 is a practical default that balances diversity with rate-limit consumption.
+  github_results_per_query: 30
+
+  # GitHub API base
+  github_api_base: "https://api.github.com"
+
+  # Identification header sent with all HTTP requests.
+  user_agent: "openapi-catalog-bot/1.0 (+https://github.com/example/openapi-catalog)"
+
+versioner:
+  # Hash algorithm used for content-based change detection.
+  hash_algorithm: "sha256"
+
+catalog:
+  # Where the versioned catalog is persisted.
+  path: "data/catalog.json"
+  # Where ETag / Last-Modified cache for incremental fetching is persisted.
+  http_cache_path: "data/http_cache.json"
+
+updater:
+  # Polling interval between full update cycles (in seconds).
+  polling_interval_seconds: 86400   # 24 hours
+
+  # Retry policy for fetch failures.
+  max_retries: 3
+  backoff_initial_seconds: 1.0
+  backoff_multiplier: 2.0
+  backoff_max_seconds: 30.0
+
+  # Per-request HTTP timeout (seconds).
+  request_timeout_seconds: 20
+
+logging:
+  # Structured JSON logs to this file (in addition to stdout).
+  log_file: "data/catalog.log"
+  level: "INFO"

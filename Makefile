@@ -1,28 +1,42 @@
-.PHONY: build crawl update catalog watch test clean install validate
+.PHONY: install run watch test report verify clean help
+
+# Cross-platform Python detection.
+# Override with: make PYTHON=python3 test  (Linux/Mac)
+#                make PYTHON=python  test   (Windows)
+PYTHON ?= $(shell python3 --version 2>/dev/null && echo python3 || echo python)
+PIP    ?= $(PYTHON) -m pip
+
+help:
+	@echo ""
+	@echo "OpenAPI Catalog — available targets:"
+	@echo "  make install   Install Python dependencies"
+	@echo "  make run       Execute a single update cycle"
+	@echo "  make watch     Run the updater continuously (24h polling)"
+	@echo "  make test      Run the full unit test suite (53 tests)"
+	@echo "  make report    Generate data/REPORT.md and data/REPORT.html"
+	@echo "  make verify    Run verify.py requirement checklist"
+	@echo "  make clean     Remove __pycache__ and .pyc files"
+	@echo ""
 
 install:
-	npm install
+	$(PIP) install -r requirements.txt
 
-build:
-	npx tsc
+run:
+	$(PYTHON) -m src.main
 
-crawl: build
-	node dist/index.js crawl
-
-update: build
-	node dist/index.js update
-
-catalog: build
-	node dist/index.js catalog
-
-watch: build
-	node dist/index.js watch
+watch:
+	$(PYTHON) -m src.main --watch
 
 test:
-	npx jest --coverage
+	$(PYTHON) run_tests.py
 
-validate: build
-	node scripts/validate-catalog.mjs
+report:
+	$(PYTHON) -m tools.render_report
+
+verify:
+	$(PYTHON) verify.py
 
 clean:
-	rm -rf dist coverage
+	find . -type d -name "__pycache__" -prune -exec rm -rf {} + 2>/dev/null || \
+	  for /r . %%d in (__pycache__) do @if exist "%%d" rd /s /q "%%d"
+	find . -name "*.pyc" -delete 2>/dev/null || del /s /q *.pyc 2>nul

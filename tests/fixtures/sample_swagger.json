@@ -1,0 +1,20 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample Legacy API",
+    "version": "0.9.1",
+    "description": "Swagger 2.x fixture."
+  },
+  "host": "legacy.example.com",
+  "basePath": "/api",
+  "schemes": ["https"],
+  "tags": [
+    { "name": "users" },
+    { "name": "admin" }
+  ],
+  "paths": {
+    "/users": { "get": { "responses": { "200": { "description": "ok" } } } },
+    "/users/{id}": { "get": { "responses": { "200": { "description": "ok" } } } },
+    "/admin/stats": { "get": { "responses": { "200": { "description": "ok" } } } }
+  }
+}

@@ -1,87 +1,567 @@
-# OpenAPI Spec Crawler
+# OpenAPI Catalog
 
-> APIMatic Intern Screening Task — discovers, parses, versions, and catalogs public OpenAPI specs from GitHub.
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Tests](https://img.shields.io/badge/tests-53%20passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![OAS](https://img.shields.io/badge/OAS-2.x%20%7C%203.x-orange)
 
-## Setup
+> Discovers, indexes, versions, and maintains a live catalog of public OpenAPI
+> specifications from across the web — with cryptographic change detection,
+> append-only versioned history, and incremental re-crawls.
 
-1. Clone the repo
-2. Install dependencies:
+---
 
-```bash
-npm install
-```
+## Table of Contents
 
-3. Copy `.env.example` to `.env` and fill in your GitHub token:
+- [Quick Start](#quick-start)
+- [Architecture](#architecture)
+- [Project Layout](#project-layout)
+- [Configuration](#configuration)
+- [Sample Output](#sample-output)
+- [Catalog Schema](#catalog-schema)
+- [How Change Detection Works](#how-change-detection-works)
+- [Update Lifecycle](#update-lifecycle)
+- [Design Decisions](#design-decisions)
+- [Known Tradeoffs](#known-tradeoffs)
+- [Tests](#tests)
+- [Reports](#reports)
+- [Logging](#logging)
+- [Demo](#demo)
 
-```
-GITHUB_TOKEN=your_personal_access_token
-MAX_SPECS=50
-POLL_INTERVAL_HOURS=24
-SEEDS_PATH=seeds.json
-CATALOG_PATH=catalog.json
-```
+---
 
-4. Build:
-
-```bash
-npx tsc
-```
-
-## Running
-
-```bash
-make crawl         # run a one-time crawl
-make update        # re-fetch existing catalog entries (ETag-aware)
-make catalog       # print catalog summary
-make watch         # daemon: crawl on POLL_INTERVAL_HOURS
-make test          # run the test suite with coverage
-make validate      # validate catalog.json schema (after crawl)
-```
-
-Or without Make:
+## Quick Start
 
 ```bash
-node dist/index.js crawl
-node dist/index.js watch
-npm test
+# 1. Install dependencies (Python 3.10+, no external services required)
+pip install -r requirements.txt
+
+# 2. Set your GitHub token (required for Code Search; free, no scopes needed)
+export GITHUB_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxx"
+# Windows PowerShell: $env:GITHUB_TOKEN = "ghp_xxxxxxxxxxxxxxxxxxxx"
+
+# 3. Run a full crawl cycle
+make run
+
+# 4. Run the test suite
+make test
 ```
+
+> **Windows users:** if `make` is not available, use the PowerShell helper instead:
+> ```powershell
+> . .\make.ps1        # load functions
+> Invoke-Run          # run a crawl
+> Invoke-Test         # run tests
+> ```
+
+---
 
 ## Architecture
 
-The system follows a linear pipeline:
+```
+┌─────────────┐   discovered   ┌────────────┐   decision   ┌──────────┐
+│   Crawler   │ ─────────────▶ │  Versioner │ ───────────▶ │ Catalog  │
+│  (GitHub    │   DiscoveredSpec│ (hash/diff │ ChangeDecision│ (catalog │
+│   search +  │                │  + compare)│              │  .json)  │
+│  bootstrap) │                └────────────┘              └──────────┘
+└─────────────┘                                                  ▲
+                                                                 │
+                               ┌────────────────────────────────┤
+                               │           Updater               │
+                               │  (fetch → parse → decide →      │
+                               │   persist → report)             │
+                               └─────────────────────────────────┘
+```
+
+| Component  | File               | Responsibility                                                                          |
+|------------|--------------------|-----------------------------------------------------------------------------------------|
+| Crawler    | `src/crawler.py`   | GitHub Code Search (4 filename patterns) + bootstrap repo tree-walks                   |
+| Parser     | `src/parser.py`    | Parse OAS 2.x / 3.x in YAML and JSON; extract canonical metadata fields                |
+| Versioner  | `src/versioner.py` | SHA-256 hashing, version comparison, `paths_delta` diffing, NEW/UPDATED/UNCHANGED decision |
+| Catalog    | `src/catalog.py`   | Atomic JSON persistence, strict schema enforcement, append-only `history[]`             |
+| Updater    | `src/updater.py`   | Polling loop, conditional HTTP fetches (ETag/Last-Modified), exponential backoff, summary |
+| Main       | `src/main.py`      | CLI entry point; wires all components together                                          |
+| Config     | `src/config.py`    | Loads `config.yaml` + `GITHUB_TOKEN` from environment; zero hardcoding                 |
+| Logger     | `src/logger.py`    | Structured JSON logging with a unique `run_id` per execution                           |
+
+---
+
+## Project Layout
 
 ```
-Crawler → Parser → Versioner → Catalog → (Optional) Updater
+openapi-catalog/
+├── README.md                  ← you are here
+├── Makefile                   ← make install / run / test / report
+├── make.ps1                   ← Windows PowerShell equivalents
+├── requirements.txt           ← requests, PyYAML (stdlib for everything else)
+├── config.yaml                ← ALL operational parameters; nothing hardcoded
+├── .env.example               ← GITHUB_TOKEN placeholder
+├── verify.py                  ← automated requirement checklist (optional)
+├── tools/
+│   └── render_report.py       ← generates data/REPORT.md and data/REPORT.html
+├── data/
+│   ├── catalog.json           ← versioned spec catalog (generated by make run)
+│   ├── http_cache.json        ← ETag / Last-Modified cache (generated)
+│   └── catalog.log            ← structured JSON log (generated)
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── config.py
+│   ├── logger.py
+│   ├── parser.py
+│   ├── crawler.py
+│   ├── versioner.py
+│   ├── catalog.py
+│   └── updater.py
+└── tests/
+    ├── __init__.py
+    ├── test_parser.py          ← OAS 2.x / 3.x, YAML + JSON, invalid doc rejection
+    ├── test_versioner.py       ← hashing, diffing, NEW/UPDATED/UNCHANGED decisions
+    ├── test_catalog.py         ← schema enforcement + append-only history
+    ├── test_crawler.py         ← DiscoveredSpec, query building, URL construction
+    └── fixtures/
+        ├── sample_openapi.yaml
+        └── sample_swagger.json
 ```
 
-- **Crawler** (`src/crawler/githubSearch.ts`, `seeds.ts`, `fetcher.ts`): Loads `seeds.json` raw URLs first, then queries GitHub Code Search for `openapi.yaml`, `openapi.json`, `swagger.yaml`, `swagger.json`. Handles pagination, rate limits (2s delay between API calls), and seed-repo bootstrapping.
+---
 
-- **Parser** (`src/parser/specParser.ts`): Parses YAML or JSON, detects OAS 2.x / 3.x, extracts `title`, `version`, `description`, `servers`, `paths_count`, `tags`, `oas_version`.
+## Configuration
 
-- **Versioner** (`src/versioner/versioner.ts`): Detects changes via `info.version` and SHA-256 content hash. Maintains append-only `history[]` with `paths_delta`. First ingest keeps `history: []`; updates append history entries.
+Every operational parameter lives in `config.yaml`. Nothing is hardcoded in the source.
 
-- **Catalog** (`src/catalog/catalogStore.ts`): Persists entries to `catalog.json` using atomic write (temp file + rename). Indexes by `source_url` for lookups. Content-hash deduplication skips byte-identical specs from different forks.
+```yaml
+crawler:
+  # The four canonical OpenAPI filename patterns for GitHub Code Search.
+  # Each becomes a separate `filename:<pattern>` query.
+  search_filenames:
+    - openapi.yaml
+    - openapi.json
+    - swagger.yaml
+    - swagger.json
 
-- **Updater** (`src/updater/updater.ts`): Re-fetch cycle with ETag/Last-Modified, exponential backoff retries, and `stale` status after consecutive failures.
+  # Optional {API NAME}.json patterns (e.g. "stripe" → searches filename:stripe.json).
+  # Left empty by default — see Design Decisions for the reasoning.
+  api_name_filenames: []   # e.g. [stripe, github, slack]
 
-## Design Decisions & Tradeoffs
+  # Well-known repos to bootstrap the crawl via the Git Tree API (no rate-limit ceiling).
+  bootstrap_repos:
+    - "github/rest-api-description:main"
+    - "stripe/openapi:master"
+    - "APIs-guru/openapi-directory:main"
+    - "kubernetes/kubernetes:master"
+    - "twilio/twilio-oai:main"
 
-1. **SHA-256 content hashing** — Catches silent path edits when `info.version` is unchanged. History stores a 16-char hash prefix per task spec; full hash is kept on the entry for dedup.
+  max_specs_per_run: 50          # hard cap per execution
+  github_results_per_query: 30   # GitHub Code Search results per filename query
+  github_api_base: "https://api.github.com"
+  user_agent: "openapi-catalog-bot/1.0"
 
-2. **Atomic catalog writes** — Avoids corrupt `catalog.json` if the process is killed mid-write.
+versioner:
+  hash_algorithm: sha256         # any algorithm in hashlib.algorithms_available
 
-3. **Seed list first** — `seeds.json` raw URLs are processed before GitHub search so the catalog contains high-quality APIs even when search is rate-limited.
+catalog:
+  path: data/catalog.json
+  http_cache_path: data/http_cache.json
 
-4. **Content-hash deduplication** — Same spec vendored across forks becomes one catalog entry (first wins).
+updater:
+  polling_interval_seconds: 86400  # 24 h (used only with --watch)
+  max_retries: 3
+  backoff_initial_seconds: 1.0
+  backoff_multiplier: 2.0
+  backoff_max_seconds: 30.0
+  request_timeout_seconds: 20
 
-5. **Crawl limit** — `MAX_SPECS` caps ingestion per run; logged when reached.
+logging:
+  log_file: data/catalog.log
+  level: INFO
+```
 
-6. **Known tradeoffs**:
-   - GitHub Code Search can return noisy filename matches; we filter to exact canonical filenames.
-   - Rate limiting means a full crawl of 50 specs takes several minutes.
-   - Byte-identical dedup does not merge semantically identical specs with different formatting.
-   - `retry_count` resets only in-catalog; deleting `catalog.json` clears failure state.
+### GitHub token
 
-## License
+The GitHub Code Search endpoint requires authentication. Rate limits without a token are very low (10 req/min). A free token with **no scopes** is sufficient for reading public data.
 
-MIT
+```bash
+# Create at: https://github.com/settings/tokens (classic, no scopes needed)
+export GITHUB_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxx"
+```
+
+The system runs **without** a token — it will skip Code Search and rely on bootstrap repos only.
+
+---
+
+## Sample Output
+
+### Console summary (after `make run`)
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│           OpenAPI Catalog Run Summary                        │
+├──────────────────────────────────────────────────────────────┤
+│  run_id:       a3f9c0d12b4e                                  │
+│  finished_at:  2026-05-19T08:22:11.345678+00:00              │
+├──────────────────────────────────────────────────────────────┤
+│  new          :         17                                   │
+│  updated      :          3                                   │
+│  unchanged    :         28                                   │
+│  failed       :          2                                   │
+│  invalid      :          0                                   │
+│  marked stale :          0                                   │
+├──────────────────────────────────────────────────────────────┤
+│  catalog size: 48                                            │
+│  runtime:      34.12s                                        │
+└──────────────────────────────────────────────────────────────┘
+
+  Top 5 newest specs
+  +----------------------------+----------+------------+
+  | Title                      |  Paths   |  Version   |
+  +----------------------------+----------+------------+
+  | Stripe API                 |      482 | 2024-06-20 |
+  | GitHub REST API            |      902 | 1.1.4      |
+  | Adyen Checkout API         |       24 | 71         |
+  | 1Password Connect          |       11 | 1.5.7      |
+  | Adafruit IO REST API       |       36 | 2.0.0      |
+  +----------------------------+----------+------------+
+```
+
+Color-coded when running on a TTY (green for new/updated, yellow for stale/invalid, red for failed, cyan for headers). Plain ASCII fallback on Windows terminals that don't support ANSI.
+
+### Structured log line (written to `data/catalog.log`)
+
+```json
+{
+  "timestamp": "2026-05-19T08:22:08.901+00:00",
+  "level": "INFO",
+  "run_id": "a3f9c0d12b4e",
+  "logger": "openapi-catalog",
+  "message": "updater.spec_processed",
+  "spec_id": "github:stripe/openapi/openapi.yaml",
+  "change_type": "updated",
+  "paths_count": 482,
+  "paths_delta": "+8 (added=8, removed=0)",
+  "content_hash": "sha256:92960f32ec8c5abb9fa1b9471dcc05074dcfcbf9d4e3addd2ecda81854cbec44",
+  "title": "Stripe API",
+  "oas_version": "3.0.0"
+}
+```
+
+---
+
+## Catalog Schema
+
+Every entry in `data/catalog.json` strictly adheres to this structure:
+
+```json
+{
+  "id": "github:stripe/openapi/openapi.yaml",
+  "source_url": "https://github.com/stripe/openapi/blob/master/openapi.yaml",
+  "title": "Stripe API",
+  "oas_version": "3.0.0",
+  "latest_version": "2024-06-20",
+  "paths_count": 482,
+  "fetched_at": "2026-05-19T08:22:08.901234+00:00",
+  "status": "active",
+  "description": "The Stripe REST API...",
+  "servers": ["https://api.stripe.com/"],
+  "tags": ["Core Resources", "Payment Methods", "..."],
+  "history": [
+    {
+      "version": "2024-04-10",
+      "hash": "sha256:a3f2cc9d4e...",
+      "paths_count": 474,
+      "paths_delta": { "added": ["/v1/foo"], "removed": [], "net": 1 },
+      "fetched_at": "2026-05-01T08:00:00+00:00"
+    },
+    {
+      "version": "2024-06-20",
+      "hash": "sha256:92960f32ec...",
+      "paths_count": 482,
+      "paths_delta": { "added": ["/v1/bar", "..."], "removed": [], "net": 8 },
+      "fetched_at": "2026-05-19T08:22:08+00:00",
+      "hash_changed": true,
+      "version_changed": true
+    }
+  ]
+}
+```
+
+| Field            | Type    | Notes                                                             |
+|------------------|---------|-------------------------------------------------------------------|
+| `id`             | string  | Stable identifier `github:{owner}/{repo}/{path}`                  |
+| `source_url`     | string  | Human-readable GitHub URL                                         |
+| `title`          | string  | `info.title` from the spec                                        |
+| `oas_version`    | string  | `3.0.3`, `2.0`, etc.                                              |
+| `latest_version` | string  | `info.version` from the most recent successful fetch              |
+| `paths_count`    | int     | Number of top-level paths in the most recent version              |
+| `fetched_at`     | string  | ISO-8601 timestamp of the most recent fetch attempt               |
+| `status`         | string  | `active` · `stale` (fetch failures) · `invalid` (parse failure)   |
+| `description`    | string  | `info.description` (may be empty)                                 |
+| `servers`        | array   | Extracted server URLs (OAS 3: `servers[].url`; OAS 2: host+base) |
+| `tags`           | array   | `tags[].name` from the spec                                       |
+| `history[]`      | array   | Append-only list; one entry per detected change                   |
+
+Schema validation is enforced on every write in `src/catalog.py` — missing required keys or an invalid status raise immediately.
+
+---
+
+## How Change Detection Works
+
+The Versioner uses **both** signals called out in the brief:
+
+1. **Cryptographic content hash** (SHA-256 of the raw bytes).  
+   Catches changes to descriptions, examples, schemas — anything the publisher edits,
+   even if they forget to bump `info.version`.
+
+2. **`info.version` string**.  
+   The semantic version explicitly maintained by the API owner. Useful when the
+   bytes change trivially (e.g., line-ending normalisation) but the publisher says
+   "this is still the same release".
+
+A new `history[]` entry is appended whenever **either** signal changes. The entry records
+`hash_changed` and `version_changed` flags so consumers can distinguish
+"silent content drift" from "intentional version bump".
+
+### `paths_delta` is reconstructible
+
+Each history entry stores the _delta_ (added / removed paths), not the full path set.
+Replaying all deltas from the first entry reconstructs the exact path set at any
+point in history. This keeps the catalog compact even for APIs with hundreds of paths
+across many versions.
+
+```python
+# Conceptually, what Versioner._reconstruct_paths does:
+paths = set()
+for entry in history:
+    paths |= set(entry["paths_delta"]["added"])
+    paths -= set(entry["paths_delta"]["removed"])
+```
+
+### Hash algorithm is future-proof
+
+Hashes are stored with an algorithm prefix (`sha256:abc123...`). If you upgrade to
+SHA-3 later, old and new hashes compare unequal — the conservative, correct answer —
+and the catalog accepts both without ambiguity.
+
+---
+
+## Update Lifecycle
+
+```
+1. DISCOVER  ── Crawler runs all Code Search queries (every filename pattern logged,
+               even if the limit is hit mid-way). Then bootstrap repos fill remaining
+               slots via the Git Tree API. Results are de-duplicated by spec_id.
+
+2. FETCH     ── Each URL is requested with cached ETag / If-None-Match headers.
+               304 Not Modified → skip parsing, refresh fetched_at only.
+               200 OK           → proceed to parse.
+               Transient errors → exponential backoff (1s → 2s → 4s, capped at 30s).
+               Permanent errors → drop (or mark existing entry "stale" after max_retries).
+
+3. PARSE     ── Raw content is parsed as JSON (fast path) then YAML fallback.
+               Missing openapi/swagger key, invalid info, non-dict paths → ParseError.
+               ParseError on a known spec → mark "invalid".
+
+4. DECIDE    ── Versioner hashes the raw bytes and compares against history[-1].
+               hash unchanged AND version unchanged → UNCHANGED (no history append).
+               Either changed                       → UPDATED (append history entry).
+               Not in catalog yet                   → NEW.
+
+5. PERSIST   ── Catalog applies the decision, atomically writes via temp-rename.
+               HttpCache saves new ETag / Last-Modified for the next cycle.
+
+6. REPORT    ── Console summary box + structured log record (updater.cycle_summary).
+```
+
+---
+
+## Design Decisions
+
+### Two-phase discovery: bootstrap repos + Code Search
+
+GitHub Code Search is rate-limited (10 req/min even authenticated) and only indexes
+a fraction of public code. Bootstrap repos crawled via the Git Tree API are far more
+reliable for high-signal sources (Stripe, GitHub, Kubernetes, APIs-guru) and have no
+per-repo rate ceiling. Code Search is reserved for serendipitous discovery across the
+long tail. Either strategy alone would be insufficient.
+
+### `{API NAME}.json` — intentionally left empty by default
+
+The task spec supports searching for `{API NAME}.json` (e.g., `filename:stripe.json`).
+This feature is fully implemented (`api_name_filenames` in `config.yaml`), but the
+list is empty by default for a deliberate reason:
+
+- Searching an arbitrary name like `stripe.json` returns **any** JSON file of that
+  name in any GitHub project — most of which are not OpenAPI specs.
+- The four canonical patterns (`openapi.yaml`, `openapi.json`, `swagger.yaml`,
+  `swagger.json`) follow the OpenAPI Specification's own recommended file naming and
+  cover the overwhelming majority of real-world published specs.
+- A curated `api_name_filenames` list requires ongoing maintenance as the API
+  ecosystem grows and renames files.
+
+**To enable it:** uncomment entries in `config.yaml → crawler.api_name_filenames`.
+Each name becomes a `filename:<name>.json` Code Search query, processed identically
+to the canonical patterns.
+
+### Atomic catalog writes
+
+The catalog is written to a temp file in the same directory, then `os.replace`'d.
+On POSIX this is atomic — a crash mid-write cannot corrupt the on-disk catalog.
+The previous version is either fully present or fully replaced; there is no
+intermediate state.
+
+### HTTP conditional GETs (ETag / Last-Modified)
+
+Both headers are persisted to `data/http_cache.json` between runs. On subsequent
+cycles, unchanged sources return `304 Not Modified` in milliseconds — no body, no
+parsing, no hashing. This makes the daily polling cycle cheap at scale: a catalog
+of thousands of specs that haven't changed costs essentially no bandwidth.
+
+### Pure Versioner / decoupled Catalog
+
+The Versioner has zero I/O — it accepts in-memory objects and returns a plain
+`ChangeDecision` dataclass. The Catalog has zero business logic — it only persists.
+The Updater wires them together. This separation is why the unit tests are fast
+(no mocking required), hermetic (no disk state), and cover edge cases cleanly.
+
+### Hash prefixed with algorithm (`sha256:...`)
+
+Lets the catalog evolve to a stronger digest (SHA-3, BLAKE2) without ambiguity:
+comparing hashes from two different algorithms simply returns "different" — the
+conservative, safe answer.
+
+### Append-only history
+
+History entries are never deleted or overwritten. This gives consumers a reliable
+audit trail and lets them reconstruct the API's surface area at any point in time
+by replaying `paths_delta` entries from the beginning.
+
+---
+
+## Known Tradeoffs
+
+| Tradeoff | Consequence | Mitigation |
+|----------|-------------|------------|
+| Code Search returns ≤ 1000 results / query | Long tail of rare filenames may be missed | Bootstrap repos cover high-signal sources reliably |
+| Catalog grows monotonically | `catalog.json` grows with every new spec version | At thousands of specs over years it stays well under 100 MB; history compaction is a drop-in extension |
+| YAML trusts `yaml.safe_load` | Extremely large docs can consume memory | No arbitrary code execution; add a size guard in production |
+| `{API NAME}.json` list is empty | Targeted searches like `stripe.json` are not run | Add names to `api_name_filenames` in `config.yaml`; takes effect immediately |
+| Path-set reconstruction is O(history depth) | Unusual for APIs with thousands of historical versions | Snapshot the full path set every N entries to cap replay cost |
+| No cross-source merge | Same API in two repos → two entries | Out of scope; a fingerprinting pass over `title` + `servers` could detect mirrors |
+| `--watch` uses `time.sleep` | Not production-grade for persistent scheduling | Run under `cron` / k8s CronJob calling `make run` for real deployments |
+
+---
+
+## Tests
+
+```bash
+make test
+# Ran 53 tests in ~30ms — no network required
+```
+
+The suite is fully hermetic (no GitHub API calls, no disk outside temp directories):
+
+| Suite | File | What it covers |
+|-------|------|----------------|
+| Parser | `tests/test_parser.py` | OAS 3.x YAML · Swagger 2.x JSON · JSON-via-YAML interop · empty / malformed / partial doc rejection |
+| Versioner | `tests/test_versioner.py` | SHA-256 format · determinism · sensitivity · unknown-algo rejection · added/removed delta · multi-revision history replay · all three decision types |
+| Catalog | `tests/test_catalog.py` | Required field enforcement · append-only history · stale/invalid marking · atomic save→reload round-trip |
+| Crawler | `tests/test_crawler.py` | `DiscoveredSpec` immutability · `has_token()` with/without creds · `_build_search_queries()` patterns & blank filtering · `_spec_from_code_search_item()` field extraction, URL construction, path encoding, missing-field guards |
+
+---
+
+## Reports
+
+Generate human-readable artifacts from `data/catalog.json`:
+
+```bash
+make report
+```
+
+Writes:
+- **`data/REPORT.md`** — Markdown overview: OAS/status breakdowns, top 10 APIs by path count, ASCII histogram, most-updated specs
+- **`data/REPORT.html`** — Self-contained HTML page with sortable tables, status badges (active=green, stale=yellow, invalid=red), and no external dependencies
+
+```bash
+# Open the HTML report in your browser (macOS)
+open data/REPORT.html
+# Windows PowerShell
+Start-Process data\REPORT.html
+```
+
+---
+
+## Logging
+
+All log records are written as newline-delimited JSON to both `stdout` and
+`data/catalog.log`. Every record from the same execution shares a `run_id`
+(12-char hex, generated once at startup).
+
+```bash
+# Filter all records from a specific run using jq
+jq 'select(.run_id == "a3f9c0d12b4e")' data/catalog.log
+
+# Find all specs that were updated
+jq 'select(.change_type == "updated") | .spec_id' data/catalog.log
+
+# Count errors in the latest run
+jq 'select(.level == "WARNING" or .level == "ERROR")' data/catalog.log | wc -l
+```
+
+Key event names:
+
+| `message`                        | When                                              |
+|----------------------------------|---------------------------------------------------|
+| `main.startup`                   | Process started; logs config summary              |
+| `crawler.code_search_results`    | One Code Search query completed; logs query + count |
+| `crawler.bootstrap_repo_complete`| One bootstrap repo tree-walk finished             |
+| `updater.spec_processed`         | Spec fetched, parsed, and written to catalog      |
+| `updater.spec_not_modified`      | 304 response; no re-parse needed                  |
+| `updater.spec_invalid`           | Parse failure; spec marked `invalid`              |
+| `updater.spec_marked_stale`      | All retries exhausted; spec marked `stale`        |
+| `updater.cycle_summary`          | End-of-run counts (new/updated/unchanged/failed)  |
+
+---
+
+## Demo
+
+### Simulating the full flow
+
+```bash
+# 1. Initial crawl
+export GITHUB_TOKEN="ghp_..."
+make run
+# → catalog.json created; console shows Run Summary with new=N
+
+# 2. Immediate re-crawl (incremental)
+make run
+# → unchanged=N (ETag / 304 short-circuit); runtime ~10s vs ~30s
+
+# 3. Simulate an update: tamper a hash to force re-detection
+python - <<'EOF'
+import json, pathlib
+p = pathlib.Path("data/catalog.json")
+d = json.loads(p.read_text())
+d["entries"][0]["history"][-1]["hash"] = "sha256:" + "0" * 64
+p.write_text(json.dumps(d, indent=2))
+EOF
+rm data/http_cache.json
+make run
+# → updated=1 in the summary; tampered entry's history grows to length 2;
+#   old (zeroed) hash preserved at history[0] (append-only proof)
+
+# 4. View reports
+make report
+open data/REPORT.html
+```
+
+### Recording a demo video
+
+Use [Loom](https://www.loom.com/) or [OBS Studio](https://obsproject.com/) to record:
+
+1. Show `config.yaml` — point out `search_filenames`, `bootstrap_repos`, `max_specs_per_run`
+2. Run `make run` — show the JSON log lines scrolling, then the Run Summary box
+3. Run `make run` again — show `unchanged=N`, point out it finishes in ~10s (ETag caching)
+4. Run the tamper script above — run `make run` again, show `updated=1` and history length 2
+5. Run `make report` and open `data/REPORT.html` in a browser
+
+Target: ~2 minutes.

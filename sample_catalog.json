@@ -1,0 +1,117 @@
+{
+  "generated_at": "2026-05-19T08:22:11.345678+00:00",
+  "count": 3,
+  "entries": [
+    {
+      "id": "github:stripe/openapi/openapi.yaml",
+      "source_url": "https://github.com/stripe/openapi/blob/master/openapi.yaml",
+      "title": "Stripe API",
+      "oas_version": "3.0.0",
+      "latest_version": "2024-06-20",
+      "paths_count": 482,
+      "fetched_at": "2026-05-19T08:22:08.901234+00:00",
+      "status": "active",
+      "description": "The Stripe REST API. Please see https://stripe.com/docs/api for more details.",
+      "servers": ["https://api.stripe.com/"],
+      "tags": ["Core Resources", "Payment Intents", "Charges", "Customers", "Subscriptions"],
+      "history": [
+        {
+          "version": "2024-04-10",
+          "hash": "sha256:a3f2cc9d4e7b1234567890abcdef1234567890abcdef1234567890abcdef1234",
+          "paths_count": 474,
+          "paths_delta": {
+            "added": [],
+            "removed": [],
+            "net": 0
+          },
+          "fetched_at": "2026-05-01T08:00:00.000000+00:00"
+        },
+        {
+          "version": "2024-06-20",
+          "hash": "sha256:92960f32ec8c5abb9fa1b9471dcc05074dcfcbf9d4e3addd2ecda81854cbec44",
+          "paths_count": 482,
+          "paths_delta": {
+            "added": ["/v1/billing_portal/configurations", "/v1/billing_portal/sessions",
+                      "/v1/climate/orders", "/v1/climate/products", "/v1/climate/suppliers",
+                      "/v1/forwarding/requests", "/v1/tax/calculations", "/v1/tax/transactions"],
+            "removed": [],
+            "net": 8
+          },
+          "fetched_at": "2026-05-19T08:22:08.901234+00:00",
+          "hash_changed": true,
+          "version_changed": true
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/twilio.com/api/1.52.0/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twilio.com/api/1.52.0/openapi.yaml",
+      "title": "Twilio - Api",
+      "oas_version": "3.0.1",
+      "latest_version": "1.52.0",
+      "paths_count": 87,
+      "fetched_at": "2026-05-19T08:22:09.112345+00:00",
+      "status": "active",
+      "description": "This is the public Twilio REST API.",
+      "servers": ["https://api.twilio.com"],
+      "tags": ["Accounts", "Calls", "Messages", "Recordings"],
+      "history": [
+        {
+          "version": "1.50.0",
+          "hash": "sha256:b2d9aa34fe1290abcdef1234567890abcdef1234567890abcdef1234567890ab",
+          "paths_count": 87,
+          "paths_delta": {
+            "added": ["/2010-04-01/Accounts/{AccountSid}/Calls/{Sid}.json",
+                      "/2010-04-01/Accounts/{AccountSid}/Messages/{Sid}.json",
+                      "/2010-04-01/Accounts/{AccountSid}/Recordings/{Sid}.json"],
+            "removed": [],
+            "net": 3
+          },
+          "fetched_at": "2026-04-15T07:00:00.000000+00:00"
+        },
+        {
+          "version": "1.52.0",
+          "hash": "sha256:c7e1bb45fa2390abcdef1234567890abcdef1234567890abcdef1234567890cd",
+          "paths_count": 87,
+          "paths_delta": {
+            "added": [],
+            "removed": [],
+            "net": 0
+          },
+          "fetched_at": "2026-05-19T08:22:09.112345+00:00",
+          "hash_changed": true,
+          "version_changed": true
+        }
+      ]
+    },
+    {
+      "id": "github:APIs-guru/openapi-directory/APIs/petstore.swagger.io/1.0/openapi.yaml",
+      "source_url": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/petstore.swagger.io/1.0/openapi.yaml",
+      "title": "Petstore",
+      "oas_version": "3.0.0",
+      "latest_version": "1.0.0",
+      "paths_count": 13,
+      "fetched_at": "2026-05-19T08:22:10.223456+00:00",
+      "status": "active",
+      "description": "A sample API that uses a petstore as an example.",
+      "servers": ["https://petstore.swagger.io/v2"],
+      "tags": ["pet", "store", "user"],
+      "history": [
+        {
+          "version": "1.0.0",
+          "hash": "sha256:d41d8cd98f00b204e9800998ecf8427e0000000000000000000000000000dead",
+          "paths_count": 13,
+          "paths_delta": {
+            "added": ["/pet", "/pet/findByStatus", "/pet/findByTags", "/pet/{petId}",
+                      "/pet/{petId}/uploadFile", "/store/inventory", "/store/order",
+                      "/store/order/{orderId}", "/user", "/user/createWithList",
+                      "/user/login", "/user/logout", "/user/{username}"],
+            "removed": [],
+            "net": 13
+          },
+          "fetched_at": "2026-05-19T08:22:10.223456+00:00"
+        }
+      ]
+    }
+  ]
+}

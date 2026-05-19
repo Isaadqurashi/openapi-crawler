@@ -1,7 +1,12 @@
-node_modules/
-dist/
-coverage/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
 .env
 *.log
+data/catalog.log
+data/http_cache.json
 .DS_Store
-*.tmp
+.idea/
+.vscode/
