@@ -26,7 +26,6 @@
 - [Tests](#tests)
 - [Reports](#reports)
 - [Logging](#logging)
-- [Demo](#demo)
 
 ---
 
@@ -521,47 +520,3 @@ Key event names:
 | `updater.cycle_summary`          | End-of-run counts (new/updated/unchanged/failed)  |
 
 ---
-
-## Demo
-
-### Simulating the full flow
-
-```bash
-# 1. Initial crawl
-export GITHUB_TOKEN="ghp_..."
-make run
-# → catalog.json created; console shows Run Summary with new=N
-
-# 2. Immediate re-crawl (incremental)
-make run
-# → unchanged=N (ETag / 304 short-circuit); runtime ~10s vs ~30s
-
-# 3. Simulate an update: tamper a hash to force re-detection
-python - <<'EOF'
-import json, pathlib
-p = pathlib.Path("data/catalog.json")
-d = json.loads(p.read_text())
-d["entries"][0]["history"][-1]["hash"] = "sha256:" + "0" * 64
-p.write_text(json.dumps(d, indent=2))
-EOF
-rm data/http_cache.json
-make run
-# → updated=1 in the summary; tampered entry's history grows to length 2;
-#   old (zeroed) hash preserved at history[0] (append-only proof)
-
-# 4. View reports
-make report
-open data/REPORT.html
-```
-
-### Recording a demo video
-
-Use [Loom](https://www.loom.com/) or [OBS Studio](https://obsproject.com/) to record:
-
-1. Show `config.yaml` — point out `search_filenames`, `bootstrap_repos`, `max_specs_per_run`
-2. Run `make run` — show the JSON log lines scrolling, then the Run Summary box
-3. Run `make run` again — show `unchanged=N`, point out it finishes in ~10s (ETag caching)
-4. Run the tamper script above — run `make run` again, show `updated=1` and history length 2
-5. Run `make report` and open `data/REPORT.html` in a browser
-
-Target: ~2 minutes.
